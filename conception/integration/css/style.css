@@ -219,8 +219,18 @@ nav p, nav strong, nav a{ line-height:22px; }
 	background-color:#0094cb;
 	text-decoration:none;
 }
-.keywords{
-	text-align:justify;
+.keywords{text-align:justify;}
+.nav-bottom{
+	padding-top:25px;
+	padding-bottom:25px;
+}
+.keywords-en{
+	display:none;
+}
+.btn-keywords-fr:hover, .btn-keywords-en:hover{
+	text-decoration:underline;
+	cursor:pointer;
+	color:#0094cb;
 }
 
 
@@ -255,10 +265,11 @@ nav p, nav strong, nav a{ line-height:22px; }
 	padding-bottom:25px;
 	background-color:#fff;
 }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content strong {color:#000;}
+.content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content strong, .translated-title {color:#000;}
 .content .subtitle, .content .authors{ color:#474747; }
+.authors{margin-top:15px;}
 
-.content h1{
+.content h1, .translated-title{
 	font-family: Arial; font-weight: bold;
 	font-size:30px;
 }
@@ -318,10 +329,17 @@ nav p, nav strong, nav a{ line-height:22px; }
 .content .ps{padding-bottom:13px;}
 
 .content p, .content strong, .content dl, .content .ps, .content a{ line-height:22px; }
-.content h1, .content h2, .content h3, .content h4, .content h5{ line-height:42px; }
-.content h1, .content h2, .content h3 { margin-top:20px; }
+.content h1, .content h2, .content h3, .content h4, .content h5, .translated-title{ line-height:42px; }
+.content h1, .content h2, .content h3, .translated-title { margin-top:20px; }
 
 .content .sommaire p{ margin-left:25px; }
+
+.separator{
+	margin: 20px 0 20px 0;
+	height:1px;
+	width:100%;
+	background-color:#aaa;
+}
 
 /* --- Onglets abstract --- */
 .abstract h2{
@@ -430,8 +448,11 @@ footer .rs a:hover{
 }
 
 @media (max-width: 767px){
-
-	/* --- */
+	/* Pour les téléphones */
+	.col-lg-2, .col-lg-8{
+		padding-bottom:12px;
+		padding-top:12px;
+	}
 }
 
 

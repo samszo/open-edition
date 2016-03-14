@@ -28,6 +28,16 @@ jQuery(document).ready(function(){
 	});
 	
 	
+	jQuery('.btn-keywords-fr').click(function(){
+		jQuery('.keywords-fr').css({display:"block"});
+		jQuery('.keywords-en').css({display:"none"});
+	});
+	jQuery('.btn-keywords-en').click(function(){
+		jQuery('.keywords-en').css({display:"block"});
+		jQuery('.keywords-fr').css({display:"none"});
+	});
+	
+	
 	var $window = $(window);
 	/* version simple
 	 $window.scroll(function () {
