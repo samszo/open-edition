@@ -12,6 +12,17 @@ jQuery(document).ready(function(){
 		jQuery('nav .mini-submenu').slideToggle(120);
 	});
 	
+	jQuery('#btn-menu').click(function(){
+		jQuery('header .menu-middle').slideToggle(420);
+		jQuery('header .menu-right').slideToggle(420);
+	});
+	
+	jQuery('#btn-domaines').click(function(){
+		jQuery('.domaines').slideToggle(420);
+		jQuery('#btn-domaines span').toggleClass("glyphicon-triangle-bottom");
+		jQuery('#btn-domaines span').toggleClass("glyphicon-triangle-top");
+	});
+	
 	jQuery('.abstract h2:nth-child(2)').click(function(){
 		jQuery('.abstract .english').css({display:"block"});
 		jQuery('.abstract .french').css({display:"none"});

@@ -64,6 +64,7 @@ header{
 	padding-top:17px;
 	padding-bottom:17px;
 	border-bottom: 4px solid #94ba4a;
+	position:relative;
 }
 header .menu-middle{
 	width:100%;
@@ -130,8 +131,67 @@ header form input[type=submit]{
 header form input[type=submit]:hover{
 	transform:translateX(1px);
 }
+#btn-menu{ 
+	display:none; 
+	position:absolute;
+	right:20px;
+	top:15px;
+	z-index:50;
+	padding:10px;
+	cursor:pointer;
+}
+#btn-domaines{ 
+	display:none; 
+	cursor:pointer;
+	text-align:center;
+	color:#474747;
+	padding:10px;
+	font-family:cabinregular;
+	font-size:18px;
+	/*margin-right:-15px;
+	margin-left:-15px;*/
+}
+/*#btn-domaines:hover{ 
+	color:#fff;
+	background-color:#0094cb;
+}*/
 
+@media (min-width: 768px) and (max-width: 991px){/* Pour les tablettes uniquement */
 
+	header .menu-middle a{
+		display:inline-block;
+		padding: 10px 15px 10px 15px ;
+	}
+
+}
+@media (max-width: 991px){/* Pour les tablettes et tel*/
+	header .logo-container{
+		padding-bottom:10px;
+		text-align:center;
+	}
+	header .logo{
+		height:60px;
+		width:auto;
+	}
+	header .menu-right a{
+		font-size:14px;
+	}
+	#btn-domaines{ display:block; }
+	.domaines{ display:none; }
+}
+@media (max-width: 767px){/* Pour les téléphones */
+
+	header, header .menu-right {
+		text-align:center;
+	}
+	
+	header .menu-middle li{
+		display:block;
+	}
+	#btn-menu{display:block;}
+	.menu-middle, .menu-right{ display:none; }
+
+}
 
 
 
