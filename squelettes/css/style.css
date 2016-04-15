@@ -88,11 +88,9 @@ header li a{
 	font-size:18px;
 	color:#fff;
 }
-header li a:hover{color:#eee;}
+header li a:hover, header li a:active, header li a:focus{color:#eee;}
 
-header form{
-	margin-top:10px;
-}
+header form{ margin-top:10px; }
 header form input{
 	border:0;
 	padding:0;
@@ -135,7 +133,7 @@ header form input[type=submit]:hover{
 	display:none; 
 	position:absolute;
 	right:20px;
-	top:15px;
+	top:3px;
 	z-index:50;
 	padding:10px;
 	cursor:pointer;
@@ -155,6 +153,11 @@ header form input[type=submit]:hover{
 	color:#fff;
 	background-color:#0094cb;
 }*/
+header .traductions{
+      color:#aaa;
+      font-family:cabinregular;
+      font-size:18px;
+}
 
 @media (min-width: 768px) and (max-width: 991px){/* Pour les tablettes uniquement */
 
@@ -178,16 +181,16 @@ header form input[type=submit]:hover{
 	}
 	#btn-domaines{ display:block; }
 	.domaines{ display:none; }
+	header .traductions{
+	    font-size:12px;
+      }
 }
 @media (max-width: 767px){/* Pour les téléphones */
 
-	header, header .menu-right {
-		text-align:center;
-	}
+	header, header .menu-right {text-align:center;}
+	header .menu-right {padding-top:12px;}
 	
-	header .menu-middle li{
-		display:block;
-	}
+	header .menu-middle li{display:block;}
 	#btn-menu{display:block;}
 	.menu-middle, .menu-right{ display:none; }
 
@@ -200,6 +203,15 @@ header form input[type=submit]:hover{
 
 body{ background-color:#e2e2e2; }
 .center{text-align:center;}
+.align-right{text-align:right;}
+.align-left{text-align:left;}
+.picture-100 img{
+	width:100%;
+	height:auto;
+}
+.underline{ text-decoration:underline; }
+.no-margin{margin:0!important;}
+.en-ligne{display:inline;}
 
 
 /* ----------------------------------- NAV RIGHT and LEFT ---------------------------------------------- */
@@ -234,7 +246,7 @@ body{ background-color:#e2e2e2; }
 .domaines li:nth-child(1) .active, .domaines li:nth-child(1) a:hover{background-color:#1560a8; color:#fff;}
 .domaines li:nth-child(2) .active, .domaines li:nth-child(2) a:hover{background-color:#72101a; color:#fff;}
 .domaines li:nth-child(3) .active, .domaines li:nth-child(3) a:hover{background-color:#881f2f; color:#fff;}
-.domaines li:nth-child(4) .active, .domaines li:nth-child(4) a:hover{background-color:#fee107; color:#000;}
+.domaines li:nth-child(4) .active, .domaines li:nth-child(4) a:hover{background-color:#fee107; color:#fff;}
 .domaines li:nth-child(5) .active, .domaines li:nth-child(5) a:hover{background-color:#08395b; color:#fff;}
 .domaines li:nth-child(6) .active, .domaines li:nth-child(6) a:hover{background-color:#184a31; color:#fff;}
 .domaines li:nth-child(7) .active, .domaines li:nth-child(7) a:hover{background-color:#94ba4a; color:#fff;}
@@ -325,13 +337,78 @@ nav p, nav strong, nav a{ line-height:22px; }
 	padding-bottom:25px;
 	background-color:#fff;
 }
-.content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content strong, .translated-title {color:#000;}
-.content .subtitle, .content .authors{ color:#474747; }
-.authors{margin-top:15px;}
+@media (max-width: 767px){/* Pour les téléphones */
+	.content{ border-top: 1px solid #c8c8c8;}
+}
 
-.content h1, .translated-title{
+.content h1, .content h2, .content h3, .content h4, .content h5, .content p, .content strong, .translated-title {color:#000;}
+/*.content .subtitle, .content .authors{ color:#474747; }
+.authors{margin-top:15px;}
+.content .authors, .content .authors a{font-size:14px; line-height:18px;}*/
+.content .subtitle, .content .translated-subtitle{ color:#474747; margin:0; }
+.content .subtitle{ margin-top:8px; }
+.content .translated-subtitle{ font-size:20px; }
+
+#texte-article img{margin-top:10px;}
+.author{
+	display:inline-block;
+	/*margin-right:1px;*/
+	position:relative;
+}
+.author:first-child{
+	margin-left:0px;
+}
+.content .author p{
+	display:none;
+	min-width:200px;
+	position:absolute;
+	top:22px; left:0px;
+	color:#474747;
+	font-size:12px;
+	line-height:16px;
+	background-color:#474747;
+	color:#eee;
+	padding:10px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.content .author p a{
+	padding-top:10px;
+	display:block;
+	text-align:center;
+	color:#0094cb;
+	text-decoration:underline;
+}
+.content .author p a:hover{color:#fff;}
+@media (min-width: 768px){
+	.content .author p a{display:none;}
+}
+
+.author:hover p{display:block;}
+.content .author a{
+	font-size:14px;
+	color:#474747;
+	font-weight:normal;
+}
+.content .author a:hover{
+	color:#0094cb;
+}
+
+.content .doi, .content .doi a{
+	font-size:14px;
+	color:#474747;
+	font-weight:normal;
+}
+
+
+
+.content h1{
 	font-family: Arial; font-weight: bold;
 	font-size:30px;
+}
+.translated-title{
+	font-family: Arial; font-weight: bold;
+	font-size:25px;
 }
 .content h2{
 	font-family: Arial; font-weight: bold;
@@ -351,13 +428,14 @@ nav p, nav strong, nav a{ line-height:22px; }
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 }
-.content .fil, .content .fil a{
+.content .fil, .content .fil a, .content .fil-secondary a, .content .fil-secondary{
 	font-family:"arconregular", sans-serif;
 	font-size:14px;
 	color:#777;
 	font-weight:normal;
 }
-.content .fil a:first-child{ color:#94ba4a; }
+.content .fil a:nth-child(2){ display:none; }
+.content .fil a:nth-child(1){ color:#94ba4a; }
 
 .content strong, .content dt{
 	font-family: Arial; font-weight: bold;
@@ -387,6 +465,7 @@ nav p, nav strong, nav a{ line-height:22px; }
 }
 .content dd{margin-bottom:10px;}
 .content .ps{padding-bottom:13px;}
+.content .ps div{margin-bottom:12px;}
 
 .content p, .content strong, .content dl, .content .ps, .content a{ line-height:22px; }
 .content h1, .content h2, .content h3, .content h4, .content h5, .translated-title{ line-height:42px; }
@@ -394,35 +473,89 @@ nav p, nav strong, nav a{ line-height:22px; }
 
 .content .sommaire p{ margin-left:25px; }
 
-.separator{
+.separator, hr{
 	margin: 20px 0 20px 0;
 	height:1px;
 	width:100%;
 	background-color:#aaa;
+	border:none;
 }
+.content .block-grey p, .content .block-grey strong{color:#474747;}
+.content .caption{font-size:12px;}
 
-/* --- Onglets abstract --- */
-.abstract h2{
-	display:inline-block;
-	margin-right:25px;
-	margin-bottom:5px;
-	padding:5px 5px 0 5px;
-	color:#777;
-	background-color:#eee;
+/* --- Bloc des Onglets (abstract...) --- */
+.block-tabs{ 
+	padding-bottom:15px; 
+	margin-bottom:30px; 
+	border-bottom: 1px solid #c8c8c8;
 }
-.abstract h2:hover{
-	color:#222;
-	background-color:#ccc;
+.block-tabs h3{
+	display:inline-block;
+	margin:0 5px 0 10px;
+	padding:1px 12px 0 12px;
+	color:#474747;
+	font-size:16px;
+	line-height:34px; /* la hauteur des onglets */
+	-webkit-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+@media (max-width: 767px){
+	.block-tabs h3{
+		margin:0 5px 0 2px;
+		padding:1px 5px 0 5px;
+		font-size:14px;
+	}
+}
+.block-tabs h3:hover{
+	color:#fff;
+	background-color:#474747;
 	cursor:pointer;
 }
-.abstract h2:nth-child(2){
+.block-tabs h3:nth-child(2){
 	/*background-color:#f99;*/
 }
-.abstract .english{display:none;}
-.abstract .active, .abstract .active:hover{
+.block-tabs .tab-2, 
+.block-tabs .tab-3, 
+.block-tabs .tab-4,
+.block-tabs .tab-5, 
+.block-tabs .tab-6 {display:none;}
+
+.block-tabs .active, .block-tabs .active:hover{
 	color:#000;
-	background:none;
+	background-color:#fff;
+	-webkit-box-shadow: 0 -2px 1px 1px #ccc;
+box-shadow: 0 -2px 1px 1px #ccc;
 }
+/* header-onglets */
+.h-tab{
+background: #ffffff;
+background: -moz-linear-gradient(top, #ffffff 0%, #eeeeee 95%, #dddddd 100%);
+background: -webkit-linear-gradient(top, #ffffff 0%,#eeeeee 95%,#dddddd 100%);
+background: linear-gradient(to bottom, #ffffff 0%,#eeeeee 95%,#dddddd 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 );
+	margin-top:20px;
+	margin-bottom:13px;
+	padding-top:10px;
+}
+
+/* ----mots clefs dans les onglets */
+.keywords-tab a{
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-color:#474747;
+	font-family: arconregular; font-weight:normal;
+	font-size:14px;
+	display:inline-block;
+	color:#fff;
+	padding:4px;
+	margin:5px 10px 10px 10px;
+}
+.keywords-tab a:hover{
+	background-color:#0094cb;
+	text-decoration:none;
+}
+.keywords-tab{text-align:center;}
+
 
 
 /* --- Bloc de boutons & sous menu --- */
@@ -466,8 +599,75 @@ nav .bloc-btn a{
 	width:100px;
 }
 
+/* -------- content table ------------- */
+
+.content table {
+	margin-top:20px;
+	margin-bottom:40px;
+}
+.content th{
+	background-color:#474747;
+	color:#fff;
+	text-align:center;
+}
+.content th, .content td{
+	padding:10px;
+	border-bottom:1px solid #474747;
+}
+.content table tr td:nth-child(odd){
+	background-color:#f4f4f4;
+}
+.content table tr td:nth-child(even){
+	background-color:#fefefe;
+}
+.content table{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+}
+.content table caption{padding-bottom:10px;}
+
+@media (max-width: 767px){
+	/* tableaux pour les téléphones */
+	.content table{font-size:13px;}
+	.content th, .content td{padding:12px 5px 12px 5px;}
+}
+
+@media (max-width: 360px){
+	/* tableaux pour les petits téléphones */
+	.content table{font-size:10px;}
+	.content th, .content td{padding:12px 2px 12px 2px;}
+}
 
 
+/* ---------------- content page domaine --------------------*/
+
+.block-deco{
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+.block-deco img{
+	width:100%;
+	height:auto;
+}
+.block-deco h2, .block-deco h2 a{
+	font-size:22px;
+	margin:0;
+	line-height:29px;
+	color:#000;
+}
+.block-deco h2 a:hover{color:#0094cb;}
+
+.block-deco p, .block-deco strong{
+	font-size:14px;
+	line-height:18px;
+}
+.block-deco hr{margin-top:10px;}
+
+/* ------- page numero ------- */
+.block-other a{ font-weight: normal; }
+.block-other .underline{ font-weight: bold; }
 
 
 
@@ -490,7 +690,7 @@ footer a{
 	font-size:14px;
 	color:#fff;
 }
-footer a:hover{ color:#fff; }
+footer a:hover, footer a:active, footer a:focus{ color:#fff; }
 footer li a{
 	display:inline-block;
 	padding:5px;
@@ -506,10 +706,14 @@ footer .rs a{
 footer .rs a:hover{
 	background-color:#0094cb;
 }
+footer .traductions{
+      font-family:cabinregular;
+      font-size:14px;
+}
 
 @media (max-width: 767px){
 	/* Pour les téléphones */
-	.col-lg-2, .col-lg-8{
+	footer .col-lg-2, footer .col-lg-8{
 		padding-bottom:12px;
 		padding-top:12px;
 	}

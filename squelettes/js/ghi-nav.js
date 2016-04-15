@@ -1,10 +1,21 @@
 jQuery(document).ready(function(){
-	/*var header_ouvert = 1;
+
+
+
 	var largeurEcran = screen.width;
-	if(largeurEcran <= 767){
-		jQuery("nav ul").css("display", "none");
-		header_ouvert = 0;
-	}*/
+	if(largeurEcran <= 767){ /*  pour les téléphones */
+
+		/* On désactive le lien auteurs */
+		$('.author > a').click(function(event){
+			event.preventDefault();
+		});
+		
+	}
+	
+	
+	
+	jQuery(".content table").width("100%"); /* force tout les tableaux à 100% */
+	
 	jQuery('.content .btn-share').click(function(){
 		jQuery('.content .mini-submenu').slideToggle(120);
 	});
@@ -23,20 +34,31 @@ jQuery(document).ready(function(){
 		jQuery('#btn-domaines span').toggleClass("glyphicon-triangle-top");
 	});
 	
-	jQuery('.abstract h2:nth-child(2)').click(function(){
-		jQuery('.abstract .english').css({display:"block"});
-		jQuery('.abstract .french').css({display:"none"});
+	
+
+	var tabs = document.querySelectorAll(".block-tabs h3"); /* système d'onglet */
+	nbrTabs = tabs.length;
+	for(i = 0 ; i < nbrTabs ; i++)
+	{
+		tabs[i].addEventListener("click", function(e){
+			for(j = 0 ; j < nbrTabs ; j++)
+			{
+				tabs[j].classList.remove("active");
+				$(".block-tabs .tab-" + (j+1)).css({display:"none"});
+			}
+			e.target.classList.add("active");
+			
+			var num = e.target.id;
+			num = num.split("-", 2);
+			num = num[1];
+			$(".block-tabs .tab-" + num ).css({display:"block"});
 		
-		jQuery('.abstract h2:nth-child(2)').addClass('active');
-		jQuery('.abstract h2:nth-child(1)').removeClass('active');
-	});
-	jQuery('.abstract h2:nth-child(1)').click(function(){
-		jQuery('.abstract .french').css({display:"block"});
-		jQuery('.abstract .english').css({display:"none"});
-		
-		jQuery('.abstract h2:nth-child(1)').addClass('active');
-		jQuery('.abstract h2:nth-child(2)').removeClass('active');
-	});
+		}, false);
+	}
+	
+	
+	
+	
 	
 	
 	jQuery('.btn-keywords-fr').click(function(){
@@ -50,19 +72,8 @@ jQuery(document).ready(function(){
 	
 	
 	var $window = $(window);
-	/* version simple
-	 $window.scroll(function () {
-		 if ($window.scrollTop() < 130)
-		 {
-			$('.nav-fixed').css({"top":"145px"});
-		 }
-		 else // if ($window.height() + $window.scrollTop() == $(document).height()) 
-		 {
-			 $('.nav-fixed').css({"top":"15px"});
-		 }
-	 });
-	 */
-	 $window.scroll(function () {
+	
+	 function posNavRight() {
 		var pos = $window.scrollTop();
 		 if (pos < 130)
 		 {
@@ -72,6 +83,59 @@ jQuery(document).ready(function(){
 		 {
 			 $('.nav-fixed').css({"top":"15px"});
 		 }
-	 });
+	 }
+	 posNavRight();
+	 $window.scroll(posNavRight);
+	
+	
+	
+	
 	
 });
+
+function sommaireNav(){
+
+	var texte = document.getElementById("texte-article").getElementsByTagName("h2");
+	var sommaire = document.querySelector(".sommaire-nav");
+	var nbrItems = texte.length ;
+	
+	for(i = 0 ; i < nbrItems ; i++)
+	{
+		sommaire.innerHTML += "<li><a href='#ancre-article-" + i + "'>" + texte[i].innerHTML + "</a></li>";
+		
+		texte[i].id = "ancre-article-" + i;
+	}
+}
+
+function selectActiveDom(id){
+
+	if(id == null)
+	{
+		/* Pas de domaine principal séléctionné */ 
+		/* donc selection d'un domaine de l'article au hasard */
+		
+		/* le champ extra est obligatoire normalement, donc ce cas alternatif est là au cas où. */
+		var altDom = document.getElementsByName("altDom");
+		id = altDom[0].id;
+		var link = document.querySelector("nav .dom-" + id);
+		var header = document.querySelector("header");
+		link.classList.add("active");
+		header.classList.add("header-dom-" + id);
+	}
+	else
+	{
+		var link = document.querySelector("nav .dom-" + id);
+		var header = document.querySelector("header");
+		var arianeDom = document.querySelectorAll(".arianeDom");
+		
+		link.classList.add("active");
+		header.classList.add("header-dom-" + id);
+		arianeDom[0].classList.add("dom-" + id);
+		arianeDom[1].classList.add("dom-" + id);
+	}
+	
+}
+
+
+
+
