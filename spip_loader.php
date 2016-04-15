@@ -6,14 +6,14 @@
 
 # auteur(s) autorise(s) a proceder aux mises a jour : '1:2:3'
 # (en tete, sinon defini trop tard !)
-define('_SPIP_LOADER_UPDATE_AUTEURS', '135');
+define('_SPIP_LOADER_UPDATE_AUTEURS', '1');
 
 # repertoires d'installation
 define('_DIR_BASE', './');
 define('_DIR_PLUGINS', _DIR_BASE . 'plugins/');
 
 # adresse du depot
-define('_URL_SPIP_DEPOT','http://files.spip.org/');
+define('_URL_SPIP_DEPOT', 'http://files.spip.org/');
 
 ######################### CONFIGURATION #
 #
@@ -26,23 +26,33 @@ define('_URL_SPIP_DEPOT','http://files.spip.org/');
 # et commenter la ligne de telechargement de la version STABLE
 # define('_CHEMIN_FICHIER_ZIP', 'spip/dev/SPIP-svn.zip');
 
+# decommenter la ligne ci-dessous
+# pour charger la version stable de la branche 2.1
+# et commenter la ligne de telechargement de la version STABLE
+# define('_CHEMIN_FICHIER_ZIP', 'spip/stable/spip-2.1.zip');
+
+# decommenter la ligne ci-dessous
+# pour charger la version stable de la branche 3.0
+# et commenter la ligne de telechargement de la version STABLE
+# define('_CHEMIN_FICHIER_ZIP', 'spip/stable/spip-3.0.zip');
+
 # Chemin du paquet de la version STABLE a telecharger
 # pointe sur une branche donnee pour eviter les changements de branche involontaires et violents
-define('_CHEMIN_FICHIER_ZIP', 'spip/stable/spip-3.0.zip');
+define('_CHEMIN_FICHIER_ZIP', 'spip/stable/spip-3.1.zip');
 
 # Adresse des librairies necessaires a spip_loader
 # (pclzip et fichiers de langue)
-define('_URL_LOADER_DL',"http://www.spip.net/spip-dev/INSTALL/");
+define('_URL_LOADER_DL', 'http://www.spip.net/spip-dev/INSTALL/');
 # telecharger a travers un proxy
 define('_URL_LOADER_PROXY', '');
 
 # surcharger le script
-define('_NOM_PAQUET_ZIP','spip');
+define('_NOM_PAQUET_ZIP', 'spip');
 // par defaut le morceau de path a enlever est le nom : spip
 define('_REMOVE_PATH_ZIP', _NOM_PAQUET_ZIP);
 
-define('_SPIP_LOADER_PLUGIN_RETOUR', "ecrire/?exec=admin_plugin&voir=tous");
-define('_SPIP_LOADER_SCRIPT', "spip_loader.php");
+define('_SPIP_LOADER_PLUGIN_RETOUR', 'ecrire/?exec=admin_plugin&voir=tous');
+define('_SPIP_LOADER_SCRIPT', 'spip_loader.php');
 
 // "habillage" optionnel
 // liste separee par virgules de fichiers inclus dans spip_loader
@@ -50,7 +60,7 @@ define('_SPIP_LOADER_SCRIPT', "spip_loader.php");
 // selon l'extension: include .php , .css et .js dans le <head> genere par spip_loader
 define('_SPIP_LOADER_EXTRA', '');
 
-define('_DEST_PAQUET_ZIP','');
+define('_DEST_PAQUET_ZIP', '');
 define('_PCL_ZIP_SIZE', 249587);
 define('_PCL_ZIP_RANGE', 200);
 
@@ -61,7 +71,8 @@ define('_PCL_ZIP_RANGE', 200);
 // v 2.4 : redirection par meta refresh au lieu de header Location
 // v 2.5 : affichage de la version à installer, de la version déjà installée (si elle existe),
 //		   compatibilite PHP, loader obsolete
-define('_SPIP_LOADER_VERSION', '2.5.2');
+// v 2.7 : on télécharge maintenant SPIP 3.1 
+define('_SPIP_LOADER_VERSION', '2.5.8');
 #
 #######################################################################
 
@@ -101,10 +112,10 @@ $langues = array (
 
 // Configuration des versions minimales de PHP en fonction des branches SPIP
 $versions_php = array(
-	'2.0' => '4.0.8',
 	'2.1' => '4.0.8',
 	'3.0' => '5.1.0',
 	'3.1' => '5.1.0',
+	'dev' => '5.3.0',
 );
 
 // Url du fichier archivelist permettant de créer les zips de spip
@@ -132,8 +143,8 @@ function lister_versions_spip() {
 
 	if ($contenu) {
 		// On lit le fichier ligne par ligne et on
-		foreach($contenu as $ligne) {
-			if (substr($ligne,0,1) != '#') {
+		foreach ($contenu as $ligne) {
+			if (substr($ligne, 0, 1) != '#') {
 				// C'est une ligne de definition d'un paquet :
 				$parametres = explode(';', $ligne);
 				// - et on extrait la version de spip du chemin svn
@@ -155,6 +166,9 @@ function lister_versions_spip() {
 }
 
 function branche_spip($version) {
+	if ($version == 'spip') {
+		return 'dev';
+	}
 	$v = explode('.', $version);
 	$branche = $v[0] . '.' . (isset($v[1]) ? $v[1] : '0');
 	return $branche;
@@ -182,19 +196,20 @@ function spip_loader_recupere_version() {
 //
 // Traduction des textes de SPIP
 //
-function _TT($code, $args=array()) {
+function _TT($code, $args = array()) {
 	global $lang;
 	$code = str_replace('tradloader:', '', $code);
 	$text = $GLOBALS['i18n_tradloader_'.$lang][$code];
-	while (list($name, $value) = @each($args))
-		$text = str_replace ("@$name@", $value, $text);
+	while (list($name, $value) = @each($args)) {
+		$text = str_replace("@$name@", $value, $text);
+	}
 	return $text;
 }
 
 //
 // Ecrire un fichier de maniere un peu sure
 //
-function ecrire_fichierT ($fichier, $contenu) {
+function ecrire_fichierT($fichier, $contenu) {
 
 	$fp = @fopen($fichier, 'wb');
 	$s = @fputs($fp, $contenu, $a = strlen($contenu));
@@ -210,42 +225,49 @@ function ecrire_fichierT ($fichier, $contenu) {
 	return $ok;
 }
 
-function mkdir_recursif($chemin,$chmod){
-	$dirs = explode('/',$chemin);
+function mkdir_recursif($chemin, $chmod) {
+	$dirs = explode('/', $chemin);
 	$d = array_shift($dirs);
-	foreach ($dirs as $dir){
+	foreach ($dirs as $dir) {
 		$d = "$d/$dir";
-		if (!is_dir($d))
-			mkdir($d,$chmod);
+		if (!is_dir($d)) {
+			mkdir($d, $chmod);
+		}
 	}
 	return is_dir($chemin);
 }
 
-function move_all($src,$dest) {
+function move_all($src, $dest) {
 	global $chmod;
-	$dest = rtrim($dest,'/');
+	$dest = rtrim($dest, '/');
 
 	if ($dh = opendir($src)) {
 		while (($file = readdir($dh)) !== false) {
-			if (in_array($file, array('.', '..'))) continue;
+			if (in_array($file, array('.', '..'))) {
+				continue;
+			}
 			$s = "$src/$file";
 			$d = "$dest/$file";
 			if (is_dir($s)) {
-				if (!is_dir($d))
-					if (!mkdir_recursif($d, $chmod))
+				if (!is_dir($d)) {
+					if (!mkdir_recursif($d, $chmod)) {
 						die("impossible de creer $d");
+					}
+				}
 				move_all($s, $d);
 				rmdir($s);
 				// verifier qu'on en a pas oublie (arrive parfois il semblerait ...)
 				// si cela arrive, on fait un clearstatcache, et on recommence un move all...
-				if (is_dir($s)){
+				if (is_dir($s)) {
 					clearstatcache();
 					move_all($s, $d);
 					rmdir($s);
 				}
+			} else {
+				if (is_file($s)) {
+					rename($s, $d);
+				}
 			}
-			else
-				if (is_file($s))	rename ($s, $d);
 		}
 		// liberer le pointeur sinon windows ne permet pas le rmdir eventuel
 		closedir($dh);
@@ -255,35 +277,39 @@ function move_all($src,$dest) {
 function regler_langue_navigateurT() {
 	$accept_langs = explode(',', $_SERVER['HTTP_ACCEPT_LANGUAGE']);
 	if (is_array($accept_langs)) {
-		foreach($accept_langs as $s) {
+		foreach ($accept_langs as $s) {
 			if (preg_match('#^([a-z]{2,3})(-[a-z]{2,3})?(;q=[0-9.]+)?$#i', trim($s), $r)) {
 				$lang = strtolower($r[1]);
-				if (isset($GLOBALS['langues'][$lang])) return $lang;
+				if (isset($GLOBALS['langues'][$lang])) {
+					return $lang;
+				}
 			}
 		}
 	}
 	return false;
 }
 
-function menu_languesT($lang, $script='', $hidden=array()) {
-
+function menu_languesT($lang, $script = '', $hidden = array()) {
 	$r = '';
 	if (preg_match(',action=([a-z_]+),', $script, $m)) {
 		$r .= "<input type='hidden' name='action' value='".$m[1]."' />";
 		$script .= '&amp;';
-	}
-	else
+	} else {
 		$script .= '?';
+	}
 
-	foreach ($hidden as $k => $v)
-		if ($v AND $k!='etape') $script .= "$k=$v&amp;";
-
+	foreach ($hidden as $k => $v) {
+		if ($v and $k!='etape') {
+			$script .= "$k=$v&amp;";
+		}
+	}
 	$r .= '<select name="lang"
 		onchange="window.location=\''.$script.'lang=\'+this.value;">';
 
-	foreach ($GLOBALS['langues'] as $l => $nom)
+	foreach ($GLOBALS['langues'] as $l => $nom) {
 		$r .= '<option value="'.$l.'"' . ($l == $lang ? ' selected="selected"' : '')
 			. '>'.$nom."</option>\n";
+	}
 	$r .= '</select> <noscript><div><input type="submit" name="ok" value="ok" /></div></noscript>';
 	return $r;
 }
@@ -308,12 +334,15 @@ function tester_repertoire() {
 	@rmdir('test');
 	@unlink('test'); // effacer au cas ou
 	@touch('test');
-	if ($uid > 0 && $uid == $uid2 && @fileowner('test') == $uid)
+	if ($uid > 0 && $uid == $uid2 && @fileowner('test') == $uid) {
 		$chmod = 0700;
-	else if ($gid > 0 && $gid == $gid2 && @filegroup('test') == $gid)
-		$chmod = 0770;
-	else
-		$chmod = 0777;
+	} else {
+		if ($gid > 0 && $gid == $gid2 && @filegroup('test') == $gid) {
+			$chmod = 0770;
+		} else {
+			$chmod = 0777;
+		}
+	}
 	// Appliquer de plus les droits d'acces du script
 	if ($perms > 0) {
 		$perms = ($perms & 0777) | (($perms & 0444) >> 2);
@@ -325,14 +354,7 @@ function tester_repertoire() {
 
 	@mkdir('test', $chmod);
 	@chmod('test', $chmod);
-	$f = @fopen('test/test.php', 'w');
-	if ($f) {
-		@fputs($f, '<'.'?php $ok = true; ?'.'>');
-		@fclose($f);
-		@chmod('test/test.php', $chmod);
-		include('test/test.php');
-	}
-	@unlink('test/test.php');
+	$ok = is_dir('test') && is_writable('test');
 	@rmdir('test');
 
 	return $ok;
@@ -342,59 +364,70 @@ function tester_repertoire() {
 // Demarre une transaction HTTP (s'arrete a la fin des entetes)
 // retourne un descripteur de fichier
 //
-function init_http($get, $url, $refuse_gz=false) {
+function init_http($get, $url, $refuse_gz = false) {
 	//global $http_proxy;
 	$fopen = false;
-	if (!preg_match(",^http://,i", _URL_LOADER_PROXY))
+	if (!preg_match(",^http://,i", _URL_LOADER_PROXY)) {
 		$http_proxy = '';
-	else
+	} else {
 		$http_proxy = _URL_LOADER_PROXY;
+	}
 
 	$t = @parse_url($url);
 	$host = $t['host'];
 	if ($t['scheme'] == 'http') {
-		$scheme = 'http'; $scheme_fsock='';
+		$scheme = 'http';
+		$scheme_fsock = '';
 	} else {
-		$scheme = $t['scheme']; $scheme_fsock=$scheme.'://';
+		$scheme = $t['scheme'];
+		$scheme_fsock = $scheme.'://';
 	}
-	if (!isset($t['port']) OR !($port = $t['port'])) $port = 80;
-	$query = isset($t['query'])?$t['query']:"";
-	if (!isset($t['path']) OR !($path = $t['path'])) $path = "/";
+	if (!isset($t['port']) or !($port = $t['port'])) {
+		$port = 80;
+	}
+	$query = isset($t['query']) ? $t['query'] : '';
+	if (!isset($t['path']) or !($path = $t['path'])) {
+		$path = "/";
+	}
 
 	if ($http_proxy) {
 		$t2 = @parse_url($http_proxy);
 		$proxy_host = $t2['host'];
 		$proxy_user = $t2['user'];
 		$proxy_pass = $t2['pass'];
-		if (!($proxy_port = $t2['port'])) $proxy_port = 80;
+		if (!($proxy_port = $t2['port'])) {
+			$proxy_port = 80;
+		}
 		$f = @fsockopen($proxy_host, $proxy_port);
-	} else
+	} else {
 		$f = @fsockopen($scheme_fsock.$host, $port);
+	}
 
 	if ($f) {
-		if ($http_proxy)
-			fputs($f, "$get $scheme://$host" . (($port != 80) ? ":$port" : "") . $path . ($query ? "?$query" : "") . " HTTP/1.0\r\n");
-		else
+		if ($http_proxy) {
+			fputs(
+				$f,
+				"$get $scheme://$host" . (($port != 80) ? ":$port" : "") .
+				$path . ($query ? "?$query" : "") . " HTTP/1.0\r\n"
+			);
+		} else {
 			fputs($f, "$get $path" . ($query ? "?$query" : "") . " HTTP/1.0\r\n");
-
+		}
 		$version_affichee = isset($GLOBALS['spip_version_affichee'])?$GLOBALS['spip_version_affichee']:"xx";
 		fputs($f, "Host: $host\r\n");
 		fputs($f, "User-Agent: SPIP-$version_affichee (http://www.spip.net/)\r\n");
 
 		// Proxy authentifiant
-		if (isset($proxy_user) AND $proxy_user) {
+		if (isset($proxy_user) and $proxy_user) {
 			fputs($f, "Proxy-Authorization: Basic "
 			. base64_encode($proxy_user . ":" . $proxy_pass) . "\r\n");
 		}
-
-	}
-	// fallback : fopen
-	else if (!$http_proxy) {
+	} elseif (!$http_proxy) {
+		// fallback : fopen
 		$f = @fopen($url, "rb");
 		$fopen = true;
-	}
-	// echec total
-	else {
+	} else {
+		// echec total
 		$f = false;
 	}
 
@@ -410,9 +443,12 @@ function recuperer_page($url) {
 
 	// Accepter les URLs au format feed:// ou qui ont oublie le http://
 	$url = preg_replace(',^feed://,i', 'http://', $url);
-	if (!preg_match(',^[a-z]+://,i', $url)) $url = 'http://'.$url;
+	if (!preg_match(',^[a-z]+://,i', $url)) {
+		$url = 'http://'.$url;
+	}
 
-	for ($i=0;$i<10;$i++) {	// dix tentatives maximum en cas d'entetes 301...
+	// dix tentatives maximum en cas d'entetes 301...
+	for ($i = 0; $i < 10; $i++) {
 		list($f, $fopen) = init_http('GET', $url);
 
 		// si on a utilise fopen() - passer a la suite
@@ -420,14 +456,15 @@ function recuperer_page($url) {
 			break;
 		} else {
 			// Fin des entetes envoyees par SPIP
-			fputs($f,"\r\n");
+			fputs($f, "\r\n");
 
 			// Reponse du serveur distant
 			$s = trim(fgets($f, 16384));
 			if (preg_match(',^HTTP/[0-9]+\.[0-9]+ ([0-9]+),', $s, $r)) {
 				$status = $r[1];
+			} else {
+				return;
 			}
-			else return;
 
 			// Entetes HTTP de la page
 			$headers = '';
@@ -436,15 +473,17 @@ function recuperer_page($url) {
 				if (preg_match(',^Location: (.*),i', $s, $r)) {
 					$location = $r[1];
 				}
-				if (preg_match(",^Content-Encoding: .*gzip,i", $s))
+				if (preg_match(",^Content-Encoding: .*gzip,i", $s)) {
 					$gz = true;
+				}
 			}
-			if ($status >= 300 AND $status < 400 AND $location)
+			if ($status >= 300 and $status < 400 and $location) {
 				$url = $location;
-			else if ($status != 200)
+			} elseif ($status != 200) {
 				return;
-			else
+			} else {
 				break; # ici on est content
+			}
 			fclose($f);
 			$f = false;
 		}
@@ -456,13 +495,15 @@ function recuperer_page($url) {
 	}
 
 	$result = '';
-	while (!feof($f))
+	while (!feof($f)) {
 		$result .= fread($f, 16384);
+	}
 	fclose($f);
 
 	// Decompresser le flux
-	if ($gz = $_GET['gz'])
-		$result = gzinflate(substr($result,10));
+	if (isset($_GET['gz']) and $gz = $_GET['gz']) {
+		$result = gzinflate(substr($result, 10));
+	}
 
 	return $result;
 }
@@ -471,13 +512,13 @@ function telecharger_langue($lang, $droits) {
 
 	$fichier = 'tradloader_'.$lang.'.php';
 	$GLOBALS['idx_lang'] = 'i18n_tradloader_'.$lang;
-	if(!file_exists(_DIR_BASE.$fichier)) {
+	if (!file_exists(_DIR_BASE.$fichier)) {
 		$contenu = recuperer_page(_URL_LOADER_DL.$fichier.".txt");
-		if ($contenu AND $droits) {
+		if ($contenu and $droits) {
 			ecrire_fichierT(_DIR_BASE.$fichier, $contenu);
 			include(_DIR_BASE.$fichier);
 			return true;
-		} elseif($contenu AND !$droits) {
+		} elseif ($contenu and !$droits) {
 			eval('?'.'>'.$contenu);
 			return true;
 		} else {
@@ -492,25 +533,31 @@ function telecharger_langue($lang, $droits) {
 function selectionner_langue($droits) {
 	global $langues; # langues dispo
 
+	$lang = '';
+
 	if (isset($_COOKIE['spip_lang_ecrire'])) {
 		$lang = $_COOKIE['spip_lang_ecrire'];
 	}
 
-	if (isset($_REQUEST['lang']))
+	if (isset($_REQUEST['lang'])) {
 		$lang = $_REQUEST['lang'];
+	}
 
 	# reglage par defaut selon les preferences du brouteur
-	if (!$lang OR !isset($langues[$lang]))
+	if (!$lang or !isset($langues[$lang])) {
 		$lang = regler_langue_navigateurT();
+	}
 
 	# valeur par defaut
-	if (!isset($langues[$lang])) $lang = 'fr';
+	if (!isset($langues[$lang])) {
+		$lang = 'fr';
+	}
 
 	# memoriser dans un cookie pour l'etape d'apres *et* pour l'install
 	setcookie('spip_lang_ecrire', $lang);
 
 	# RTL
-	if ($lang == 'ar' OR $lang == 'he' OR $lang == 'fa') {
+	if ($lang == 'ar' or $lang == 'he' or $lang == 'fa') {
 		$GLOBALS['spip_lang_right']='left';
 		$GLOBALS['spip_lang_dir']='rtl';
 	} else {
@@ -520,18 +567,18 @@ function selectionner_langue($droits) {
 
 	# code de retour = capacite a telecharger le fichier de langue
 	$GLOBALS['idx_lang'] = 'i18n_tradloader_'.$lang;
-	return telecharger_langue($lang,$droits) ? $lang : false;
+	return telecharger_langue($lang, $droits) ? $lang : false;
 }
 
-function debut_html($corps='', $hidden=array()) {
+function debut_html($corps = '', $hidden = array()) {
 
 	global $lang, $spip_lang_dir, $spip_lang_right, $version_installee;
 
-  if ($version_installee)
-			$titre = _TT('tradloader:titre_maj', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
-		else
-			$titre = _TT('tradloader:titre', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
-
+	if ($version_installee) {
+		$titre = _TT('tradloader:titre_maj', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
+	} else {
+		$titre = _TT('tradloader:titre', array('paquet'=>strtoupper(_NOM_PAQUET_ZIP)));
+	}
 	$css = $js = '';
 	foreach (explode(',', _SPIP_LOADER_EXTRA) as $fil) {
 		switch (strrchr($fil, '.')) {
@@ -549,13 +596,13 @@ function debut_html($corps='', $hidden=array()) {
 	}
 
 	$hid = '';
-	foreach ($hidden as $k => $v)
+	foreach ($hidden as $k => $v) {
 		$hid .= "<input type='hidden' name='$k' value='$v' />\n";
-
+	}
 	$script = _DIR_BASE . _SPIP_LOADER_SCRIPT;
 	echo
 	"<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
-	<html 'xml:lang=$lang' dir='spip_lang_dir'>
+	<html 'xml:lang=$lang' dir='$spip_lang_dir'>
 	<head>
 	<title>$titre</title>
 	<meta http-equiv='Expires' content='0' />
@@ -636,8 +683,8 @@ function fin_html()
 	';
 
 	// forcer l'envoi du buffer par tous les moyens !
-	echo(str_repeat("<br />\r\n",256));
-	while (@ob_get_level()){
+	echo(str_repeat("<br />\r\n", 256));
+	while (@ob_get_level()) {
 		@ob_flush();
 		@flush();
 		@ob_end_flush();
@@ -650,7 +697,9 @@ function nettoyer_racine($fichier) {
 	@unlink(_DIR_BASE.'pclzip.php');
 	$d = opendir(_DIR_BASE);
 	while (false !== ($f = readdir($d))) {
-		if(preg_match('/^tradloader_(.+).php$/', $f)) @unlink(_DIR_BASE.$f);
+		if (preg_match('/^tradloader_(.+).php$/', $f)) {
+			@unlink(_DIR_BASE.$f);
+		}
 	}
 	closedir($d);
 	return true;
@@ -674,29 +723,31 @@ function microtime_float()
 function verifie_zlib_ok()
 {
 	global $taux;
-	if (!function_exists("gzopen")) return false;
+	if (!function_exists("gzopen") and !function_exists("gzopen64")) {
+		return false;
+	}
 
-	if(!file_exists($f = _DIR_BASE . 'pclzip.php')) {
-			$taux = microtime_float();
-			$contenu = recuperer_page(_URL_LOADER_DL . 'pclzip.php.txt');
-			if ($contenu) {
-					ecrire_fichierT($f, $contenu);
-			}
-			$taux = _PCL_ZIP_SIZE / (microtime_float() - $taux);
+	if (!file_exists($f = _DIR_BASE . 'pclzip.php')) {
+		$taux = microtime_float();
+		$contenu = recuperer_page(_URL_LOADER_DL . 'pclzip.php.txt');
+		if ($contenu) {
+			ecrire_fichierT($f, $contenu);
+		}
+		$taux = _PCL_ZIP_SIZE / (microtime_float() - $taux);
 	}
 	include $f;
 	$necessaire = array();
 	foreach (explode(',', _SPIP_LOADER_EXTRA) as $fil) {
 			$necessaire[$fil] = strrchr($fil, '.') == '.php' ? '.txt' : '';
 	}
-	foreach ($necessaire as $fil=>$php) {
+	foreach ($necessaire as $fil => $php) {
 		if (!file_exists($f = _DIR_BASE . basename($fil))) {
 			$contenu = recuperer_page(_URL_LOADER_DL . $fil . $php);
 			if ($contenu) {
 					ecrire_fichierT($f, $contenu);
 			}
 		}
-		if ($php){
+		if ($php) {
 			include $f;
 		}
 	}
@@ -704,12 +755,12 @@ function verifie_zlib_ok()
 }
 
 function spip_loader_reinstalle() {
-	if(!defined(_SPIP_LOADER_UPDATE_AUTEURS))
+	if (!defined('_SPIP_LOADER_UPDATE_AUTEURS')) {
 		define('_SPIP_LOADER_UPDATE_AUTEURS', '1');
-	if (!isset($GLOBALS['auteur_session']['statut'])
-	OR $GLOBALS['auteur_session']['statut'] != '0minirezo'
-	OR !in_array($GLOBALS['auteur_session']['id_auteur'],
-	explode(':', _SPIP_LOADER_UPDATE_AUTEURS))) {
+	}
+	if (!isset($GLOBALS['auteur_session']['statut']) or
+		$GLOBALS['auteur_session']['statut'] != '0minirezo' or
+		!in_array($GLOBALS['auteur_session']['id_auteur'], explode(':', _SPIP_LOADER_UPDATE_AUTEURS))) {
 		include_spip('inc/headers');
 		include_spip('inc/minipres');
 		http_status('403');
@@ -720,54 +771,57 @@ function spip_loader_reinstalle() {
 	}
 }
 
-function spip_deballe_paquet($paquet, $fichier, $dest, $range)
-{
+function spip_deballe_paquet($paquet, $fichier, $dest, $range) {
 	global $chmod;
 
 	// le repertoire temporaire est invariant pour permettre la reprise
-	@mkdir ($tmp = _DIR_BASE.'zip_'.md5($fichier), $chmod);
+	@mkdir($tmp = _DIR_BASE.'zip_'.md5($fichier), $chmod);
 	$ok = is_dir($tmp);
 
 	$zip = new PclZip($fichier);
 	$content = $zip->listContent();
 	$max_index = count($content);
-	$start_index = $_REQUEST['start']?$_REQUEST['start']:0;
+	$start_index = isset($_REQUEST['start']) ? intval($_REQUEST['start']) : 0;
 
-	if ($start_index<$max_index){
-		if (!$range) $range = _PCL_ZIP_RANGE;
-		$end_index = min($start_index+$range,$max_index);
-		$ok &= $zip->extractByIndex("$start_index-$end_index",
-					PCLZIP_OPT_PATH, $tmp,
-					PCLZIP_OPT_SET_CHMOD, $chmod,
-					PCLZIP_OPT_REPLACE_NEWER,
-					PCLZIP_OPT_REMOVE_PATH, _REMOVE_PATH_ZIP."/",
-					PCLZIP_CB_POST_EXTRACT, 'touchCallBack'
-					);
+	if ($start_index < $max_index) {
+		if (!$range) {
+			$range = _PCL_ZIP_RANGE;
+		}
+		$end_index = min($start_index + $range, $max_index);
+		$ok &= $zip->extractByIndex(
+			"$start_index-$end_index",
+			PCLZIP_OPT_PATH,
+			$tmp,
+			PCLZIP_OPT_SET_CHMOD,
+			$chmod,
+			PCLZIP_OPT_REPLACE_NEWER,
+			PCLZIP_OPT_REMOVE_PATH,
+			_REMOVE_PATH_ZIP."/",
+			PCLZIP_CB_POST_EXTRACT,
+			'touchCallBack'
+		);
 	}
 
-	if (!$ok OR $zip->error_code<0) {
+	if (!$ok or $zip->error_code < 0) {
 		debut_html();
-
-		echo _TT('tradloader:donnees_incorrectes',
-					array('erreur' => $zip->errorInfo()));
+		echo _TT('tradloader:donnees_incorrectes', array('erreur' => $zip->errorInfo()));
 		fin_html();
 	} else {
 		// si l'extraction n'est pas finie, relancer
-		if ($start_index<$max_index){
+		if ($start_index < $max_index) {
 
 			$url = _DIR_BASE._SPIP_LOADER_SCRIPT
 			.  (strpos(_SPIP_LOADER_SCRIPT, '?') ? '&' : '?')
 			. "etape=fichier&chemin=$paquet&dest=$dest&start=$end_index";
 			$progres = $start_index/$max_index;
-			spip_redirige_boucle($url,$progres);
+			spip_redirige_boucle($url, $progres);
 		}
 
 		if ($dest) {
 			@mkdir(_DIR_PLUGINS, $chmod);
 			$dir = _DIR_PLUGINS . $dest;
 			$url = _DIR_BASE._SPIP_LOADER_PLUGIN_RETOUR;
-		}
-		else {
+		} else {
 			$dir =  _DIR_BASE;
 			$url = _DIR_BASE._SPIP_LOADER_URL_RETOUR;
 		}
@@ -778,14 +832,14 @@ function spip_deballe_paquet($paquet, $fichier, $dest, $range)
 	}
 }
 
-function spip_redirige_boucle($url, $progres = ""){
+function spip_redirige_boucle($url, $progres = ''){
 	//@apache_setenv('no-gzip', 1); // provoque page blanche chez certains hebergeurs donc ne pas utiliser
-	@ini_set("zlib.output_compression","0"); // pour permettre l'affichage au fur et a mesure
-	@ini_set("output_buffering","off");
+	@ini_set('zlib.output_compression', '0'); // pour permettre l'affichage au fur et a mesure
+	@ini_set('output_buffering', 'off');
 	@ini_set('implicit_flush', 1);
 	@ob_implicit_flush(1);
 	$corps = '<meta http-equiv="refresh" content="0;'.$url.'">';
-	if ($progres){
+	if ($progres) {
 		$corps .="<div class='progression'>".round($progres*100)."%</div>
 				  <div class='bar'><div style='width:".round($progres*100)."%'></div></div>
 				";
@@ -811,8 +865,9 @@ function spip_presente_deballe($fichier, $paquet, $dest, $range) {
 	// Version proposée à l'installation par défaut
 	$versions_spip = lister_versions_spip();
 	$version_future = 'SPIP ' . $versions_spip[_CHEMIN_FICHIER_ZIP]['version'];
-	if ($versions_spip[_CHEMIN_FICHIER_ZIP]['etat'] == 'dev')
-		$version_future .= '-' . $versions_spip[_CHEMIN_FICHIER_ZIP]['etat'];
+	if ($versions_spip[_CHEMIN_FICHIER_ZIP]['etat'] == 'dev') {
+		$version_future .= '-dev';
+	}
 
 	if ($version_installee) {
 		// Mise à jour
@@ -839,8 +894,7 @@ function spip_presente_deballe($fichier, $paquet, $dest, $range) {
 			'<div class="erreur">'
 			. _TT('tradloader:echec_php', array('php1' => $version_php_installee, 'php2' => $version_php_spip))
 			. '</div>';
-	}
-	else {
+	} else {
 		$bouton =
 			"<div style='text-align:".$GLOBALS['spip_lang_right']."'>"
 			. '<input type="submit" value="' . $bouton . '" />'
@@ -874,7 +928,7 @@ function spip_recupere_paquet($paquet, $fichier, $dest, $range)
 {
 	$contenu = recuperer_page(_URL_SPIP_DEPOT . $paquet);
 
-	if(!($contenu AND ecrire_fichierT($fichier, $contenu))) {
+	if (!($contenu and ecrire_fichierT($fichier, $contenu))) {
 		debut_html();
 		echo _TT('tradloader:echec_chargement'), "$paquet, $fichier, $range" ;
 		fin_html();
@@ -889,7 +943,7 @@ function spip_deballe($paquet, $etape, $dest, $range)
 {
 	$fichier = _DIR_BASE . basename($paquet);
 
-	if ($etape == 'fichier'	AND file_exists($fichier)) {
+	if ($etape == 'fichier'	and file_exists($fichier)) {
 		// etape finale: deploiement de l'archive
 		spip_deballe_paquet($paquet, $fichier, $dest, $range);
 
@@ -912,9 +966,9 @@ error_reporting(E_ALL ^ E_NOTICE);
 
 // PHP >= 5.3 rale si cette init est absente du php.ini et consorts
 // On force a defaut de savoir anticiper l'erreur (il doit y avoir mieux)
-if (function_exists('date_default_timezone_set'))
+if (function_exists('date_default_timezone_set')) {
 	date_default_timezone_set('Europe/Paris');
-
+}
 $GLOBALS['taux'] = 0; // calcul eventuel du taux de transfert+dezippage
 
 // En cas de reinstallation, verifier que le demandeur a les droits avant tout
@@ -924,13 +978,15 @@ if (@file_exists('ecrire/inc_version.php')) {
 	define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=accueil");
 	include_once 'ecrire/inc_version.php';
 	$version_installee = $GLOBALS['spip_version_branche'];
-	if (
-	  (defined('_FILE_CONNECT') AND _FILE_CONNECT AND strpos(_FILE_CONNECT, '.php'))
-	  OR defined('_SITES_ADMIN_MUTUALISATION')
-	) {
+	if ((defined('_FILE_CONNECT') and
+		_FILE_CONNECT and
+		strpos(_FILE_CONNECT, '.php')) or
+		defined('_SITES_ADMIN_MUTUALISATION')) {
 		spip_loader_reinstalle();
 	}
-} else define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=install");
+} else {
+	define('_SPIP_LOADER_URL_RETOUR', "ecrire/?exec=install");
+}
 
 $droits = tester_repertoire();
 
@@ -940,7 +996,8 @@ if (!$GLOBALS['lang']) {
 	//on ne peut pas telecharger
 	$GLOBALS['lang'] = 'fr'; //francais par defaut
 	$GLOBALS['i18n_tradloader_fr']['titre'] = 'T&eacute;l&eacute;chargement de SPIP';
-	$GLOBALS['i18n_tradloader_fr']['echec_chargement'] = '<h4>Le chargement a &eacute;chou&eacute;. Veuillez r&eacute;essayer, ou utiliser l\'installation manuelle.</h4>';
+	$GLOBALS['i18n_tradloader_fr']['echec_chargement'] = '<h4>Le chargement a &eacute;chou&eacute;.'.
+	' Veuillez r&eacute;essayer, ou utiliser l\'installation manuelle.</h4>';
 	debut_html();
 	echo _TT('tradloader:echec_chargement');
 	fin_html();
@@ -948,20 +1005,38 @@ if (!$GLOBALS['lang']) {
 	//on ne peut pas ecrire
 	debut_html();
 	$q = $_SERVER['QUERY_STRING'];
-	echo _TT('tradloader:texte_preliminaire',
-			array('paquet'=>strtoupper(_NOM_PAQUET_ZIP),
-					'href' => ('spip_loader.php' . ($q ? "?$q" : '')),
-					'chmod'=>sprintf('%04o',$chmod)));
+	echo _TT(
+		'tradloader:texte_preliminaire',
+		array(
+			'paquet' => strtoupper(_NOM_PAQUET_ZIP),
+			'href'   => ('spip_loader.php' . ($q ? "?$q" : '')),
+			'chmod'  => sprintf('%04o', $chmod)
+		)
+	);
 	fin_html();
-} elseif (!verifie_zlib_ok())
+} elseif (!verifie_zlib_ok()) {
 	// on ne peut pas decompresser
-	die ('fonctions zip non disponibles');
-else {
-	// y a tout ce qu'il faut pour que cela marche
-	$dest = !preg_match('/^[\w-_.]+$/', $_REQUEST['dest'])  ? '' : $_REQUEST['dest'];
-	$paquet = $_REQUEST['chemin'] ? urldecode($_REQUEST['chemin']) : _CHEMIN_FICHIER_ZIP;
+	die('fonctions zip non disponibles');
+} else {
 
-	if ((strpos($paquet, '../') !== false) OR (substr($paquet,-4,4) != '.zip'))
+	// y a tout ce qu'il faut pour que cela marche
+	$dest = '';
+	$paquet = _CHEMIN_FICHIER_ZIP;
+	if (isset($_REQUEST['dest']) and preg_match('/^[\w-_.]+$/', $_REQUEST['dest'])) {
+		$dest = $_REQUEST['dest'];
+	}
+	if (isset($_REQUEST['chemin']) and $_REQUEST['chemin']) {
+		$paquet = urldecode($_REQUEST['chemin']);
+	}
+
+	if ((strpos($paquet, '../') !== false) or (substr($paquet, -4, 4) != '.zip')) {
 		die("chemin incorrect $paquet");
-	else spip_deballe($paquet, $_REQUEST['etape'], $dest, intval($_REQUEST['range']));
+	} else {
+		spip_deballe(
+			$paquet,
+			(isset($_REQUEST['etape']) ? $_REQUEST['etape'] : ''),
+			$dest,
+			intval(isset($_REQUEST['range']) ? $_REQUEST['range'] : 0)
+		);
+	}
 }
