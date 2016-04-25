@@ -136,6 +136,11 @@ function selectActiveDom(id){
 	
 }
 
+function selectActiveNum(id){
+	var link = document.getElementById("num-" + id);
+	link.classList.add("underline");
+}
+
 
 
 

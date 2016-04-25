@@ -104,13 +104,42 @@
 						
 						<br><br>
 						<p><:open_science:other_issues:> :</p>
+						<!--
+						<ul>
+							<BOUCLE_select_rub2(RUBRIQUES){id_rubrique}>
+								<BOUCLE_affiche_soeur2(RUBRIQUES){meme_parent}>
+									<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+								</BOUCLE_affiche_soeur2>
+							</BOUCLE_select_rub2>
+						</ul>
+						-->
+						<!--
+						<ul>
+							<BOUCLE_select_rub3(RUBRIQUES){id_rubrique}>
+								<BOUCLE_affiche_soeur3(RUBRIQUES){meme_parent}>
+									<BOUCLE_motNum3(MOTS){id_rubrique}{id_groupe=3}>
+										<li>#TITRE</li>
+									</BOUCLE_motNum3>
+									<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+								</BOUCLE_affiche_soeur3>
+							</BOUCLE_select_rub3>
+						</ul>
+						-->
 						<ul>
 							<BOUCLE_select_rub(RUBRIQUES){id_rubrique}>
 								<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
-									<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+									<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=3}{doublons}>
+										<li class="margin-top-10"><p>#TITRE  <BOUCLE_motVolNum(MOTS){id_rubrique}{id_groupe=4}{doublons}> [- Volume (#TITRE)] </BOUCLE_motVolNum></p></li>
+									</BOUCLE_motVol>
+									
+									
+									<li class="margin-left-10"><a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a></li>
 								</BOUCLE_affiche_soeur>
 							</BOUCLE_select_rub>
 						</ul>
+						<script type="text/javascript">
+							selectActiveNum(#ID_RUBRIQUE);
+						</script>
 					</div>
 					
 				</nav>
@@ -188,15 +217,16 @@
 					<br><br>
 					<div class="row">
 						<div class="col-lg-12 center">
-						
-	<BOUCLE_article_precedent(ARTICLES) {id_rubrique} {!par date} {precedent}>
-	    <a href="#URL_ARTICLE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; 						
-	</BOUCLE_article_precedent>
- 
-	<BOUCLE_article_suivant(ARTICLES) {id_rubrique} {!par date} {suivant}>
-	    <a href="#URL_ARTICLE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
-	</BOUCLE_article_suivant>
-						
+							<!--
+							<a href="#"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; 
+							<a href="#"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a>
+							-->
+							<BOUCLE_article_precedent2(ARTICLES) {id_rubrique} {!par date} {precedent}>
+								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp;						
+							</BOUCLE_article_precedent2>
+							<BOUCLE_article_suivant2(ARTICLES) {id_rubrique} {!par date} {suivant}>
+								<a href="#URL_ARTICLE" title="#TITRE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
+							</BOUCLE_article_suivant2>
 							<br>
 							<div class="bloc-btn">
 								<a href="[(#URL_PAGE{spipdf}|parametre_url{spipdf,article_pdf}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{nom_fichier,article_#ID_ARTICLE})]"><:open_science:download_pdf:> </a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
@@ -230,34 +260,12 @@
 								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> #TITRE </a> &nbsp; <br>
 								<a href="#URL_ARTICLE" title="#TITRE"> #TITRE <span class="glyphicon glyphicon-chevron-right"></span> </a> 
 								-->
-								
-								
-								<!--
-								<BOUCLE_precedent(ARTICLES){id_rubrique}{age_relatif>=0}{par date}{inverse}{1,1}>
-									<a href='#URL_ARTICLE'>#TITRE</a>
-								</BOUCLE_precedent>
-
-								<br>-<br>
-								
-								<BOUCLE_suivant(ARTICLES){id_rubrique}{age_relatif<0}{par date}{0,1}>
-									<a href='#URL_ARTICLE'>#TITRE</a>
-								</BOUCLE_suivant>
-								
-								<br>--------------<br>
-								-->
-								
-								
-								<BOUCLE_aaa(ARTICLES){id_rubrique}{age_relatif>0}>
-									- <a href='#URL_ARTICLE'>#TITRE</a><br>
-								</BOUCLE_aaa>
-								
-								<br>--------------<br>
-								
-								<BOUCLE_bbb(ARTICLES){id_rubrique}{age_relatif<0}>
-									- <a href='#URL_ARTICLE'>#TITRE</a><br>
-								</BOUCLE_bbb>
-								
-								
+								<BOUCLE_article_precedent(ARTICLES) {id_rubrique} {!par date} {precedent}>
+									<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; <br>						
+								</BOUCLE_article_precedent>
+								<BOUCLE_article_suivant(ARTICLES) {id_rubrique} {!par date} {suivant}>
+									<a href="#URL_ARTICLE" title="#TITRE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
+								</BOUCLE_article_suivant>
 							</div>
 							<br>
 							<div class="bloc-btn">
