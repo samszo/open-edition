@@ -1,80 +1,69 @@
 <!DOCTYPE HTML>
-<html>
+<html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}>
 	<head>
 		<meta charset="utf-8" />
-		<title>ISTE</title>
-		<meta name="description" content=" " />
-		<meta name="keywords" content=" " />
+		<title>#NOM_SITE_SPIP - #TITRE</title>
+		<!--
+		[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_article}>#TITRE, </BOUCLE_keywords>" />
+		-->
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
 		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
 		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-3 col-lg-2 logo-container">
-						<a href="#" title="ISTE Open Science"><img class="logo" src="#CHEMIN{design/logo-iste.png}" title="ISTE Open Science" alt="ISTE Open Science" /></a>
-						<img id="btn-menu" src="#CHEMIN{design/menu.png}" title="Menu" alt="Menu" />
-					</div>
-					<div class="col-sm-10 col-md-7 col-lg-8">
-						<ul class="menu-middle">
-							<li><a href="#">Accueil</a></li>
-							<li><a href="#">Organisation</a></li>
-							<li><a href="#">ISTE Éditions</a></li>
-							<li><a href="#">ISTE Ltd</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-						<form action="#" method="post">
-							<input type="text" name="search-header" maxlength="128" placeholder="Recherche"/>
-							<input type="submit" value=" "/>
-						</form>
-					</div>
-					<div class="col-sm-2 col-md-2 col-lg-2">
-						<ul class="menu-right">
-							<li><a href="#">English version</a></li>
-							<li><a href="#">Connexion</a></li>
-							<li><a href="#">Inscription</a></li>
-						</ul>
-					</div>
-				</div>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
 			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
 		</header>
 		
 		<div class="container conteneur">
 			<div class="row">
 				<nav class="col-md-3 col-lg-2 nav-left">
-					<ul class="domaines">
-						<li><a href="#" title=" ">Ingénierie et systèmes</a></li>
-						<li><a href="#" title=" ">Sciences de l'information</a></li>
-						<li><a href="#" title=" ">Mathématiques et statistiques</a></li>
-						<li><a href="#" title=" ">Physique, Électronique et ondes</a></li>
-						<li><a href="#" title=" ">Homme et société</a></li>
-						<li><a href="#" title=" ">Chimie moléculaire, verte, médicinale, et pharmaceutique</a></li>
-						<li><a class="active" href="#" title=" ">Environnement et système terre</a></li>
-						<li><a href="#" title=" ">Sciences biologiques et médicinales</a></li>
-					</ul>
-					<p id="btn-domaines">Domaines  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></p>
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					
+					<br>
+					<div class="hidden-xs hidden-sm picture-100">
+						<BOUCLE_img2(DOCUMENTS){id_document=#IMG_1}>
+							<img src="#URL_DOCUMENT"/>
+						</BOUCLE_img2>
+					</div>
 					
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
-				
-					<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > vol 1 num 2</p>
+					
+					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > vol 1 num 2</p>-->
+					
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="#">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="#">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
+					
+					<script type="text/javascript">
+						selectActiveDom(#DOM_P);
+					</script>
 					
 					
 					<div class="row">
 						<div class="col-sm-9">
-							<h1>Paysages et patrimoines</h1>
-							<h2>Vol 1 Num 2</h2>
+							<BOUCLE_titre(RUBRIQUES){id_enfant}><h1>#TITRE</h1></BOUCLE_titre>
+							<h2><BOUCLE_vol(MOTS){id_rubrique}{id_groupe=4}>[Vol (#TITRE)]</BOUCLE_vol> - #TITRE</h2>
 						</div>
 						<div class="col-sm-3 align-right">
 							<div class="bloc-btn">
-								<a class="btn-share" href="#" onclick="return false;"> Partager  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
 								<ul class="mini-submenu">
 									<li><a href="#">Facebook</a></li>
 									<li><a href="#">Twitter</a></li>
@@ -93,34 +82,41 @@
 						<div class="col-sm-8">
 							<h2>Liste des articles</h2>
 							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
+							<BOUCLE_articles(ARTICLES){id_rubrique}>
+								<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
+								<p><em>[(#DESCRIPTIF|couper{220})]</em></p>
+								<p><BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author></p><br>
+							</BOUCLE_articles>
 							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
-							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
-							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
-							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
-							
-							<a href="#">Titre d'un article - le titre d'un article</a>
-							<p><em>Le début du résumé ici en deux ou trois lignes. Le début du résumé ici en deux ou trois lignes.</em></p>
-							<p>Un auteur - un auteur - un auteur</p><br>
+
 						</div>
 						<div class="col-sm-4 picture-100 block-other">
-							<img src="#CHEMIN{images/r1.png}" alt="couverture de la revue" title="revue"/>
-							<h3>Autres numéros de la revue</h3>
+							<BOUCLE_revue(RUBRIQUES){id_enfant}>
+								<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+									<img src="#URL_DOCUMENT"/>
+								</BOUCLE_img>
+							</BOUCLE_revue>
 							
+							
+							<h3><:open_science:other_issues:> :</h3>
+							<!--<h3>Autres numéros de la revue</h3>-->
+								
+							<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
+								<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=3}{doublons}>
+									<p>#TITRE  <BOUCLE_motVolNum(MOTS){id_rubrique}{id_groupe=4}{doublons}> [- Volume (#TITRE)] </BOUCLE_motVolNum></p>
+								</BOUCLE_motVol>
+								
+								
+								<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br>
+							</BOUCLE_affiche_soeur>
+							<script type="text/javascript">
+								selectActiveNum(#ID_RUBRIQUE);
+							</script>
+								
+
+							
+							
+							<!--
 							<a href="#">2018 - volume 3</a><br>
 							<a href="#">Numéro 1</a><br>
 							<a href="#">Numéro 2</a><br>
@@ -136,53 +132,25 @@
 							<a href="#" class="underline">Numéro 2</a><br>
 							<a href="#">Numéro 3</a><br>
 							<br>
-							
-							<a href="#">Accéder à la liste complète des numéros de revues</a><br>
+							-->
+							<!--
+							<br>
+							<a href="#">Accéder à la liste complète des numéros de revues</a><br>-->
 						</div>
 					</div>
 
 					
 
 
+
 				</section>
 			</div>
 		</div>
-		
-		
 
 	
 		<footer>
-			<div class="container">
-				<div class="row">
-					
-					<div class="rs col-sm-3 col-lg-2">
-						<p>Suivez-nous sur :</p>
-						<br> 
-						<a href="#"><img src="#CHEMIN{design/rs-f1.png}" alt="facebook" title="facebook" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-t1.png}" alt="twitter" title="twitter" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-in1.png}" alt="linkedIn" title="linkedIn" /></a> 
-
-					</div>
-					<div class="col-sm-6 col-lg-8">
-						<p>
-						ISTE OpenScience 27-37 St George’s Road – Londres SW19 4EU – Royaume-Uni <br>
-						Tel : <strong>0044 208 879 4580</strong> ou <strong>0800 902 354</strong> <br>
-						(numéro gratuit à partir d’un poste fixe)<br>
-						<a href="mailto:info@openscience.fr">contact : info@openscience.fr</a>
-						</p>
-
-					</div>
-					<div class="col-sm-3 col-lg-2">
-						<ul>
-							<li><a href="#">English version</a></li>
-							<li><a href="#">Connexion</a></li>
-							<li><a href="#">Inscription</a></li>
-							<li><a href="#">Mentions légales</a></li>
-							<li><a href="#">Plan du site</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<INCLURE{fond=inclure/footer, env}>
 		</footer>
 	</body>	
+</BOUCLE_principal>
 </html>

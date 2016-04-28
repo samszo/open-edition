@@ -16,14 +16,7 @@
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		
-		<style rel="stylesheet" type="text/css">
-		<BOUCLE_colorDom(MOTS){id_groupe=1}>
-		.domaines li:nth-child(#COMPTEUR_BOUCLE) .active, .domaines li:nth-child(#COMPTEUR_BOUCLE) a:hover{background-color:#COLOR;}
-		.header-dom-#COMPTEUR_BOUCLE {border-bottom: 4px solid #COLOR;}
-		.content .fil .dom-#COMPTEUR_BOUCLE {color: #COLOR!important;}
-		.content .fil .dom-bg-#COMPTEUR_BOUCLE {background-color: #COLOR;}</BOUCLE_colorDom>
-		/* l'ordre des domaines est important ! */
-		</style>
+		<INCLURE{fond=inclure/domaines-style, env}>
 	</head>
 	<body>
 		<div id="ghi-lightbox-container">
@@ -32,52 +25,14 @@
 			</div>
 		</div>
 		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-3 col-lg-2 logo-container">
-						<a href="#URL_SITE_SPIP" title="#NOM_SITE_SPIP"><img class="logo" src="#CHEMIN{design/logo-iste.png}" title="#NOM_SITE_SPIP" alt="Logo #NOM_SITE_SPIP" /></a>
-						<img id="btn-menu" src="#CHEMIN{design/menu.png}" title="Menu" alt="Menu" />
-					</div>
-					<div class="col-sm-10 col-md-7 col-lg-8">
-						<ul class="menu-middle">
-							<BOUCLE_menuhaut(RUBRIQUES) {racine}{lang=#LANG}>
-							    <BOUCLE_menuhautLien(SITES) {id_rubrique}>
-							      <li><a href="#URL_SITE">#NOM_SITE</a></li>
-							    </BOUCLE_menuhautLien>
-							</BOUCLE_menuhaut>
-						</ul>
-						<!--
-						<form action="#" method="post">
-							<input type="text" name="search-header" maxlength="128" placeholder="Recherche"/>
-							<input type="submit" value=" "/>
-						</form>
-						-->
-						<form method="get" action="spip.php?page=recherche">
-							<input type="hidden" value="recherche" name="page">
-							<input type="text" autocorrect="off" autocapitalize="off" placeholder="<:open_science:search:>" accesskey="4" id="recherche" name="recherche" size="10" class="search text"><input type="submit" title="Rechercher" value=" " class="submit">
-						</form>
-					</div>
-					<div class="col-sm-2 col-md-2 col-lg-2">
-						<ul class="menu-right">
-							<li><INCLURE{fond=inclure/menu_langues,env}/></li>
-							<li><a href="#URL_SITE_SPIP/ecrire"><:open_science:sign_in:> </a></li>
-							<li><a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<INCLURE{fond=inclure/header, env}>
 		</header>
 		
 		<div class="container conteneur">
 			<div class="row">
 				<nav class="col-md-3 col-lg-2 nav-left">
-					<ul class="domaines">
-					      <BOUCLE_menuDom(MOTS){id_groupe=1}>
-							<li><a class="dom-#COMPTEUR_BOUCLE" href="#" title=" ">#TITRE</a></li>
-					      </BOUCLE_menuDom>
-					</ul>
-					
-					<p id="btn-domaines">Domaines  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></p>
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
 					
 					<div class="hidden-xs hidden-sm">
 					
@@ -104,27 +59,6 @@
 						
 						<br><br>
 						<p><:open_science:other_issues:> :</p>
-						<!--
-						<ul>
-							<BOUCLE_select_rub2(RUBRIQUES){id_rubrique}>
-								<BOUCLE_affiche_soeur2(RUBRIQUES){meme_parent}>
-									<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
-								</BOUCLE_affiche_soeur2>
-							</BOUCLE_select_rub2>
-						</ul>
-						-->
-						<!--
-						<ul>
-							<BOUCLE_select_rub3(RUBRIQUES){id_rubrique}>
-								<BOUCLE_affiche_soeur3(RUBRIQUES){meme_parent}>
-									<BOUCLE_motNum3(MOTS){id_rubrique}{id_groupe=3}>
-										<li>#TITRE</li>
-									</BOUCLE_motNum3>
-									<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
-								</BOUCLE_affiche_soeur3>
-							</BOUCLE_select_rub3>
-						</ul>
-						-->
 						<ul>
 							<BOUCLE_select_rub(RUBRIQUES){id_rubrique}>
 								<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
@@ -137,9 +71,6 @@
 								</BOUCLE_affiche_soeur>
 							</BOUCLE_select_rub>
 						</ul>
-						<script type="text/javascript">
-							selectActiveNum(#ID_RUBRIQUE);
-						</script>
 					</div>
 					
 				</nav>
@@ -341,6 +272,15 @@
 					<a href="#">Numéro 12 </a> &nbsp;
 					<a href="#">Numéro 6 </a> -->
 					<!-- copier celui du haut lors de la finalisation -->
+
+					<BOUCLE_select_rub2(RUBRIQUES){id_rubrique}>
+						<BOUCLE_affiche_soeur2(RUBRIQUES){meme_parent}>
+							<a id="num2-#ID_RUBRIQUE" href="#URL_RUBRIQUE"><BOUCLE_motVol2(MOTS){id_rubrique}{id_groupe=3}>#TITRE  <BOUCLE_motVolNum2(MOTS){id_rubrique}{id_groupe=4}> [- Volume (#TITRE)] </BOUCLE_motVolNum2></BOUCLE_motVol2> - #TITRE</a> &nbsp; 
+						</BOUCLE_affiche_soeur2>
+					</BOUCLE_select_rub2>
+					<script type="text/javascript">
+						selectActiveNum(#ID_RUBRIQUE);
+					</script>
 					
 				</div>
 			</div>
@@ -348,37 +288,7 @@
 
 	
 		<footer>
-			<div class="container">
-				<div class="row">
-					
-					<div class="rs col-sm-3 col-lg-2">
-						<p><:open_science:follow_us:> :</p>
-						<br> 
-						<a href="#"><img src="#CHEMIN{design/rs-f1.png}" alt="facebook" title="facebook" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-t1.png}" alt="twitter" title="twitter" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-in1.png}" alt="linkedIn" title="linkedIn" /></a> 
-
-					</div>
-					<div class="col-sm-6 col-lg-8">
-						<p>
-						ISTE OpenScience 27-37 St George’s Road – Londres SW19 4EU – Royaume-Uni <br>
-						Tel : <strong>0044 208 879 4580</strong> ou <strong>0800 902 354</strong> <br>
-						(numéro gratuit à partir d’un poste fixe)<br>
-						<a href="mailto:info@openscience.fr">contact : info@openscience.fr</a>
-						</p>
-
-					</div>
-					<div class="col-sm-3 col-lg-2">
-						<ul>
-							<li><INCLURE{fond=inclure/menu_langues,env}/></li>
-							<li><a href="#URL_SITE_SPIP/ecrire"><:open_science:sign_in:> </a></li>
-							<li><a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a></li>
-							<li><a href="#"><:open_science:legal:></a></li>
-							<li><a href="#"><:open_science:sitemap:></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<INCLURE{fond=inclure/footer, env}>
 		</footer>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-lightbox.js}"></script>
 	</body>	

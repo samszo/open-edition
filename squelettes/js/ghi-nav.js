@@ -86,6 +86,21 @@ jQuery(document).ready(function(){
 	 }
 	 posNavRight();
 	 $window.scroll(posNavRight);
+	 
+	 
+	 function resizeScrollBox() {
+		
+		if($(window).width() < 992){ /* pour les tablettes */
+			$(".scroll-box").height("auto");
+		}
+		else
+		{
+			$(".scroll-box").height(  ($(".squares-container").height()) - 44  );
+			//alert($(window).width());
+		}
+	 }
+	 resizeScrollBox();
+	 $window.resize(resizeScrollBox);
 	
 	
 	
@@ -130,8 +145,8 @@ function selectActiveDom(id){
 		
 		link.classList.add("active");
 		header.classList.add("header-dom-" + id);
-		arianeDom[0].classList.add("dom-" + id);
-		arianeDom[1].classList.add("dom-" + id);
+		if(arianeDom[0]){arianeDom[0].classList.add("dom-" + id);}
+		if(arianeDom[1]){arianeDom[1].classList.add("dom-" + id);}
 	}
 	
 }
@@ -139,6 +154,9 @@ function selectActiveDom(id){
 function selectActiveNum(id){
 	var link = document.getElementById("num-" + id);
 	link.classList.add("underline");
+	
+	var link2 = document.getElementById("num2-" + id);
+	if(link2){link2.classList.add("underline");}
 }
 
 

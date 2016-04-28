@@ -1,420 +1,109 @@
 <!DOCTYPE HTML>
-<html>
+<html dir="#LANG_DIR" lang="#LANG">
 	<head>
 		<meta charset="utf-8" />
-		<title>ISTE</title>
-		<meta name="description" content=" " />
-		<meta name="keywords" content=" " />
+		<title>#NOM_SITE_SPIP</title>
+		<!--[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_groupe=1}>#TITRE, </BOUCLE_keywords>" />-->
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
 		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
 		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
 	</head>
 	<body>
-		<header>
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12 col-md-3 col-lg-2 logo-container">
-						<a href="#" title="ISTE Open Science"><img class="logo" src="#CHEMIN{design/logo-iste.png}" title="ISTE Open Science" alt="ISTE Open Science" /></a>
-						<img id="btn-menu" src="#CHEMIN{design/menu.png}" title="Menu" alt="Menu" />
-					</div>
-					<div class="col-sm-10 col-md-7 col-lg-8">
-						<ul class="menu-middle">
-							<li><a href="#">Accueil</a></li>
-							<li><a href="#">Organisation</a></li>
-							<li><a href="#">ISTE Éditions</a></li>
-							<li><a href="#">ISTE Ltd</a></li>
-							<li><a href="#">Contact</a></li>
-						</ul>
-						<form action="#" method="post">
-							<input type="text" name="search-header" maxlength="128" placeholder="Recherche"/>
-							<input type="submit" value=" "/>
-						</form>
-					</div>
-					<div class="col-sm-2 col-md-2 col-lg-2">
-						<ul class="menu-right">
-							<li><a href="#">English version</a></li>
-							<li><a href="#">Connexion</a></li>
-							<li><a href="#">Inscription</a></li>
-						</ul>
-					</div>
-				</div>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
 			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
 		</header>
 		
 		<div class="container conteneur">
 			<div class="row">
-				<nav class="col-md-3 col-lg-2 nav-left">
-					<ul class="domaines">
-						<li><a href="#" title=" ">Ingénierie et systèmes</a></li>
-						<li><a href="#" title=" ">Sciences de l'information</a></li>
-						<li><a href="#" title=" ">Mathématiques et statistiques</a></li>
-						<li><a href="#" title=" ">Physique, Électronique et ondes</a></li>
-						<li><a href="#" title=" ">Homme et société</a></li>
-						<li><a href="#" title=" ">Chimie moléculaire, verte, médicinale, et pharmaceutique</a></li>
-						<li><a class="active" href="#" title=" ">Environnement et système terre</a></li>
-						<li><a href="#" title=" ">Sciences biologiques et médicinales</a></li>
-					</ul>
-					<p id="btn-domaines">Domaines  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></p>
-					
-					<div class="hidden-xs hidden-sm">
-					
-					
-						<p><span class="btn-keywords-fr">Mots-clefs</span> | <span class="btn-keywords-en">Keywords</span></p>
-						<div class="keywords keywords-fr">
-							<a href="#">Modélisation numérique</a>
-							<a href="#">mécanique</a>
-							<a href="#">technologie</a>
-							<a href="#">communication</a>
-							<a href="#">design</a>
-							<a href="#">organisation apprenante</a>
-						</div>
-						<div class="keywords keywords-en">
-							<a href="#">English keyword</a>
-							<a href="#">keyword</a>
-							<a href="#">English </a>
-							<a href="#">English </a>
-							<a href="#">English keyword</a>
-							<a href="#">English keyword</a>
-						</div>
-						
-						
-						<br><br>
-						<p>Précédents numéros :</p>
-						<ul>
-							<li><a href="#">Numéro 12</a></li>
-							<li><a href="#">Numéro 11</a></li>
-							<li><a href="#">Numéro 10</a></li>
-							<li><a href="#">Numéro 9</a></li>
-							<li><a href="#">Numéro 8</a></li>
-							<li><a href="#">Numéro 7</a></li>
-							<li><a href="#">Numéro 6</a></li>
-						</ul>
-					</div>
-					
-				</nav>
-				<section class="col-md-9 col-lg-8 content">
-				
-					<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > Couplage endommagement du béton</p>
-					<h1>Couplage endommagement du béton</h1>
-					<h2 class="subtitle">Etude d’une modélisation numérique</h2>
-					
-					<div class="separator"></div>
-					
-					<span class="translated-title">concrete damage coupling</span>
-					<h2 class="subtitle">Study of numerical modeling</h2>
-					<br>
-					
-
-						<div class="author">
-							<a href="#">Laurent Molez, </a>
-								<p>
-								Laboratoire de Mécanique et Technologie, ENS de Cachan<br>
-								l.molez@laboratoire.fr<br>
-								<a href="#">Page de l'auteur</a>
-								</p>
-						</div>
-
-						<div class="author">
-							<a href="#">Bruno Gérard, </a>
-								<p>
-								CNRS/Université Pierre et Marie Curie <br>
-								b.Gégé@laboratoire.fr<br>
-								<a href="#">Page de l'auteur</a>
-								</p>
-						</div>
-
-						<div class="author">
-							<a href="#">Gilles Pijaudier</a>
-								<p>
-								Institut Universitaire de France<br>
-								l.molez@laboratoire.fr<br>
-								<a href="#">Page de l'auteur</a>
-								</p>
-						</div>
-						
-						<br><br>
-						<p class="doi"> DOI : <a href="#">13.55621/exemple</a></p>
-
-					
-					<div class="abstract">
-						<div class="h-tab"><h3 class="active">Résumé</h3><h3>Abstract</h3></div>
-						<p class="french">
-							L’ensemble des consignes rassemblées ci-dessous s’organise <strong>en trois rubriques.</strong> La rédaction remercie <a href="#">les auteurs</a> pour le strict respect qu’ils accorderont à ces dispositions. La taille de ce résumé ne doit pas dépasser une dizaine de lignes. Il est à composer en Times corps 9 italique, interligné 11 points. Un résumé en anglais doit l’accompagner. L’ensemble des consignes rassemblées ci-dessous s’organise en trois rubriques. La rédaction remercie les auteurs pour le strict respect qu’ils accorderont à ces dispositions. La taille de ce résumé ne doit pas dépasser une dizaine de lignes. Il est à composer en Times corps 9 italique, interligné 11 points. Un résumé en anglais doit l’accompagner.
-						</p>
-						<p class="english">
-							The instructions put together below fall into three categories. The publisher would be grateful to authors for respecting these indications. The length of this summary may attain a dozen lines. It is to be written in size 9 italic Times. An abstract in French will be joined. The instructions put together below fall into three categories. The publisher would be grateful to authors for respecting these indications. The length of this summary may attain a dozen lines. It is to be written in size 9 italic Times. An abstract in French will be joined.
-						</p>
-					</div>
-					
-					
-					
-					
-					<h2>Sommaire</h2>
-					
-						    
-					
-
-						<p>
-						<strong>Introduction</strong> <br>
-						<strong>1. Le design de l’organisation apprenante</strong> <br>
-						1.1.	De l’approche systémique au design organisationnel <br>
-						1.2.	L’approche systémique <br>
-						1.2.1. La définition et les caractéristiques d’un système <br>
-						<strong>2. Proposition d’un design organisationnel pour le management des connaissances</strong> <br>
-						2.1.	Le classement des travaux autour du management des connaissances <br>
-						2.2.	Design de l’organisation apprenante <br>
-						<strong>3. Format de page</strong> <br>
-						3.1.	Marges <br>
-						3.2.	En-tête <br>
-						<strong>4. Titre des paragraphes ou titre d’« inter »</strong> <br>
-						<strong>5. Les notes de bas de page</strong> <br>
-						<strong>6. Figures et tableaux</strong> <br>
-						6.1.	Exemples de tableaux <br>
-						6.2.	Exemples de figures <br>
-						7.2.3 Exemples de figures II <br>
-						<strong>7. Formules	</strong> <br>
-						<strong>8. Enumérations	</strong> <br>
-						<strong>9. Remarque ou note	</strong> <br>
-						<strong>10. Typographie</strong> <br>
-						<strong>Bibliographie</strong> <br>
-						</p>
-
-					
-					
-					
-					
-					
-					
-					<h2>1. Le design de l’organisation apprenante</h2>
-					<p>
-					Dans la première section de ce chapitre, nous présenterons les fondements de notre modèle théorique, l’approche systémique et le design organisationnel. 
-					Dans la seconde section, nous exposerons la construction de notre modèle de recherche dans le domaine du management des connaissances. 
-					<br>
-					Test des caractères spéciaux : <br>
-					²&#~”<>’()[]{}-_`\/^ç@=+*?!§¨$£µ%ù€
-					ƒ¦µ¢¥¤|ă÷¼½¾ª«¬­¯°±²³µ¶¸¹·º»¼½¾¿Ð×ØÞßâ÷øþÿĦħΔΩ
-					∞√−∑∏∆∂℮ℓ⁴‰
-					</p>
-					<br> <br>
-					<p>ƒ(uk)=nk|N</p>
-					
-					<h3>1.1. De l’approche systémique au design organisationnel</h3> 
-					<p>
-					L’approche analytique1 semblant être insuffisante pour comprendre les situations complexes floues, changeantes et peu structurées, souvent rencontrées dans la réalité, nous développons puis appliquons l’approche systémique au design organisationnel.
-					</p>
-					
-					<h3>1.2. L’approche systémique </h3> 
-					
-					<p>
-					La théorie des systèmes (Bertalanffy, 1968 ; 1993) est apparue pour pallier les faiblesses de l’approche analytique face aux situations complexes.
-					Quelques grands principes permettent de présenter l’approche systémique.
-					</p>
-					
-					<h4>1.2.1. La définition et les caractéristiques d’un système</h4>
-					
-					<p>
-					De nombreuses définitions d’un système ont été proposées dans la littérature (tableau 2.1). Dans cet ouvrage, nous adoptons la définition générique suivante : un système est un ensemble d’éléments interagissant entre eux conformément à un ensemble de principes et de règles. Selon son niveau de complexité, les caractéristiques d’un système sont plus ou moins riches. Le modèle des neuf niveaux de complexité d’un système a été présenté par
-					</p>
-					
-					
-					
-					<table border="1" cellpadding="1" cellspacing="1" class="spip" style="width: 500px;" summary="Hiérarchie des systèmes à 11 niveaux">
-						<thead>
-							<tr>
-								<th scope="row">Niveau</th>
-								<th scope="col">Modèle 1956</th>
-								<th scope="col">Modèle 1985</th>
-								<th scope="col">Bertalanffy 1968</th>
-							</tr>
-						</thead>
-						<p><caption><br class='autobr' />Hiérarchie des systèmes</caption></p>
-						<tbody>
-							<tr>
-								<th scope="row">1</th>
-								<td>Canevas</td>
-								<td>Système mécanique</td>
-								<td>Structure statistique</td>
-							</tr>
-							<tr>
-								<th scope="row">2</th>
-								<td>Horloge</td>
-								<td>Système cinématique</td>
-								<td>Mouvements d&#8217;horlogerie</td>
-							</tr>
-							<tr>
-								<th scope="row">3</th>
-								<td>Thermostat</td>
-								<td>Système à Rétroaction positive</td>
-								<td>Mécanisme d&#8217;autorégulation</td>
-							</tr>
-						</tbody>
-					</table>
-					<!--
-					<dl>
-						<dt>1.</dt>
-						<dd>
-						L’approche analytique a deux caractéristiques importantes. La première est liée à ses objectifs de connaître, d’expliquer, de comprendre, de prédire et de contrôler la réalité. Et la seconde est sa prétention à l’universalité. Elle domine depuis plus de deux siècles la pensée scientifique occidentale et est appliquée dans tous les domaines du savoir humain.
-						</dd>
-						<dt>2.</dt>
-						<dd>
-						L’approche analytique a deux caractéristiques importantes. La première est liée à ses objectifs de connaître, d’expliquer, de comprendre, de prédire et de contrôler la réalité. Et la seconde est sa prétention à l’universalité. Elle domine depuis plus de deux siècles la pensée scientifique occidentale et est appliquée dans tous les domaines du savoir humain.
-						</dd>
-					</dl>-->
-					
-					
-					<div class="ps">
-						<strong>1. </strong> 
-						L’approche analytique a deux caractéristiques importantes. La première est liée à ses objectifs de connaître, d’expliquer, de comprendre, de prédire et de contrôler la réalité. Et la seconde est sa prétention à l’universalité. Elle domine depuis plus de deux siècles la pensée scientifique occidentale et est appliquée dans tous les domaines du savoir humain.
-						<br><br>
-						<strong>2. </strong> 
-						L’approche analytique a deux caractéristiques importantes. La première est liée à ses objectifs de connaître, d’expliquer, de comprendre, de prédire et de contrôler la réalité. Et la seconde est sa prétention à l’universalité. Elle domine depuis plus de deux siècles la pensée scientifique occidentale et est appliquée dans tous les domaines du savoir humain.
-					</div>
-					
+				<section class="col-lg-12 content bg-grey">
 					
 					<!--
+					<INCLURE{fond=inclure/menu_langues,env}/>
+					<h1>Sommaire</h1>
+					<h2 class="subtitle">sous titre</h2>
+					<BOUCLE_article(ARTICLES){id_article=4}>
 					<p>
-					L’approche analytique1 semblant être insuffisante pour comprendre les situations complexes floues, changeantes et peu structurées, souvent rencontrées dans la réalité, nous développons puis appliquons l’approche systémique au design organisationnel.
-					</p>-->
+					#TITRE
+					</p>
+					</BOUCLE_article>
+					-->
+					<!-- <br> =============================== -->
 					
-					
-					<br><br>
 					<div class="row">
-						<div class="col-lg-12 center">
-							<a href="#"> <span class="glyphicon glyphicon-chevron-left"></span> Article précédent </a> &nbsp; 
-							<a href="#"> Article Suivant <span class="glyphicon glyphicon-chevron-right"></span> </a> 
-							<br>
-							<div class="bloc-btn">
-							      <a href="#">PDF</a><a class="btn-share" href="#" onclick="return false;"> Partager  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu">
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Twitter</a></li>
-									<li><a href="#">Google +</a></li>
-									<li><a href="#">Email</a></li>
-									<li><a href="#">Export Zotero</a></li>
-								</ul>
+						<div class="col-md-8 squares-container">
+							<div class="row">
+								<BOUCLE_squares(MOTS){id_groupe=1}>
+									<div class="col-xs-12 col-sm-6 col-md-4">
+										<div class="square bg-color-dom-#ID_MOT">
+											<a href="spip.php?page=domaine&id_mot=#ID_MOT">
+												<span class="dom-img">#LOGO_MOT</span>
+												<span class="dom-titre">#TITRE</span>
+											</a>
+										</div>
+									</div>
+								</BOUCLE_squares>
 							</div>
-
 						</div>
-						<div class="col-lg-12">
-							<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > Couplage endommagement du béton</p>
+						<div class="col-md-4">
+							<h2 class="no-margin">Nos revues</h2>
+							
+							<div class="scroll-box">
+							
+							
+							<BOUCLE_alpha2(DATA){enum A,Z}>
+									[<h3 id="#VALEUR">(#VALEUR)</h3>]
+									
+									<BOUCLE_revues(RUBRIQUES){lang=#LANG}{racine}>
+										<BOUCLE_revues2(RUBRIQUES){id_parent}{par titre}>
+											<p>#TITRE</p>
+										</BOUCLE_revues2>
+									</BOUCLE_revues>
+
+								
+							</BOUCLE_alpha2>
+							
+							
+							
+							
+							
+							<br>===============================<br>
+							<!-- ====================== -->
+								<BOUCLE_revuesAAA(RUBRIQUES){lang=#LANG}{racine}>
+									<BOUCLE_revues2AAA(RUBRIQUES){id_parent}{par titre}>
+										<p>#TITRE</p>
+									</BOUCLE_revues2AAA>
+								</BOUCLE_revuesAAA>
+								
+								
+							</div>
+							<script type="text/javascript">
+								//resizeScrollBox();
+							</script>
 						</div>
 					</div>
+					
 				</section>
-				<nav class="hidden-md hidden-sm hidden-xs col-lg-2 nav-right">
-						<div class="nav-fixed">
-							<div class="center">
-								<a href="#"> <span class="glyphicon glyphicon-chevron-left"></span> Article précédent </a> &nbsp; <br>
-								<a href="#"> Article Suivant <span class="glyphicon glyphicon-chevron-right"></span> </a> 
-							</div>
-							<br>
-							<div class="bloc-btn">
-								<a href="#">Télécharger en PDF </a><a class="btn-share" href="#" onclick="return false;"> Partager  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu">
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Twitter</a></li>
-									<li><a href="#">Google +</a></li>
-									<li><a href="#">Email</a></li>
-									<li><a href="#">Export Zotero</a></li>
-								</ul>
-							</div>
-							
-							<br>
-							<ul class="sommaire-nav">
-								<li><a href="#">Introduction</a></li>
-								<li><a href="#">1. Le design de l’organisation apprenante</a></li>
-								<li><a href="#">2. Proposition d’un design organisationnel pour le management des connaissances</a></li>
-								<li><a href="#">3. Format de page</a></li>
-								<li><a href="#">4. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">5. Les notes de bas de page</a></li>
-								<li><a href="#">6. Figures et tableaux</a></li>
-								<li><a href="#">7. Formules</a></li>
-								<li><a href="#">8. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">9. Remarque ou note</a></li>
-								<li><a href="#">10. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">Conclusion</a></li>
-							</ul>
-							
-						</div>
-				</nav>
 			</div>
 		</div>
 		
-		
-		<nav class="container hidden-md hidden-lg nav-bottom">
-			<div class="row">
-				<div class="col-sm-6">
-					<p><span class="btn-keywords-fr">Mots-clefs</span> | <span class="btn-keywords-en">Keywords</span></p>
-					<div class="keywords keywords-fr">
-						<a href="#">Modélisation numérique</a>
-						<a href="#">mécanique</a>
-						<a href="#">technologie</a>
-						<a href="#">communication</a>
-						<a href="#">design</a>
-						<a href="#">organisation apprenante</a>
-					</div>
-					<div class="keywords keywords-en">
-							<a href="#">English keyword</a>
-							<a href="#">keyword</a>
-							<a href="#">English </a>
-							<a href="#">English </a>
-							<a href="#">English keyword</a>
-							<a href="#">English keyword</a>
-					</div>
-					<br>
-				</div>
-				
-				<div class="col-sm-6">
-					<p>Précédents numéros :</p>
-					<br>
-					<a href="#">Numéro 12 </a> &nbsp;
-					<a href="#">Numéro 11 </a> &nbsp;
-					<a href="#">Numéro 10 </a> &nbsp;
-					<a href="#">Numéro 9 </a> &nbsp;
-					<a href="#">Numéro 8 </a> &nbsp;
-					<a href="#">Numéro 7 </a> &nbsp;
-					<a href="#">Numéro 6 </a> 
-				</div>
-			</div>
-		</nav>
 
 	
 		<footer>
-			<div class="container">
-				<div class="row">
-					
-					<div class="rs col-sm-3 col-lg-2">
-						<p>Suivez-nous sur :</p>
-						<br> 
-						<a href="#"><img src="#CHEMIN{design/rs-f1.png}" alt="facebook" title="facebook" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-t1.png}" alt="twitter" title="twitter" /></a> 
-						<a href="#"><img src="#CHEMIN{design/rs-in1.png}" alt="linkedIn" title="linkedIn" /></a> 
-
-					</div>
-					<div class="col-sm-6 col-lg-8">
-						<p>
-						ISTE OpenScience 27-37 St George’s Road – Londres SW19 4EU – Royaume-Uni <br>
-						Tel : <strong>0044 208 879 4580</strong> ou <strong>0800 902 354</strong> <br>
-						(numéro gratuit à partir d’un poste fixe)<br>
-						<a href="mailto:info@openscience.fr">contact : info@openscience.fr</a>
-						</p>
-
-					</div>
-					<div class="col-sm-3 col-lg-2">
-						<ul>
-							<li><a href="#">English version</a></li>
-							<li><a href="#">Connexion</a></li>
-							<li><a href="#">Inscription</a></li>
-							<li><a href="#">Mentions légales</a></li>
-							<li><a href="#">Plan du site</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
+			<INCLURE{fond=inclure/footer, env}>
 		</footer>
 	</body>	
 </html>
