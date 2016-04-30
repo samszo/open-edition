@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_section(RUBRIQUES) {racine}{lang=#LANG}>
 	<head>
 		<meta charset="utf-8" />
 		<title>#NOM_SITE_SPIP</title>
@@ -63,19 +64,23 @@
 							
 							<div class="scroll-box">
 							
-							
-							<BOUCLE_alpha2(DATA){enum A,Z}>
-									[<h3 id="#VALEUR">(#VALEUR)</h3>]
-									
-									<BOUCLE_revues(RUBRIQUES){lang=#LANG}{racine}>
-										<BOUCLE_revues2(RUBRIQUES){id_parent}{par titre}>
-											<p>#TITRE</p>
-										</BOUCLE_revues2>
-									</BOUCLE_revues>
+												
+						      <BOUCLE_tableaux(RUBRIQUES){lang=#LANG}{id_parent}>
+						      [(#SET{premierelettre,[(#TITRE|substr{0,1})]})]
+						      [(#SET{beginby[(#GET{premierelettre}|unique)],#ARRAY})]
+						      [(#SET{beginby[(#GET{premierelettre})],[(#GET{beginby[(#GET{premierelettre})]}|array_merge{#ARRAY{#TITRE,#ID_RUBRIQUE}})]})]
+						      </BOUCLE_tableaux>
 
-								
-							</BOUCLE_alpha2>
-							
+							<BOUCLE_alpha(DATA){enum A,Z}>
+							    <B_data>
+							    [<h1 id="#VALEUR">(#VALEUR)</h1>]
+								    <ul> 
+								  <BOUCLE_data(DATA){source tableau, #GET{beginby#VALEUR}}{par cle}>
+								  <li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+								  </BOUCLE_data>
+								  </ul>
+							    </B_data>
+							</BOUCLE_alpha>
 							
 							
 							
@@ -106,4 +111,5 @@
 			<INCLURE{fond=inclure/footer, env}>
 		</footer>
 	</body>	
+</BOUCLE_section>
 </html>
