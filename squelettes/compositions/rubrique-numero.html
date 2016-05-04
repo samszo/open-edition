@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
 <BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}>
@@ -153,4 +154,161 @@
 		</footer>
 	</body>	
 </BOUCLE_principal>
+=======
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}>
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - #TITRE</title>
+		<!--
+		[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_article}>#TITRE, </BOUCLE_keywords>" />
+		-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					
+					<br>
+					<div class="hidden-xs hidden-sm picture-100">
+						<BOUCLE_img2(DOCUMENTS){id_document=#IMG_1}>
+							<img src="#URL_DOCUMENT"/>
+						</BOUCLE_img2>
+					</div>
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+					
+					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > vol 1 num 2</p>-->
+					
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="#">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="#">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
+					
+					<script type="text/javascript">
+						selectActiveDom(#DOM_P);
+					</script>
+					
+					
+					<div class="row">
+						<div class="col-sm-9">
+							<BOUCLE_titre(RUBRIQUES){id_enfant}><h1>#TITRE</h1></BOUCLE_titre>
+							<h2><BOUCLE_vol(MOTS){id_rubrique}{id_groupe=4}>[Vol (#TITRE)]</BOUCLE_vol> - #TITRE</h2>
+						</div>
+						<div class="col-sm-3 align-right">
+							<div class="bloc-btn">
+								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+								<ul class="mini-submenu">
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Twitter</a></li>
+									<li><a href="#">Google +</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Export Zotero</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+					<br>
+					
+					
+					<div class="row">
+						<div class="col-sm-8">
+							<h2>Liste des articles</h2>
+							
+							<BOUCLE_articles(ARTICLES){id_rubrique}>
+								<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
+								<p><em>[(#DESCRIPTIF|couper{220})]</em></p>
+								<p><BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author></p><br>
+							</BOUCLE_articles>
+							
+
+						</div>
+						<div class="col-sm-4 picture-100 block-other">
+							<BOUCLE_revue(RUBRIQUES){id_enfant}>
+								<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+									<img src="#URL_DOCUMENT"/>
+								</BOUCLE_img>
+							</BOUCLE_revue>
+							
+							
+							<h3><:open_science:other_issues:> :</h3>
+							<!--<h3>Autres numéros de la revue</h3>-->
+								
+							<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
+								<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=3}{doublons}>
+									<p>#TITRE  <BOUCLE_motVolNum(MOTS){id_rubrique}{id_groupe=4}{doublons}> [- Volume (#TITRE)] </BOUCLE_motVolNum></p>
+								</BOUCLE_motVol>
+								
+								
+								<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br>
+							</BOUCLE_affiche_soeur>
+							<script type="text/javascript">
+								selectActiveNum(#ID_RUBRIQUE);
+							</script>
+								
+
+							
+							
+							<!--
+							<a href="#">2018 - volume 3</a><br>
+							<a href="#">Numéro 1</a><br>
+							<a href="#">Numéro 2</a><br>
+							<a href="#">Numéro 3</a><br>
+							<br>
+							<a href="#">2017 - volume 2</a><br>
+							<a href="#">Numéro 1</a><br>
+							<a href="#">Numéro 2</a><br>
+							<a href="#">Numéro 3</a><br>
+							<br>
+							<a href="#">2016 - volume 1</a><br>
+							<a href="#">Numéro 1</a><br>
+							<a href="#" class="underline">Numéro 2</a><br>
+							<a href="#">Numéro 3</a><br>
+							<br>
+							-->
+							<!--
+							<br>
+							<a href="#">Accéder à la liste complète des numéros de revues</a><br>-->
+						</div>
+					</div>
+
+					
+
+
+
+				</section>
+			</div>
+		</div>
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</BOUCLE_principal>
+>>>>>>> origin/master
 </html>

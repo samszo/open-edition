@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <composition>
       <nom>Domaine</nom>
       <description>La page d'un domaine</description>
       <icon>design/recherche.png</icon>
+=======
+<composition>
+      <nom>Domaine</nom>
+      <description>La page d'un domaine</description>
+      <icon>design/recherche.png</icon>
+>>>>>>> origin/master
 </composition>
