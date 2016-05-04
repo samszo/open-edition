@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 <composition>
       <nom>Revue</nom>
       <description>La page d'une revue</description>
       <icon>design/recherche.png</icon>
-=======
-<composition>
-      <nom>Revue</nom>
-      <description>La page d'une revue</description>
-      <icon>design/recherche.png</icon>
->>>>>>> origin/master
 </composition>
