@@ -718,6 +718,20 @@ nav .bloc-btn a{
 	background-color:#fff;
 	padding-left:14px;
 }
+.alphabet{
+	/*background-color:#999;*/
+	text-align:center;
+}
+.alphabet a{
+	/*background-color:#ddd;*/
+	padding: 5px;
+	display:inline-block;
+}
+.alphabet a:hover, .alphabet a:focus{
+	background-color:#474747;
+	text-decoration:none;
+	color:#fff;
+}
 
 @media (min-width: 992px){ /* pour ecran moyen et grand */
 	.scroll-box{
@@ -731,6 +745,7 @@ nav .bloc-btn a{
 	.scroll-box{
 		/*height:auto;*/
 	}
+	.alphabet{display:none;}
 }
 
 

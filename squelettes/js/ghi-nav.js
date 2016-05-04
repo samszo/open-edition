@@ -95,7 +95,7 @@ jQuery(document).ready(function(){
 		}
 		else
 		{
-			$(".scroll-box").height(  ($(".squares-container").height()) - 44  );
+			$(".scroll-box").height(  ($(".squares-container").height()) - 76  );
 			//alert($(window).width());
 		}
 	 }
@@ -158,6 +158,22 @@ function selectActiveNum(id){
 	var link2 = document.getElementById("num2-" + id);
 	if(link2){link2.classList.add("underline");}
 }
+
+function selectAlpha(lettre){
+
+	var box = document.querySelector(".scroll-box");
+	var element = document.getElementById(lettre);
+	var offsetTop = element.offsetTop;
+	
+	box.scrollTop = offsetTop - 70;
+	
+}
+
+
+
+
+
+
 
 
 

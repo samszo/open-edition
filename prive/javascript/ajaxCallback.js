@@ -102,6 +102,53 @@ if(!jQuery.spip.load_handlers) {
 
 }
 
+/* jQuery.browser */
+jQuery.uaMatch = function( ua ) {
+	ua = ua.toLowerCase();
+
+	var match = /(chrome)[ \/]([\w.]+)/.exec( ua ) ||
+		/(webkit)[ \/]([\w.]+)/.exec( ua ) ||
+		/(opera)(?:.*version|)[ \/]([\w.]+)/.exec( ua ) ||
+		/(msie) ([\w.]+)/.exec( ua ) ||
+		ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec( ua ) ||
+		[];
+
+	return {
+		browser: match[ 1 ] || "",
+		version: match[ 2 ] || "0"
+	};
+};
+
+// Don't clobber any existing jQuery.browser in case it's different
+if ( !jQuery.browser ) {
+	matched = jQuery.uaMatch( navigator.userAgent );
+	browser = {};
+
+	if ( matched.browser ) {
+		browser[ matched.browser ] = true;
+		browser.version = matched.version;
+	}
+
+	// Chrome is Webkit, but Webkit is also Safari.
+	if ( browser.chrome ) {
+		browser.webkit = true;
+	} else if ( browser.webkit ) {
+		browser.safari = true;
+	}
+
+	jQuery.browser = browser;
+}
+
+// jQuery.getScript cache par defaut
+jQuery.getScript = function(url,callback){
+	return $.ajax({
+		url: url,
+		dataType: "script",
+		success: callback,
+		cache: true
+	});
+}
+
 /**
  * if not fully visible, scroll the page to position
  * target block at the top of page
@@ -143,7 +190,7 @@ jQuery.spip.updateReaderBuffer = function(){
 	if (!i.length) return;
 	// incrementons l'input hidden, ce qui a pour effet de forcer le rafraichissement du
 	// buffer du lecteur d'ecran (au moins dans Jaws)
-	i.attr('value',parseInt(i.attr('value'))+1);
+	i.val(parseInt(i.val())+1);
 }
 
 jQuery.fn.formulaire_setARIA = function(){
@@ -164,33 +211,41 @@ jQuery.fn.formulaire_setARIA = function(){
 jQuery.fn.formulaire_dyn_ajax = function(target) {
 	if (this.length)
 		jQuery.spip.initReaderBuffer();
-  return this.each(function() {
-	  var scrollwhensubmit = !jQuery(this).is('.noscroll');
+	return this.each(function() {
+		var scrollwhensubmit = !jQuery(this).is('.noscroll');
 		var cible = target || this;
-	  jQuery(cible).formulaire_setARIA();
+		jQuery(cible).formulaire_setARIA();
 		jQuery('form:not(.noajax):not(.bouton_action_post)', this).each(function(){
 		var leform = this;
 		var leclk,leclk_x,leclk_y;
+		var onError = function(xhr, status, error, $form){
+			jQuery(leform).ajaxFormUnbind().find('input[name="var_ajax"]').remove();
+			var msg = "Erreur";
+			if (typeof(error_on_ajaxform)!=="undefined") msg = error_on_ajaxform;
+			jQuery(leform).prepend("<p class='error ajax-error none'>"+msg+"</p>").find('.ajax-error').show('fast');
+			jQuery(cible).closest('.ariaformprop').endLoading(true);
+		}
 		jQuery(this).prepend("<input type='hidden' name='var_ajax' value='form' />")
 		.ajaxForm({
 			beforeSubmit: function(){
 				// memoriser le bouton clique, en cas de repost non ajax
 				leclk = leform.clk;
-        if (leclk) {
-            var n = leclk.name;
-            if (n && !leclk.disabled && leclk.type == "image") {
-							leclk_x = leform.clk_x;
-							leclk_y = leform.clk_y;
-            }
-        }
+				if (leclk) {
+					var n = leclk.name;
+					if (n && !leclk.disabled && leclk.type == "image") {
+						leclk_x = leform.clk_x;
+						leclk_y = leform.clk_y;
+					}
+				}
 				jQuery(cible).wrap('<div />');
 				cible = jQuery(cible).parent();
 				jQuery(cible).closest('.ariaformprop').animateLoading();
 				if (scrollwhensubmit)
 					jQuery(cible).positionner(false,false);
 			},
-			success: function(c){
-				if (c=='noajax'){
+			error: onError,
+			success: function(c, status, xhr , $form){
+				if (c.match(/^\s*noajax\s*$/)){
 					// le serveur ne veut pas traiter ce formulaire en ajax
 					// on resubmit sans ajax
 					jQuery("input[name=var_ajax]",leform).remove();
@@ -198,8 +253,8 @@ jQuery.fn.formulaire_dyn_ajax = function(target) {
 					// les reinjecter dans le dom sous forme de input hidden
 					// pour que le serveur les recoive
 					if (leclk){
-            var n = leclk.name;
-            if (n && !leclk.disabled) {
+						var n = leclk.name;
+						if (n && !leclk.disabled) {
 							jQuery(leform).prepend("<input type='hidden' name='"+n+"' value='"+leclk.value+"' />");
 							if (leclk.type == "image") {
 								jQuery(leform).prepend("<input type='hidden' name='"+n+".x' value='"+leform.clk_x+"' />");
@@ -210,6 +265,8 @@ jQuery.fn.formulaire_dyn_ajax = function(target) {
 					jQuery(leform).ajaxFormUnbind().submit();
 				}
 				else {
+					if (!c.length || c.indexOf("ajax-form-is-ok")==-1)
+						return onError.apply(this,[status, xhr , $form]);
 					// commencons par vider le cache des urls, si jamais un js au retour
 					// essaye tout de suite de suivre un lien en cache
 					// dans le doute sur la validite du cache il vaut mieux l'invalider
@@ -273,13 +330,12 @@ jQuery.fn.formulaire_dyn_ajax = function(target) {
 					// a supprimer ?
 					jQuery.spip.updateReaderBuffer();
 				}
-			},
-			iframe: jQuery.browser.msie
+			}/*,
+			iframe: jQuery.browser.msie*/
 		})
 		// previent qu'on n'ajaxera pas deux fois le meme formulaire en cas de ajaxload
 		// mais le marquer comme ayant l'ajax au cas ou on reinjecte du contenu ajax dedans
-		.addClass('noajax hasajax')
-		;
+		.addClass('noajax hasajax');
 		});
   });
 }
@@ -582,7 +638,7 @@ jQuery.spip.ajaxReload = function(blocfrag, options){
 	if (!ajax_env || ajax_env==undefined) return;
 	var href = options.href || blocfrag.attr('data-url') || blocfrag.attr('data-origin');
 	if (href && typeof href != undefined){
-		options == options || {};
+		options = options || {};
 		var callback=options.callback || null;
 		var history=options.history || false;
 		var args = options.args || {};
@@ -635,26 +691,26 @@ jQuery.fn.ajaxbloc = function() {
 	if (ajaxbloc_selecteur==undefined)
 		ajaxbloc_selecteur = '.pagination a,a.ajax';
 
-  return this.each(function() {
-	  // traiter les enfants d'abord :
-	  // un lien ajax provoque le rechargement
-	  // du plus petit bloc ajax le contenant
-	  jQuery('div.ajaxbloc',this).ajaxbloc();
+	return this.each(function() {
+		// traiter les enfants d'abord :
+		// un lien ajax provoque le rechargement
+		// du plus petit bloc ajax le contenant
+		jQuery('div.ajaxbloc',this).ajaxbloc();
 		var blocfrag = jQuery(this);
 
 		var ajax_env = blocfrag.attr('data-ajax-env');
 		if (!ajax_env || ajax_env==undefined) return;
 
-	  blocfrag.not('.bind-ajaxReload').bind('ajaxReload',function(event, options){
-		  if (jQuery.spip.ajaxReload(blocfrag,options))
+		blocfrag.not('.bind-ajaxReload').bind('ajaxReload',function(event, options){
+			if (jQuery.spip.ajaxReload(blocfrag,options))
 				// don't trig reload of parent blocks
 				event.stopPropagation();
-	  }).addClass('bind-ajaxReload')
-		  .attr('aria-live','polite').attr('aria-atomic','true');
+		}).addClass('bind-ajaxReload')
+			.attr('aria-live','polite').attr('aria-atomic','true');
 
 		// dans un formulaire, le screen reader relit tout a chaque saisie d'un caractere si on est en aria-live
-	  // mettre un aria-live="off" sur les forms inclus dans ce bloc aria-live="polite"
-	  jQuery('form',this).not('[aria-live]').attr('aria-live','off');
+		// mettre un aria-live="off" sur les forms inclus dans ce bloc aria-live="polite"
+		jQuery('form',this).not('[aria-live]').attr('aria-live','off');
 
 		jQuery(ajaxbloc_selecteur,this).not('.noajax,.bind-ajax')
 			.click(function(){return jQuery.spip.ajaxClick(blocfrag,this.href,{force:jQuery(this).is('.nocache'),history:!(jQuery(this).is('.nohistory')||jQuery(this).closest('.box_modalbox').length)});})
@@ -683,11 +739,10 @@ jQuery.fn.ajaxbloc = function() {
 				success: function(c){
 					jQuery.spip.on_ajax_loaded(blocfrag,c);
 					jQuery.spip.preloaded_urls = {}; // on vide le cache des urls car on a fait une action en bdd
-				},
-				iframe: jQuery.browser.msie
+				}/*,
+				iframe: jQuery.browser.msie*/
 			})
-			.addClass('bind-ajax') // previent qu'on n'ajaxera pas deux fois le meme formulaire en cas de ajaxload
-			;
+			.addClass('bind-ajax'); // previent qu'on n'ajaxera pas deux fois le meme formulaire en cas de ajaxload
 		});
   });
 };
@@ -786,7 +841,7 @@ jQuery.fn.animateRemove = function(callback){
 		// if target is a tr, include td childrens cause background color on tr doesn't works in a lot of browsers
 		if (sel.is('tr'))
 			sel = sel.add('>td',sel);
-		sel.addClass('remove').css({backgroundColor: color}).animate({opacity: "0.0"}, 'fast',function(){
+		sel.addClass('remove').css({backgroundColor: color}).animate({opacity: "0.0"}, 'fast', function(){
 			sel.removeClass('remove').css({backgroundColor: ''});
 			if (callback)
 				callback.apply(me);
@@ -794,6 +849,7 @@ jQuery.fn.animateRemove = function(callback){
 	}
 	return this; // don't break the chain
 }
+
 
 /**
  * animation d'un item que l'on ajoute :
@@ -851,7 +907,7 @@ function parametre_url(url,c,v,sep,force_vide){
 	if (typeof(url) == 'undefined'){
 		url = '';
 	}
-	
+
 	var p;
 	// lever l'#ancre
 	var ancre='';
@@ -905,8 +961,8 @@ function parametre_url(url,c,v,sep,force_vide){
 				na.push(r[1]+'='+u);
 				ajouts.push(r[1]);
 			}
-			/* Pour les tableaux ont laisse tomber les valeurs de départ, on
-			remplira à l'étape suivante */
+			/* Pour les tableaux ont laisse tomber les valeurs de dÃ©part, on
+			remplira Ã  l'Ã©tape suivante */
 			// else na.push(args[n]);
 		}
 		else

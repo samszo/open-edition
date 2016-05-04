@@ -1,0 +1,359 @@
+2016-04-20 20:57:53 79.89.1.172 (pid 20465) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-04-20 20:57:53 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2016-04-20 20:57:54 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_articles 18
+2016-04-20 20:57:54 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2016-04-20 20:57:55 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_auteurs_liens 21
+2016-04-20 20:57:55 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2016-04-20 20:57:55 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2016-04-20 20:57:55 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_depots 1
+2016-04-20 20:57:55 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2016-04-20 20:57:56 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-04-20 20:57:56 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_depots_plugins 475
+2016-04-20 20:57:56 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2016-04-20 20:57:56 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_documents 10
+2016-04-20 20:57:56 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2016-04-20 20:57:57 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_documents_liens 11
+2016-04-20 20:57:57 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2016-04-20 20:57:58 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2016-04-20 20:57:58 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-04-20 20:57:58 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2016-04-20 20:57:59 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_jobs 8
+2016-04-20 20:57:59 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2016-04-20 20:57:59 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2016-04-20 20:57:59 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2016-04-20 20:58:00 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_mots 31
+2016-04-20 20:58:00 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2016-04-20 20:58:00 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_mots_liens 62
+2016-04-20 20:58:00 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2016-04-20 20:58:04 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_paquets 400
+2016-04-20 20:58:05 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_paquets 529
+2016-04-20 20:58:05 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2016-04-20 20:58:05 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2016-04-20 20:58:06 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_plugins 400
+2016-04-20 20:58:06 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_plugins 499
+2016-04-20 20:58:06 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2016-04-20 20:58:06 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2016-04-20 20:58:06 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2016-04-20 20:58:07 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_rubriques 21
+2016-04-20 20:58:07 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2016-04-20 20:58:07 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2016-04-20 20:58:08 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_syndic 6
+2016-04-20 20:58:08 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2016-04-20 20:58:09 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2016-04-20 20:58:09 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_types_documents 167
+2016-04-20 20:58:10 79.89.1.172 (pid 20465) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-04-20 20:58:10 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2016-04-20 20:58:10 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_urls 45
+2016-04-20 20:58:10 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2016-04-20 20:58:11 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2016-04-20 20:58:11 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2016-04-20 20:58:11 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2016-04-20 20:58:11 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2016-04-20 20:58:12 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_auteurs 4
+2016-04-20 20:58:12 79.89.1.172 (pid 20465) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2016-04-20 20:58:12 79.89.1.172 (pid 20465) :Pri:!INFO: recopie spip_meta 148
+2016-04-20 20:58:12 79.89.1.172 (pid 20465) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
+2016-04-20 20:58:38 79.89.1.172 (pid 20476) :Pri:!INFO: Copier 31 tables de 'dump' vers ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: Conserver copieur  dans id_auteur= pour le serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_articles' sur serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_articles' sur serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_articles 18
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_auteurs_liens' sur serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_auteurs_liens 21
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_breves' sur serveur ''
+2016-04-20 20:58:39 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_breves' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_depots' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_depots' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_depots 1
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_depots_plugins' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_depots_plugins 475
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_documents' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_documents' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_documents 10
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_documents_liens' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_documents_liens' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_documents_liens 11
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_forum' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_forum' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_groupes_mots' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_jobs' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_jobs' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_jobs 8
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_jobs_liens' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_messages' sur serveur ''
+2016-04-20 20:58:40 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_messages' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_mots' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_mots' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_mots 31
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_mots_liens' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_mots_liens' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_mots_liens 62
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_paquets' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_paquets' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_paquets 400
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_paquets 529
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_petitions' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_petitions' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_plugins' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_plugins' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_plugins 400
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_plugins 499
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_referers' sur serveur ''
+2016-04-20 20:58:41 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_referers' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_referers_articles' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_referers_articles' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_rubriques' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_rubriques' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_rubriques 21
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_signatures' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_signatures' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_syndic' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_syndic' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_syndic 6
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_syndic_articles' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_types_documents' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_types_documents' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_types_documents 167
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_urls' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_urls' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_urls 45
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_versions' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_versions' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_versions_fragments' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_visites' sur serveur ''
+2016-04-20 20:58:42 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_visites' sur serveur ''
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: drop table 'spip_visites_articles' sur serveur ''
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_visites_articles' sur serveur ''
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_auteurs' sur serveur ''
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_auteurs 4
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: creation 'spip_meta' sur serveur ''
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: recopie spip_meta 127
+2016-04-20 20:58:43 79.89.1.172 (pid 20476) :Pri:!INFO: Detruire copieur id_auteur&lt;0 pour le serveur ''
+2016-04-25 11:06:59 90.58.105.119 (pid 24247) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-04-25 11:06:59 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2016-04-25 11:07:00 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_articles 18
+2016-04-25 11:07:00 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_auteurs_liens 21
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_depots 1
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2016-04-25 11:07:01 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-04-25 11:07:02 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_depots_plugins 477
+2016-04-25 11:07:02 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2016-04-25 11:07:02 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_documents 10
+2016-04-25 11:07:02 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2016-04-25 11:07:03 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_documents_liens 11
+2016-04-25 11:07:03 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2016-04-25 11:07:03 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2016-04-25 11:07:04 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-04-25 11:07:04 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2016-04-25 11:07:04 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_jobs 8
+2016-04-25 11:07:04 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2016-04-25 11:07:04 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2016-04-25 11:07:05 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2016-04-25 11:07:05 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_mots 29
+2016-04-25 11:07:05 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2016-04-25 11:07:06 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_mots_liens 62
+2016-04-25 11:07:06 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2016-04-25 11:07:09 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_paquets 400
+2016-04-25 11:07:10 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_paquets 531
+2016-04-25 11:07:10 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2016-04-25 11:07:10 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2016-04-25 11:07:11 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_plugins 400
+2016-04-25 11:07:11 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_plugins 501
+2016-04-25 11:07:11 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2016-04-25 11:07:12 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2016-04-25 11:07:12 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2016-04-25 11:07:12 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_rubriques 21
+2016-04-25 11:07:12 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2016-04-25 11:07:13 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2016-04-25 11:07:13 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_syndic 6
+2016-04-25 11:07:13 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2016-04-25 11:07:14 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2016-04-25 11:07:14 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_types_documents 167
+2016-04-25 11:07:14 90.58.105.119 (pid 24247) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2016-04-25 11:07:15 90.58.105.119 (pid 24247) :Pri:!INFO: recopie spip_urls 56
+2016-04-25 11:07:15 90.58.105.119 (pid 21453) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-04-25 11:07:15 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2016-04-25 11:07:16 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2016-04-25 11:07:16 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2016-04-25 11:07:16 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2016-04-25 11:07:16 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2016-04-25 11:07:17 90.58.105.119 (pid 21453) :Pri:!INFO: recopie spip_auteurs 4
+2016-04-25 11:07:17 90.58.105.119 (pid 21453) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2016-04-25 11:07:17 90.58.105.119 (pid 21453) :Pri:!INFO: recopie spip_meta 148
+2016-04-25 11:07:17 90.58.105.119 (pid 21453) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
+2016-05-03 15:33:08 193.54.172.101 (pid 5425) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-03 15:33:08 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2016-05-03 15:33:09 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_articles 29
+2016-05-03 15:33:09 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2016-05-03 15:33:10 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_auteurs_liens 32
+2016-05-03 15:33:10 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2016-05-03 15:33:10 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2016-05-03 15:33:11 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_depots 1
+2016-05-03 15:33:11 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2016-05-03 15:33:11 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-05-03 15:33:11 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_depots_plugins 480
+2016-05-03 15:33:11 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2016-05-03 15:33:12 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_documents 14
+2016-05-03 15:33:12 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2016-05-03 15:33:12 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_documents_liens 14
+2016-05-03 15:33:12 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2016-05-03 15:33:13 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2016-05-03 15:33:13 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-05-03 15:33:13 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2016-05-03 15:33:14 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_jobs 8
+2016-05-03 15:33:14 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2016-05-03 15:33:14 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2016-05-03 15:33:14 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2016-05-03 15:33:15 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_mots 35
+2016-05-03 15:33:15 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2016-05-03 15:33:16 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_mots_liens 116
+2016-05-03 15:33:16 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2016-05-03 15:33:19 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_paquets 400
+2016-05-03 15:33:20 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_paquets 541
+2016-05-03 15:33:20 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2016-05-03 15:33:20 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2016-05-03 15:33:21 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_plugins 400
+2016-05-03 15:33:22 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_plugins 504
+2016-05-03 15:33:22 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2016-05-03 15:33:22 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2016-05-03 15:33:22 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2016-05-03 15:33:23 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_rubriques 32
+2016-05-03 15:33:23 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2016-05-03 15:33:23 193.54.172.101 (pid 5425) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2016-05-03 15:33:24 193.54.172.101 (pid 5425) :Pri:!INFO: recopie spip_syndic 6
+2016-05-03 15:33:24 193.54.172.101 (pid 6152) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-03 15:33:24 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2016-05-03 15:33:25 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2016-05-03 15:33:25 193.54.172.101 (pid 6152) :Pri:!INFO: recopie spip_types_documents 167
+2016-05-03 15:33:25 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2016-05-03 15:33:26 193.54.172.101 (pid 6152) :Pri:!INFO: recopie spip_urls 107
+2016-05-03 15:33:26 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2016-05-03 15:33:26 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2016-05-03 15:33:26 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2016-05-03 15:33:27 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2016-05-03 15:33:27 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2016-05-03 15:33:27 193.54.172.101 (pid 6152) :Pri:!INFO: recopie spip_auteurs 4
+2016-05-03 15:33:27 193.54.172.101 (pid 6152) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2016-05-03 15:33:28 193.54.172.101 (pid 6152) :Pri:!INFO: recopie spip_meta 151
+2016-05-03 15:33:28 193.54.172.101 (pid 6152) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
+2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2016-05-04 11:26:58 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_articles 31
+2016-05-04 11:26:58 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2016-05-04 11:26:58 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_auteurs_liens 34
+2016-05-04 11:26:58 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_depots 1
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_depots_plugins 480
+2016-05-04 11:26:59 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2016-05-04 11:27:00 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_documents 14
+2016-05-04 11:27:00 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2016-05-04 11:27:01 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_documents_liens 14
+2016-05-04 11:27:01 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2016-05-04 11:27:01 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2016-05-04 11:27:02 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-05-04 11:27:02 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2016-05-04 11:27:02 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_jobs 8
+2016-05-04 11:27:02 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2016-05-04 11:27:02 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2016-05-04 11:27:03 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2016-05-04 11:27:03 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_mots 35
+2016-05-04 11:27:03 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2016-05-04 11:27:04 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_mots_liens 116
+2016-05-04 11:27:04 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2016-05-04 11:27:07 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_paquets 400
+2016-05-04 11:27:09 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_paquets 541
+2016-05-04 11:27:09 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2016-05-04 11:27:09 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2016-05-04 11:27:10 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_plugins 400
+2016-05-04 11:27:10 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_plugins 504
+2016-05-04 11:27:10 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2016-05-04 11:27:10 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2016-05-04 11:27:10 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2016-05-04 11:27:11 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_rubriques 32
+2016-05-04 11:27:11 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2016-05-04 11:27:11 90.58.107.251 (pid 20343) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2016-05-04 11:27:12 90.58.107.251 (pid 20343) :Pri:!INFO: recopie spip_syndic 6
+2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_types_documents 167
+2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_urls 109
+2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_auteurs 4
+2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_meta 151
+2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
+2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_articles' sur serveur 'dump'
+2016-05-04 11:31:00 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_articles 31
+2016-05-04 11:31:00 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_auteurs_liens' sur serveur 'dump'
+2016-05-04 11:31:01 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_auteurs_liens 34
+2016-05-04 11:31:01 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_breves' sur serveur 'dump'
+2016-05-04 11:31:01 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_depots' sur serveur 'dump'
+2016-05-04 11:31:01 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_depots 1
+2016-05-04 11:31:01 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_depots_plugins' sur serveur 'dump'
+2016-05-04 11:31:02 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_depots_plugins 400
+2016-05-04 11:31:02 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_depots_plugins 480
+2016-05-04 11:31:02 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_documents' sur serveur 'dump'
+2016-05-04 11:31:02 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_documents 14
+2016-05-04 11:31:02 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_documents_liens' sur serveur 'dump'
+2016-05-04 11:31:03 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_documents_liens 14
+2016-05-04 11:31:03 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_forum' sur serveur 'dump'
+2016-05-04 11:31:04 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_groupes_mots' sur serveur 'dump'
+2016-05-04 11:31:04 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_groupes_mots 4
+2016-05-04 11:31:04 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_jobs' sur serveur 'dump'
+2016-05-04 11:31:05 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_jobs 8
+2016-05-04 11:31:05 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_jobs_liens' sur serveur 'dump'
+2016-05-04 11:31:05 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_messages' sur serveur 'dump'
+2016-05-04 11:31:05 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_mots' sur serveur 'dump'
+2016-05-04 11:31:06 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_mots 35
+2016-05-04 11:31:06 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_mots_liens' sur serveur 'dump'
+2016-05-04 11:31:06 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_mots_liens 116
+2016-05-04 11:31:06 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_paquets' sur serveur 'dump'
+2016-05-04 11:31:10 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_paquets 400
+2016-05-04 11:31:11 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_paquets 541
+2016-05-04 11:31:11 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_petitions' sur serveur 'dump'
+2016-05-04 11:31:11 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_plugins' sur serveur 'dump'
+2016-05-04 11:31:12 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_plugins 400
+2016-05-04 11:31:12 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_plugins 504
+2016-05-04 11:31:12 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_referers' sur serveur 'dump'
+2016-05-04 11:31:13 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_referers_articles' sur serveur 'dump'
+2016-05-04 11:31:13 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_rubriques' sur serveur 'dump'
+2016-05-04 11:31:13 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_rubriques 32
+2016-05-04 11:31:13 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_signatures' sur serveur 'dump'
+2016-05-04 11:31:14 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_syndic' sur serveur 'dump'
+2016-05-04 11:31:14 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_syndic 6
+2016-05-04 11:31:14 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
+2016-05-04 11:31:15 90.58.107.251 (pid 20292) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
+2016-05-04 11:31:15 90.58.107.251 (pid 20292) :Pri:!INFO: recopie spip_types_documents 167
+2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
+2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
+2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_urls 109
+2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
+2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
+2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
+2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
+2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
+2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_auteurs 4
+2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
+2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_meta 151
+2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'

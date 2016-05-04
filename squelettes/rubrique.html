@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_section(RUBRIQUES) {id_rubrique}>
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP</title>
+		<!--[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_groupe=1}>#TITRE, </BOUCLE_keywords>" />-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+		      <INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<section class="col-lg-12 content bg-grey">
+										
+					<div class="row">
+						<div class="col-md-8 squares-container">
+							<div class="row">
+							      <BOUCLE_artsom(ARTICLES){id_rubrique}{par num titre}{0,1}>
+								<BOUCLE_squares(MOTS){id_article}>
+									<div class="col-xs-12 col-sm-6 col-md-4">
+										<div class="square bg-color-dom-#ID_MOT">
+											<a href="spip.php?page=domaine&id_mot=#ID_MOT">
+												<span class="dom-img">#LOGO_MOT</span>
+												<span class="dom-titre">#TITRE</span>
+											</a>
+										</div>
+									</div>
+								</BOUCLE_squares>
+							      </BOUCLE_artsom>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<h2 class="no-margin">Nos revues</h2>
+							
+							<BOUCLE_tableaux(RUBRIQUES){lang=#LANG}{id_parent}>
+							[(#SET{premierelettre,[(#TITRE|substr{0,1})]})]
+							[(#SET{beginby[(#GET{premierelettre}|unique)],#ARRAY})]
+							[(#SET{beginby[(#GET{premierelettre})],[(#GET{beginby[(#GET{premierelettre})]}|array_merge{#ARRAY{#TITRE,#ID_RUBRIQUE}})]})]
+							</BOUCLE_tableaux>
+							
+							<div class="alphabet">
+								<BOUCLE_alpha2(DATA){enum A,Z}>
+								<B_data2>
+									[<a href="#" onclick="selectAlpha('#VALEUR'); return false;">(#VALEUR)</a>]
+									
+									<BOUCLE_data2(DATA){source tableau, #GET{beginby#VALEUR}}{par cle}>
+										
+									</BOUCLE_data2>
+								</B_data2>
+								</BOUCLE_alpha2>
+							</div>
+							
+							<div class="scroll-box">
+
+								<BOUCLE_alpha(DATA){enum A,Z}>
+								<B_data>
+									[<h3 id="#VALEUR">(#VALEUR)</h3>]
+									<ul> 
+										<BOUCLE_data(DATA){source tableau, #GET{beginby#VALEUR}}{par cle}>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+											<li><a href="#URL_RUBRIQUE{#VALEUR}">#CLE</a></li>
+											
+										</BOUCLE_data>
+									</ul>
+								</B_data>
+								</BOUCLE_alpha>
+							
+							
+							
+							
+							<br><br>===============================<br><br><br>
+							<!-- ============================== -->
+								<BOUCLE_revuesAAA(RUBRIQUES){lang=#LANG}{racine}>
+									<BOUCLE_revues2AAA(RUBRIQUES){id_parent}{par titre}>
+										<p>#TITRE</p>
+									</BOUCLE_revues2AAA>
+								</BOUCLE_revuesAAA>
+								
+								
+							</div>
+							<script type="text/javascript">
+								//resizeScrollBox();
+							</script>
+						</div>
+					</div>
+					
+				</section>
+			</div>
+		</div>
+		
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</BOUCLE_section>
+</html>

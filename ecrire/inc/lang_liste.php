@@ -3,13 +3,12 @@
 /***************************************************************************\
  *  SPIP, Systeme de publication pour l'internet                           *
  *                                                                         *
- *  Copyright (c) 2001-2014                                                *
+ *  Copyright (c) 2001-2016                                                *
  *  Arnaud Martin, Antoine Pitrou, Philippe Riviere, Emmanuel Saint-James  *
  *                                                                         *
  *  Ce programme est un logiciel libre distribue sous licence GNU/GPL.     *
  *  Pour plus de details voir le fichier COPYING.txt ou l'aide en ligne.   *
 \***************************************************************************/
-
 
 
 /*
@@ -19,7 +18,9 @@
  http://www.loc.gov/standards/iso639-2/langcodes.html
 */
 
-if (!defined('_ECRIRE_INC_VERSION')) return;
+if (!defined('_ECRIRE_INC_VERSION')) {
+	return;
+}
 
 $GLOBALS['codes_langues'] = array(
 	'aa' => "Afar",
@@ -50,7 +51,7 @@ $GLOBALS['codes_langues'] = array(
 	'cpf_dom' => "Krey&ograve;l",
 	'cpf_hat' => "Krey&ograve;l (Peyi Dayiti)",
 	'cs' => "&#269;e&#353;tina",
-	'cy' => "Cymraeg",	# welsh, gallois
+	'cy' => "Cymraeg",  # welsh, gallois
 	'da' => "dansk",
 	'de' => "Deutsch",
 	'dz' => "Bhutani",
@@ -108,7 +109,7 @@ $GLOBALS['codes_langues'] = array(
 	'km' => "&#6039;&#6070;&#6047;&#6070;&#6017;&#6098;&#6040;&#6082;&#6042;",// Khmer
 	'kn' => "Kannada",
 	'ko' => "&#54620;&#44397;&#50612;",
-	'kok' => "&#2325;&#2379;&#2306;&#2325;&#2339;&#2368;", // Konkani
+	'kok' => "&#2325;&#2379;&#2306;&#2325;&#2339;&#2368;",
 	'ks' => "Kashmiri",
 	'ku' => "&#1705;&#1608;&#1585;&#1583;&#1740;",
 	'ky' => "Kirghiz",
@@ -175,8 +176,8 @@ $GLOBALS['codes_langues'] = array(
 	'sh_latn' => 'srpskohrvastski',
 	'sh_cyrl' => '&#1057;&#1088;&#1087;&#1089;&#1082;&#1086;&#1093;&#1088;&#1074;&#1072;&#1090;&#1089;&#1082;&#1080;',
 	'si' => "Sinhalese",
-	'sk' => "sloven&#269;ina",	// (Slovakia)
-	'sl' => "sloven&#353;&#269;ina",	// (Slovenia)
+	'sk' => "sloven&#269;ina",  // (Slovakia)
+	'sl' => "sloven&#353;&#269;ina",  // (Slovenia)
 	'sm' => "Samoan",
 	'sn' => "Shona",
 	'so' => "Somali",
@@ -220,5 +221,3 @@ $GLOBALS['codes_langues'] = array(
 	'zu' => "Zulu"
 
 );
-
-?>

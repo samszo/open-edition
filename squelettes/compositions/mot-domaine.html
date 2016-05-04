@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_principal(MOTS){id_mot}>
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - #TITRE</title>
+		<!--
+		[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_article}>#TITRE, </BOUCLE_keywords>" />
+		-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					
+					<script type="text/javascript">
+						selectActiveDom(#ID_MOT);
+					</script>
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > Couplage endommagement du béton</p>-->
+					
+					
+					<div class="row">
+						<div class="col-sm-9">
+							<h1>#TITRE</h1>
+						</div>
+						<div class="col-sm-3 align-right">
+							<div class="bloc-btn">
+								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+								<ul class="mini-submenu">
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Twitter</a></li>
+									<li><a href="#">Google +</a></li>
+									<li><a href="#">Email</a></li>
+									<li><a href="#">Export Zotero</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+					<br>
+					
+					
+					<div class="row">
+						<BOUCLE_revues(RUBRIQUES){id_mot}{type_rubrique=revue}{lang=#LANG}>
+							<div class="col-sm-6 block-deco">
+								<div class="row">
+									<div class="col-xs-3">
+										<a href="#URL_RUBRIQUE">
+										<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+											<img src="#URL_DOCUMENT"/>
+										</BOUCLE_img>
+										</a>
+									</div>
+									<div class="col-xs-9">
+										<h2><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+										<strong>Un auteur</strong>
+										<p>Université Pierre et Marie Curie, Paris</p>
+										<strong>Un auteur</strong>
+										<p>Université Pierre et Marie Curie, Paris</p>
+									</div>
+								</div>
+								<hr>
+							</div>
+						</BOUCLE_revues>
+						
+						<!--
+						<div class="col-sm-6 block-deco">
+							<div class="row">
+								<div class="col-xs-3">
+									<a href="#"><img src="#CHEMIN{images/r2.png}" alt="une revue" title="une revue"/></a>
+								</div>
+								<div class="col-xs-9">
+									<h2><a href="#">Une revue</a></h2>
+									<strong>Un auteur</strong>
+									<p>Université Pierre et Marie Curie, Paris</p>
+									<strong>Un auteur</strong>
+									<p>Université Pierre et Marie Curie, Paris</p>
+								</div>
+							</div>
+							<hr>
+						</div>
+						-->
+						
+
+						
+					</div>
+
+				</section>
+			</div>
+		</div>
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</BOUCLE_principal>
+</html>
