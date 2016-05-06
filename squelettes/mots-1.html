@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
-<BOUCLE_artPrincipal(ARTICLES){id_article}>
+<BOUCLE_principal(MOTS){id_mot}>
 	<head>
 		<meta charset="utf-8" />
 		<title>#NOM_SITE_SPIP - #TITRE</title>
@@ -18,9 +18,7 @@
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		
-		<BOUCLE_mot1(MOTS){id_groupe=1}{id_article}>
 		<INCLURE{fond=inclure/domaines-style, env}>
-		</BOUCLE_mot1>
 	</head>
 	<body>
 		<div id="ghi-lightbox-container">
@@ -36,13 +34,12 @@
 			<div class="row">
 				<nav class="col-md-3 col-lg-2 nav-left">
 
-					<INCLURE{fond=inclure/domaines-nav, id_rubrique}>
+					<INCLURE{fond=inclure/domaines-nav, env}>
 					
-					<BOUCLE_mot2(MOTS){id_groupe=1}{id_article}>
 					<script type="text/javascript">
 						selectActiveDom(#ID_MOT);
 					</script>
-					</BOUCLE_mot2>
+					
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > Couplage endommagement du béton</p>-->
@@ -82,13 +79,10 @@
 									</div>
 									<div class="col-xs-9">
 										<h2><a href="#URL_RUBRIQUE">#TITRE</a></h2>
-										<p>#REDAC_CHEF</p>
-										<!--
 										<strong>Un auteur</strong>
 										<p>Université Pierre et Marie Curie, Paris</p>
 										<strong>Un auteur</strong>
 										<p>Université Pierre et Marie Curie, Paris</p>
-										-->
 									</div>
 								</div>
 								<hr>
@@ -126,5 +120,5 @@
 			<INCLURE{fond=inclure/footer, env}>
 		</footer>
 	</body>	
-</BOUCLE_artPrincipal>
+</BOUCLE_principal>
 </html>

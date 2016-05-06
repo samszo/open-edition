@@ -1,0 +1,6 @@
+<BOUCLE_mot_principal(MOTS){id_mot}{doublons}>
+	[(#CHEMIN{mots-#ID_GROUPE.html}|?{' ',''})
+	<INCLURE{fond=mots-#ID_GROUPE}{id_mot}{self=#SELF}>]
+	[(#CHEMIN{mots-#ID_GROUPE.html}|?{'',' '})
+	<INCLURE{fond=mots}{id_mot}{self=#SELF}>]
+</BOUCLE_mot_principal>
