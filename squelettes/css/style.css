@@ -748,6 +748,66 @@ nav .bloc-btn a{
 	.alphabet{display:none;}
 }
 
+/* -------------------------------------- formulaire -------------------------------------- */
+
+
+.content form input[type=text], .content form textarea{
+	outline: 1px solid #aaa;
+	background-color:#fafafa;
+	border:0;
+	padding:6px;
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:22px;
+	margin-bottom:15px;
+	margin-top:3px;
+}
+.content form textarea{
+	min-height:140px;
+	resize: vertical;
+}
+.content form input[type=text]:focus, .content form textarea:focus{
+	outline: 2px solid #0094cb;
+	background-color:#fcfcfc;
+	-webkit-box-shadow: 1px 1px 2px 4px #eee;
+	box-shadow: 1px 1px 2px 4px #eee;
+}
+.content form input[type=submit]{
+	padding: 10px 40px 10px 40px;
+	margin: 10px 0px 10px 0px;
+	background-color:#474747;
+	color:#fff;
+	font-family:Arial, Helvetica, sans-serif;
+	display:inline-block;
+	border:0;
+}
+.content form input[type=submit]:hover{background-color:#0094cb;}
+.content form input[type=submit]:active{background-color:#00aaee;}
+
+.content select{
+	font-family:Arial, Helvetica, sans-serif;
+	padding:5px;
+	margin-bottom:15px;
+	margin-top:3px;
+	width:100%;
+}
+.content select option{
+	/*outline: 2px solid #0094cb;*/
+}
+.content form label{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:16px;
+	line-height:22px;
+}
+
+/*form input[type=file], form input[type=checkbox]{display:inline;}*/
+
+form .miniature{
+	width:80px;
+	height:auto;
+	vertical-align:middle;
+}
 
 
 /* --------------------------------------FOOTER--------------------------------------------------- */

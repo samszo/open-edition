@@ -96,17 +96,25 @@
 							<h3>Numéros de la revue</h3>
 							
 							<div class="row block-other">
-								<BOUCLE_motVol(MOTS){id_groupe=3}>
-									<div class="block-num col-sm-4">
-										<p>#TITRE - Volume #COMPTEUR_BOUCLE ?</p><br>
-										<BOUCLE_num(RUBRIQUES){id_parent}{id_mot=#ID_MOT}>
-											<a href="#URL_RUBRIQUE">#TITRE</a><br>
+							
+							
+							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
+								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>																	
+									[<div class="block-num col-sm-4"><p>(#TITRE|unique)</p>]  
+										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
+											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>[- Volume (#TITRE|unique)]<br>
+											</BOUCLE_motVol>								
+											<a href="#URL_RUBRIQUE">#TITRE</a>
 										</BOUCLE_num>
-										<br>
-									</div>
-								</BOUCLE_motVol>
-
-								
+									[<!--(#ID_MOT|unique)--></div>]								
+								</BOUCLE_motAn>
+							</BOUCLE_rubAn>																								
+											
+							
+														
+									
+									<!--  
+										-->	
 								<div class="col-lg-12">
 									<br><a href="#">Accéder à la liste complète des numéros de revues</a><br>
 								</div>
