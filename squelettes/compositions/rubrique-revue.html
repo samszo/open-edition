@@ -99,12 +99,15 @@
 							
 							
 							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
-								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>																	
+								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
+									#SET{gmAn,(#TITRE|substr{2,2})}																	
 									[<div class="block-num col-sm-4"><p>(#TITRE|unique)</p>]  
 										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
-											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>[- Volume (#TITRE|unique)]<br>
+											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
+												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
+												[- Volume (#GET{mAnNum}|unique)<br/>]
 											</BOUCLE_motVol>								
-											<a href="#URL_RUBRIQUE">#TITRE</a>
+											<a href="#URL_RUBRIQUE">#TITRE</a><br/>
 										</BOUCLE_num>
 									[<!--(#ID_MOT|unique)--></div>]								
 								</BOUCLE_motAn>
