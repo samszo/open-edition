@@ -8,6 +8,8 @@ class CrudController extends Zend_Controller_Action
     		//récupère les paramètres
     		$params = $this->_request->getParams();
 
+    		$this->view->rs = json_encode($params);
+    		
     		//enlève les paramètres Zend
     		unset($params['controller']);
     		unset($params['action']);
@@ -23,9 +25,8 @@ class CrudController extends Zend_Controller_Action
     {    	
     		//récupère les paramètres
     		$params = $this->_request->getParams();
-    		$id = $this->_getParam('recid');
-    		$obj = $this->_getParam('obj');
-
+    		$this->view->rs = json_encode($params);
+    		
     		//enlève les paramètres Zend
     		unset($params['controller']);
     		unset($params['action']);

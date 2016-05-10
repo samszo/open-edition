@@ -48,8 +48,8 @@
 					
 					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > vol 1 num 2</p>-->
 					
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="#">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
-					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="#">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					
 					<script type="text/javascript">
 						selectActiveDom(#DOM_P);
@@ -100,22 +100,28 @@
 							
 							<h3><:open_science:other_issues:> :</h3>
 							<!--<h3>Autres numéros de la revue</h3>-->
-								
-							<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
-								<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=3}{doublons}>
-									<p>#TITRE  <BOUCLE_motVolNum(MOTS){id_rubrique}{id_groupe=4}{doublons}> [- Volume (#TITRE)] </BOUCLE_motVolNum></p>
-								</BOUCLE_motVol>
-								
-								
-								<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br>
-							</BOUCLE_affiche_soeur>
+							
+							
+							<BOUCLE_RubTest(RUBRIQUES){id_enfant}>
+							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
+								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
+									#SET{gmAn,(#TITRE|substr{2,2})}																	
+									[<p>(#TITRE|unique)</p>]  
+										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
+											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
+												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
+												[<p>Volume (#GET{mAnNum}|unique)</p>]
+											</BOUCLE_motVol>								
+											<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br/>
+										</BOUCLE_num>
+									[<!--(#ID_MOT|unique)-->]								
+								</BOUCLE_motAn>
+							</BOUCLE_rubAn>
+							</BOUCLE_RubTest>
+							
 							<script type="text/javascript">
 								selectActiveNum(#ID_RUBRIQUE);
 							</script>
-								
-
-							
-							
 							<!--
 							<a href="#">2018 - volume 3</a><br>
 							<a href="#">Numéro 1</a><br>

@@ -36,9 +36,7 @@
 
 					<INCLURE{fond=inclure/domaines-nav, env}>
 					
-					<script type="text/javascript">
-						selectActiveDom(#DOM_P);
-					</script>
+					
 					
 					<br>
 					<div class="hidden-xs hidden-sm picture-100">
@@ -51,6 +49,14 @@
 				<section class="col-md-9 col-lg-10 content">
 									
 					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a></p>-->
+					
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
+					
+					
+					<script type="text/javascript">
+						selectActiveDom(#DOM_P);
+					</script>
 					
 					
 					<div class="row">
@@ -101,11 +107,11 @@
 							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
 								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
 									#SET{gmAn,(#TITRE|substr{2,2})}																	
-									[<div class="block-num col-sm-4"><p>(#TITRE|unique)</p>]  
+									[<div class="block-num col-sm-4"><h4>(#TITRE|unique)</h4>]  
 										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
 											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
 												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
-												[- Volume (#GET{mAnNum}|unique)<br/>]
+												[<p>Volume (#GET{mAnNum}|unique)</p>]
 											</BOUCLE_motVol>								
 											<a href="#URL_RUBRIQUE">#TITRE</a><br/>
 										</BOUCLE_num>
@@ -113,14 +119,11 @@
 								</BOUCLE_motAn>
 							</BOUCLE_rubAn>																								
 											
-							
-														
-									
-									<!--  
-										-->	
+								<!--
 								<div class="col-lg-12">
 									<br><a href="#">Accéder à la liste complète des numéros de revues</a><br>
 								</div>
+								-->
 							</div>
 							
 							

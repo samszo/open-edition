@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - <:resultats_recherche:></title>
+		<!--<meta name="description" content=" " />
+		<meta name="keywords" content=" " />-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		<script src="#CHEMIN{ckeditor/ckeditor.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					<script type="text/javascript">
+						//selectActiveDom(4);
+					</script>
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+					
+					<h1><:resultats_recherche:></h1>
+					<h2 class="subtitle">#RECHERCHE</h2>
+					<br>
+					
+					[(#REM) Articles trouves ]
+					<B_articles>
+					<div class="menu menu_articles">
+						#ANCRE_PAGINATION
+						<h2><:articles:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}>
+							<li><a href="#URL_ARTICLE">#TITRE</a></li>
+							</BOUCLE_articles>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_articles>
+					
+					[(#REM) Rubriques trouvees ]
+					<B_rubriques>
+					<div class="menu menu_rubriques">
+						#ANCRE_PAGINATION
+						<h2><:rubriques:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_rubriques(RUBRIQUES) {recherche} {!par points} {pagination 5}>
+							<li><a href="#URL_RUBRIQUE">#TITRE</a></li>
+							</BOUCLE_rubriques>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_rubriques>
+					
+					[(#REM) Mots-cles trouves ]
+					<B_mots>
+					<div class="menu menu_mots">
+						#ANCRE_PAGINATION
+						<h2><:mots_clefs:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_mots(MOTS) {recherche} {!par points} {pagination 5}>
+							<li><a href="#URL_MOT">#TITRE</a></li>
+							</BOUCLE_mots>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_mots>
+					
+					[(#REM) Breves trouvees ]
+					<B_breves>
+					<div class="menu menu_breves">
+						#ANCRE_PAGINATION
+						<h2><:breves:breves:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_breves(BREVES) {recherche} {!par points} {pagination 5}>
+							<li><a href="#URL_BREVE">#TITRE</a></li>
+							</BOUCLE_breves>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_breves>
+					
+					[(#REM) Messages trouves ]
+					<B_messages>
+					<div class="menu menu_comments">
+						#ANCRE_PAGINATION
+						<h2><:messages_forum:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_messages(FORUMS?) {recherche} {!par points} {pagination 5}>
+							[<li><a href="#URL_FORUM"[ title="(#TITRE|attribut_html|couper{80})"]>(#TEXTE|couper{80})</a></li>]
+							</BOUCLE_messages>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_messages>
+					
+					[(#REM) Sites web trouves ]
+					<B_sites>
+					<div class="menu menu_sites">
+						#ANCRE_PAGINATION
+						<h2><:sites_web:> (#GRAND_TOTAL)</h2>
+						<ul class="spip">
+							<BOUCLE_sites(SITES) {recherche} {!par points} {pagination 5}>
+							<li><a href="[(#ID_SYNDIC|generer_url_entite{site,'','',#CONNECT})]">#NOM_SITE</a></li>
+							</BOUCLE_sites>
+						</ul>
+						[<p class="pagination">(#PAGINATION)</p>]
+					</div>
+					</B_sites>
+							
+							
+
+
+				</section>
+			</div>
+		</div>
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</html>

@@ -59,18 +59,26 @@
 						
 						<br><br>
 						<p><:open_science:other_issues:> :</p>
-						<ul>
-							<BOUCLE_select_rub(RUBRIQUES){id_rubrique}>
-								<BOUCLE_affiche_soeur(RUBRIQUES){meme_parent}>
-									<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=3}{doublons}>
-										<li class="margin-top-10"><p>#TITRE  <BOUCLE_motVolNum(MOTS){id_rubrique}{id_groupe=4}{doublons}> [- Volume (#TITRE)] </BOUCLE_motVolNum></p></li>
-									</BOUCLE_motVol>
-									
-									
-									<li class="margin-left-10"><a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a></li>
-								</BOUCLE_affiche_soeur>
-							</BOUCLE_select_rub>
-						</ul>
+						<BOUCLE_RubTest2(RUBRIQUES){id_rubrique}>
+							<BOUCLE_RubTest(RUBRIQUES){id_enfant}>
+								<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
+									<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
+										#SET{gmAn,(#TITRE|substr{2,2})}																	
+										[<p class="margin-top-10">(#TITRE|unique)</p>]  
+											<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
+												<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
+													#SET{mAnNum,#GET{gmAn} - #TITRE}																												
+													[<p>Volume (#GET{mAnNum}|unique)</p>]
+												</BOUCLE_motVol>								
+												<a class="margin-left-10" id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br/>
+											</BOUCLE_num>
+										[<!--(#ID_MOT|unique)-->]								
+									</BOUCLE_motAn>
+								</BOUCLE_rubAn>
+							</BOUCLE_RubTest>
+						</BOUCLE_RubTest2>
+							
+						
 					</div>
 					
 				</nav>
@@ -78,8 +86,8 @@
 				
 					<!-- <p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > #TITRE</p> -->
 					  
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="#">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
-					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="#">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					  
 					
 					<h1>#TITRE</h1>
@@ -173,8 +181,8 @@
 						</div>
 						<div class="col-lg-12">
 							<!-- fil d'ariane : copier celui du haut -->
-							<p class="fil"> <BOUCLE_arianeDom2 (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="#">#TITRE</a></BOUCLE_arianeDom2> <BOUCLE_ariane2(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane2></p>
-							<B_arianeSec2><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec2(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="#">#TITRE</a> &nbsp;  </BOUCLE_arianeSec2></p><//B_arianeSec2>
+							<p class="fil"> <BOUCLE_arianeDom2 (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien3(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien3>">#TITRE</a></BOUCLE_arianeDom2> <BOUCLE_ariane2(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane2></p>
+							<B_arianeSec2><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec2(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien4(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien4>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec2></p><//B_arianeSec2>
 					  
 						</div>
 						<input type="hidden" name="altDom" id="<BOUCLE_DomId (MOTS){id_article}{id_groupe=1}{n-1,n}>#ID_MOT</BOUCLE_DomId>"/>

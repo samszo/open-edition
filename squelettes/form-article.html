@@ -121,10 +121,16 @@
 						
 						<div class="separator"></div>
 						
-						<h2>Texte de l'article</h2>
-						<textarea name="editeurtexte" id="editeurtexte" rows="10" cols="80"></textarea>
+						<h2>Texte de l'article français</h2>
+						<textarea name="editeurtexte-fr" id="editeurtexte-fr" rows="10" cols="80"></textarea>
 						<script>
-							CKEDITOR.replace( 'editeurtexte' );
+							CKEDITOR.replace( 'editeurtexte-fr' );
+						</script>
+
+						<h2>Texte de l'article anglais</h2>
+						<textarea name="editeurtexte-en" id="editeurtexte-en" rows="10" cols="80"></textarea>
+						<script>
+							CKEDITOR.replace( 'editeurtexte-en' );
 						</script>
 						<!--dans le texte il doit y avoir des titres H2 (pour le sommaire)-->
 						<!--il doit y avoir des tableaux-->
@@ -162,7 +168,7 @@
 				$("#form-article").submit(function(event) {
 					
 		            $.ajax({
-		                url: 'admin/crud/update',
+		                url: 'admin/crud/insert',
 		                type: 'post',
 		                data: $(this).serialize(),
 		                success: function(result) {

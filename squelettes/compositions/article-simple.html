@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_article(ARTICLES){id_article}>
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - #TITRE</title>
+		[<meta name="description" content="(#DESCRIPTIF|supprimer_tags|couper{250}|addslashes)" />]
+		<meta name="keywords" content="<BOUCLE_keywords(MOTS){id_article}>#TITRE, </BOUCLE_keywords>" />
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+				
+					
+					<h1>#TITRE</h1>
+					<h2 class="subtitle">#SOUSTITRE</h2>
+					
+					<div class="separator"></div>
+					
+					<br>
+					
+					
+					<div id="texte-article">
+					#TEXTE
+					</div>
+					
+					[<div class="ps">
+					(#NOTES)
+					</div>]
+					
+					
+				</section>
+			</div>
+		</div>
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-lightbox.js}"></script>
+	</body>	
+</BOUCLE_article>
+</html>
