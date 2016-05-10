@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../plugins/auto/taa/v1.3.14/prive/objets/liste/inc-articles_compacte.html
- * Date :      Wed, 23 Dec 2015 13:09:20 GMT
- * Compile :   Wed, 04 May 2016 09:29:47 GMT
+ * Date :      Fri, 15 Apr 2016 04:09:08 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   _liste_art_trie, _liste_art
  */ 
 
@@ -203,7 +203,7 @@ vide($Pile['vars'][$_zzz=(string)'class'] = alterner($Numrows['_liste_art']['com
 
 //
 // Fonction principale du squelette ../plugins/auto/taa/v1.3.14/prive/objets/liste/inc-articles_compacte.html
-// Temps de compilation total: 5.870 ms
+// Temps de compilation total: 3.804 ms
 //
 
 function html_98a3764c05c6840c1a3faf1b06120632($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

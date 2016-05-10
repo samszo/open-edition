@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../prive/squelettes/contenu/accueil.html
- * Date :      Tue, 01 Mar 2016 13:54:32 GMT
- * Compile :   Wed, 04 May 2016 09:29:47 GMT
+ * Date :      Wed, 17 Feb 2016 11:33:06 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   _haspostdate
  */ 
 
@@ -84,7 +84,7 @@ function BOUCLE_haspostdatehtml_b0086e5f40f704ca7d38dfcdffb51604(&$Cache, &$Pile
 
 //
 // Fonction principale du squelette ../prive/squelettes/contenu/accueil.html
-// Temps de compilation total: 3.290 ms
+// Temps de compilation total: 1.390 ms
 //
 
 function html_b0086e5f40f704ca7d38dfcdffb51604($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

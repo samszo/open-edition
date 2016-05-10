@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../plugins-dist/breves/prive/objets/liste/breves.html
- * Date :      Tue, 01 Mar 2016 13:54:40 GMT
- * Compile :   Wed, 04 May 2016 09:29:47 GMT
+ * Date :      Fri, 06 May 2016 08:06:00 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   _liste_bre
  */ 
 
@@ -179,7 +179,7 @@ invalideur_session($Cache, (((function_exists("autoriser")||include_spip("inc/au
 
 //
 // Fonction principale du squelette ../plugins-dist/breves/prive/objets/liste/breves.html
-// Temps de compilation total: 7.736 ms
+// Temps de compilation total: 2.474 ms
 //
 
 function html_79a102c45c2193fb149eed9af66486ae($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

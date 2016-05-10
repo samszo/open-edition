@@ -1,5 +1,5 @@
 /* #PRODUIRE{fond=ckeditor4spip.js}
-   md5:087a8bf5ee09777cdb25b8abfc77d566 */
+   md5:d2a1163df90c4a24346798ea16073d48 */
 
 
 var ckeDataProcessor;
@@ -123,7 +123,7 @@ function SpipEditor2CKEditor(editor_id){
 		.attr('disabled',true)
 		.attr('title',htmldecode('Chargement'))
 		.find('img')
-			.attr('src','http://gapai.univ-paris8.fr/open-edition/plugins/auto/ckeditor/v0.16.19/images/searching.gif');
+			.attr('src','http://localhost/open-edition/plugins/auto/ckeditor/v0.16.19/images/searching.gif');
 	jQuery(editor_id).attr('disabled',true);
 	var EdConfig={};jQuery.extend(EdConfig,CKEDITOR.ckConfig) ;
 	EdConfig.toolbar='Spip'+stack[editor_id].tb;
@@ -155,7 +155,7 @@ function SpipEditor2CKEditor(editor_id){
 		jQuery('#swapeditor_'+stack[editor_id].md5)
 			.attr('title',htmldecode('Utiliser l&#39;éditeur de SPIP'))
 			.find('img')
-				.attr('src','http://gapai.univ-paris8.fr/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor_spip.png') ;
+				.attr('src','http://localhost/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor_spip.png') ;
 		jQuery('#swapeditor_'+stack[editor_id].md5).attr('disabled',false);
 		this.setReadOnly(false);
 		this.on('dataReady', function(e){ 
@@ -193,7 +193,7 @@ function CKEditor2SpipEditor(editor_id){
 		.attr('disabled',true)
 		.attr('title',htmldecode('Chargement'))
 		.find('img')
-			.attr('src','http://gapai.univ-paris8.fr/open-edition/plugins/auto/ckeditor/v0.16.19/images/searching.gif');
+			.attr('src','http://localhost/open-edition/plugins/auto/ckeditor/v0.16.19/images/searching.gif');
 	jQuery(editor_id)
 		.attr('disabled',true)
 		.css('display','block')
@@ -202,7 +202,7 @@ function CKEditor2SpipEditor(editor_id){
 	jQuery('#swapeditor_'+stack[editor_id].md5)
 		.attr('title',htmldecode('Utiliser CKEditor'))
 		.find('img')
-			.attr('src','http://gapai.univ-paris8.fr/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor.png')
+			.attr('src','http://localhost/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor.png')
 		.end()
 		.attr('disabled',false);
 	jQuery(editor_id)
@@ -326,7 +326,7 @@ function fullInitCKEDITOR(editor_ids){
 				buttons=buttons +
 					'<button style="margin:0;width:40px;height:24px;" type="button" id="swapeditor_'+editor_md5+'" onclick="javascript:SwapEditor(\''+editor_id+'\');" title="' 
 					+htmldecode(CKEDITOR.ckeditmode=='spip'?'Utiliser CKEditor':'Utiliser l&#39;éditeur de SPIP') 
-					+'"><img src="http://gapai.univ-paris8.fr/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor.png"/></button>';
+					+'"><img src="http://localhost/open-edition/plugins/auto/ckeditor/v0.16.19/images/ckeditor.png"/></button>';
 			}
 
 	

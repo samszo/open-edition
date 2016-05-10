@@ -2,13 +2,13 @@
 
 /*
  * Squelette : ../prive/themes/spip/box_skins.css.html
- * Date :      Tue, 01 Mar 2016 13:54:33 GMT
- * Compile :   Wed, 04 May 2016 09:28:05 GMT
+ * Date :      Fri, 06 May 2016 08:06:02 GMT
+ * Compile :   Tue, 10 May 2016 14:28:46 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette ../prive/themes/spip/box_skins.css.html
-// Temps de compilation total: 2.764 ms
+// Temps de compilation total: 1.240 ms
 //
 
 function html_d75de017c85f5c7ae28ba8047ee36b83($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

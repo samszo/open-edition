@@ -1,2 +1,0 @@
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_versions - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1

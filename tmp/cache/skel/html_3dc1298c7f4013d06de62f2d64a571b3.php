@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../prive/themes/spip/picker.css.html
- * Date :      Tue, 01 Mar 2016 13:54:33 GMT
- * Compile :   Wed, 04 May 2016 09:28:05 GMT
+ * Date :      Wed, 17 Feb 2016 10:26:20 GMT
+ * Compile :   Tue, 10 May 2016 14:28:46 GMT
  * Boucles :   _objets
  */ 
 
@@ -88,7 +88,7 @@ table_valeur($Pile["vars"], (string)'petite_icone', null) .
 
 //
 // Fonction principale du squelette ../prive/themes/spip/picker.css.html
-// Temps de compilation total: 5.607 ms
+// Temps de compilation total: 1.960 ms
 //
 
 function html_3dc1298c7f4013d06de62f2d64a571b3($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../plugins/auto/taa/v1.3.14/prive/objets/liste/inc-articles_row.html
- * Date :      Wed, 23 Dec 2015 13:09:20 GMT
- * Compile :   Wed, 04 May 2016 09:29:47 GMT
+ * Date :      Fri, 15 Apr 2016 04:09:08 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   _auteurs, _art_trads, _art
  */ 
 
@@ -296,7 +296,7 @@ invalideur_session($Cache, (((function_exists("autoriser")||include_spip("inc/au
 
 //
 // Fonction principale du squelette ../plugins/auto/taa/v1.3.14/prive/objets/liste/inc-articles_row.html
-// Temps de compilation total: 13.285 ms
+// Temps de compilation total: 4.902 ms
 //
 
 function html_6b9da561aaafd6702f3a29d022809179($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

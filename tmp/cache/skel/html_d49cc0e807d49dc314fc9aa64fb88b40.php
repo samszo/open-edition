@@ -2,8 +2,8 @@
 
 /*
  * Squelette : ../plugins-dist/sites/prive/objets/liste/syndic.html
- * Date :      Tue, 01 Mar 2016 13:54:35 GMT
- * Compile :   Wed, 04 May 2016 09:29:47 GMT
+ * Date :      Fri, 06 May 2016 08:06:01 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   _articlesyndic, _liste_sites
  */ 
 
@@ -263,7 +263,7 @@ invalideur_session($Cache, (((function_exists("autoriser")||include_spip("inc/au
 
 //
 // Fonction principale du squelette ../plugins-dist/sites/prive/objets/liste/syndic.html
-// Temps de compilation total: 13.108 ms
+// Temps de compilation total: 5.581 ms
 //
 
 function html_d49cc0e807d49dc314fc9aa64fb88b40($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

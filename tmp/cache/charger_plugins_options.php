@@ -1,7 +1,7 @@
 <?php
 
 if (defined('_ECRIRE_INC_VERSION')) {
-define('_PLUGINS_HASH','4bd28e2e8f572502e87f131190737678');
+define('_PLUGINS_HASH','ab3aff22cf618e1ca6dbc0f8cabd4a01');
 include_once_check(_ROOT_PLUGINS_DIST.'petitions/petitions_options.php');
 include_once_check(_ROOT_PLUGINS_DIST.'squelettes_par_rubrique/squelettes_par_rubrique_options.php');
 include_once_check(_ROOT_PLUGINS.'auto/skeleditor/v2.7.10/skeleditor_options.php');

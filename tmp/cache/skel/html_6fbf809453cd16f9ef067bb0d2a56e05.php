@@ -2,13 +2,13 @@
 
 /*
  * Squelette : ../plugins/auto/saisies/v2.6.2/saisies.css.html
- * Date :      Thu, 28 Jan 2016 18:19:02 GMT
- * Compile :   Wed, 04 May 2016 09:28:06 GMT
+ * Date :      Fri, 06 May 2016 08:06:02 GMT
+ * Compile :   Tue, 10 May 2016 14:28:47 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette ../plugins/auto/saisies/v2.6.2/saisies.css.html
-// Temps de compilation total: 1.090 ms
+// Temps de compilation total: 0.689 ms
 //
 
 function html_6fbf809453cd16f9ef067bb0d2a56e05($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

@@ -2,13 +2,13 @@
 
 /*
  * Squelette : ../prive/themes/spip/icons.css.html
- * Date :      Tue, 01 Mar 2016 13:54:33 GMT
- * Compile :   Wed, 04 May 2016 09:28:05 GMT
+ * Date :      Fri, 06 May 2016 08:06:02 GMT
+ * Compile :   Tue, 10 May 2016 14:28:46 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette ../prive/themes/spip/icons.css.html
-// Temps de compilation total: 3.116 ms
+// Temps de compilation total: 1.047 ms
 //
 
 function html_0c8fca82ad2d1bd0edbbe2cf7494fb85($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

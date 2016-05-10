@@ -1,9 +1,9 @@
 <?php
 
 /*
- * Squelette : ../plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html
- * Date :      Wed, 23 Dec 2015 13:09:26 GMT
- * Compile :   Wed, 04 May 2016 09:28:05 GMT
+ * Squelette : plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html
+ * Date :      Fri, 15 Apr 2016 04:09:07 GMT
+ * Compile :   Tue, 10 May 2016 14:28:41 GMT
  * Boucles :   _options
  */ 
 
@@ -35,7 +35,7 @@ function BOUCLE_optionshtml_1b1e8801640b6d12631435dff7e880f5(&$Cache, &$Pile, &$
 	$iter = IterFactory::create(
 		"DATA",
 		$command,
-		array('../plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html','html_1b1e8801640b6d12631435dff7e880f5','_options',340,$GLOBALS['spip_lang'])
+		array('plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html','html_1b1e8801640b6d12631435dff7e880f5','_options',340,$GLOBALS['spip_lang'])
 	);
 	if (!$iter->err()) {
 	$SP++;
@@ -53,13 +53,13 @@ interdire_scripts(replace(table_valeur($Pile[$SP]['valeur'],'1'),'(\\.|#)')) .
 	}
 	if (defined("_BOUCLE_PROFILER")
 	AND 1000*($timer = (time()+microtime())-$timer) > _BOUCLE_PROFILER)
-		spip_log(intval(1000*$timer)."ms BOUCLE_options @ ../plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html","profiler"._LOG_AVERTISSEMENT);
+		spip_log(intval(1000*$timer)."ms BOUCLE_options @ plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html","profiler"._LOG_AVERTISSEMENT);
 	return $t0;
 }
 
 //
-// Fonction principale du squelette ../plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html
-// Temps de compilation total: 4.184 ms
+// Fonction principale du squelette plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html
+// Temps de compilation total: 2.234 ms
 //
 
 function html_1b1e8801640b6d12631435dff7e880f5($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {
@@ -485,6 +485,6 @@ _T('public|spip|ecrire:bouton_enregistrer') .
 }
 ');
 
-	return analyse_resultat_skel('html_1b1e8801640b6d12631435dff7e880f5', $Cache, $page, '../plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html');
+	return analyse_resultat_skel('html_1b1e8801640b6d12631435dff7e880f5', $Cache, $page, 'plugins/auto/ckeditor/v0.16.19/ckeditor4spip.js.html');
 }
 ?>

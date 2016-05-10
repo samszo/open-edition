@@ -2,13 +2,13 @@
 
 /*
  * Squelette : ../plugins/auto/roles/v1.8.2/prive/style_prive_plugin_roles.html
- * Date :      Wed, 23 Dec 2015 13:08:54 GMT
- * Compile :   Wed, 04 May 2016 09:28:05 GMT
+ * Date :      Fri, 06 May 2016 08:06:02 GMT
+ * Compile :   Tue, 10 May 2016 14:28:46 GMT
  * Boucles :   
  */ 
 //
 // Fonction principale du squelette ../plugins/auto/roles/v1.8.2/prive/style_prive_plugin_roles.html
-// Temps de compilation total: 0.043 ms
+// Temps de compilation total: 0.034 ms
 //
 
 function html_85a194f62ffd9d37e6a98b5a0b1c8e32($Cache, $Pile, $doublons = array(), $Numrows = array(), $SP = 0) {

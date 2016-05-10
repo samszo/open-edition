@@ -1,446 +1,122 @@
-2016-05-03 17:39:31 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 8caa8c6a05cd1edd88327e9c0921b36e.cache pour 86400 secondes
-2016-05-03 17:39:31 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 9b8f5241dfc325a4adffde507dc7f250.cache pour 86400 secondes
-2016-05-03 17:39:31 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 4a3e59f1e56c2440a190f3bb8031d9f9.cache pour 86400 secondes
-2016-05-03 17:39:34 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache cf09f922f86024b116d232f79cea6ac0.cache pour 86400 secondes
-2016-05-03 17:39:34 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 8780c4802ed80b6dd018b95aa4d707ae.cache pour 86400 secondes
-2016-05-03 17:39:34 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 16b4dee572c3a958e37cf276f33fc567.cache pour 86400 secondes
-2016-05-03 17:39:34 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 83c1de845f59cd1811e53a837bddbfc1.cache pour 86400 secondes
-2016-05-03 17:39:34 86.16.0.217 (pid 6906) :Pub:!INFO: Creation du cache 8ec397c55d6aa4b63d9b6e0b27c78c55.cache pour 86400 secondes
-2016-05-04 10:42:17 86.16.0.217 (pid 19237) :Pub:!INFO: Creation du cache 55560e93b9505535183ebc19b5495ab3.cache pour 86400 secondes
-2016-05-04 10:59:42 86.16.0.217 (pid 19242) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 10:59:42 86.16.0.217 (pid 19242) :Pub:!INFO: Creation du cache a2d2909b293b6e61493fee1c7ff5db76.cache pour 86400 secondes
-2016-05-04 10:59:42 86.16.0.217 (pid 19242) :Pub:!INFO: Creation du cache b917d2b45ecc583041b27b98ead824c9.cache pour 86400 secondes
-2016-05-04 10:59:42 86.16.0.217 (pid 19242) :Pub:!INFO: Creation du cache 802f987c7025122ceb133fef8d85bac0.cache pour 86400 secondes
-2016-05-04 10:59:42 86.16.0.217 (pid 19242) :Pub:!INFO: Creation du cache 4bf6017ffcb6ec66f8c86ab40d687d0f.cache pour 86400 secondes
-2016-05-04 10:59:43 86.16.0.217 (pid 18458) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 10:59:57 86.16.0.217 (pid 19581) :Pub:!INFO: Creation du cache 91eb9d9de950caf2bf820b81c63272df.cache pour 86400 secondes
-2016-05-04 10:59:57 86.16.0.217 (pid 19581) :Pub:!INFO: Creation du cache be5dd7215e9043163dd8bb8580a3f8dc.cache pour 86400 secondes
-2016-05-04 10:59:57 86.16.0.217 (pid 19581) :Pub:!INFO: Creation du cache e79cb2937bb4aa5d28a780252a919d2f.cache pour 86400 secondes
-2016-05-04 10:59:57 86.16.0.217 (pid 19581) :Pub:!INFO: Creation du cache 7fdeb6ab5d7fd3b1f1cc9b0a905a2bba.cache pour 86400 secondes
-2016-05-04 10:59:57 86.16.0.217 (pid 19581) :Pub:!INFO: Creation du cache 0c9614eb17ee73a2037f46161b47ea79.cache pour 86400 secondes
-2016-05-04 11:02:49 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache 401bb0fef187c739bde1d8bc2a5333c4.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 7db34733ac1db0ce387f3f41af1e39ad.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache d45c8764d5776f9563c6aa4199ce3315.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache b8902a73a955884834e75e9a2f0d5486.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 8c650d65b3f4bcc20fd704f8a281d38c.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache 7db34733ac1db0ce387f3f41af1e39ad.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache d45c8764d5776f9563c6aa4199ce3315.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache b8902a73a955884834e75e9a2f0d5486.cache pour 86400 secondes
-2016-05-04 11:02:54 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache 8c650d65b3f4bcc20fd704f8a281d38c.cache pour 86400 secondes
-2016-05-04 11:02:59 90.58.107.251 (pid 19865) :Pub:!INFO: Creation du cache 2ea99c59f42f870f26cce9f155497c02.cache pour 86400 secondes
-2016-05-04 11:03:03 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache c9720ad354b8c57a90d724715cf997f5.cache pour 86400 secondes
-2016-05-04 11:03:03 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 5f062f9449f56d9c14fcdb057a380247.cache pour 86400 secondes
-2016-05-04 11:03:03 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 551d3a85732954326523e2f0159f98e7.cache pour 86400 secondes
-2016-05-04 11:03:03 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 81b9998e273ffcbdbbf5fdbff8fc17c9.cache pour 86400 secondes
-2016-05-04 11:03:03 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache f34e505afffcb9156bad07d72a3da329.cache pour 86400 secondes
-2016-05-04 11:03:05 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 6460caf20f550a5f427ae1bb2a429230.cache pour 86400 secondes
-2016-05-04 11:03:05 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 27c5946edd99235d1e253fb6f896908b.cache pour 86400 secondes
-2016-05-04 11:03:05 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 1d2263e51dd760736122069bd0d678fc.cache pour 86400 secondes
-2016-05-04 11:03:05 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache d84c02636937aa0fa966a6eb4ae40288.cache pour 86400 secondes
-2016-05-04 11:03:05 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 9f100f80aaa406f65c60ab3f53946633.cache pour 86400 secondes
-2016-05-04 11:03:07 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 551d3a85732954326523e2f0159f98e7.cache pour 86400 secondes
-2016-05-04 11:03:21 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 9f100f80aaa406f65c60ab3f53946633.cache pour 86400 secondes
-2016-05-04 11:03:50 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache fdaaad5fde17ef81fe4be8e792a499c4.cache pour 86400 secondes
-2016-05-04 11:03:50 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 4d25864a7afdf5b44e1d2d48f5562a90.cache pour 86400 secondes
-2016-05-04 11:03:50 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 6ece039a8af8fd408ed47682dbf6ba08.cache pour 86400 secondes
-2016-05-04 11:03:50 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache ac6b078d2f3a898c91bb9856cbd61777.cache pour 86400 secondes
-2016-05-04 11:03:50 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache bba103c5fe483c2404bf6f97e852f91c.cache pour 86400 secondes
-2016-05-04 11:03:51 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache faa7c1d56b2ae7dbb267cc9690c0aff0.cache pour 86400 secondes
-2016-05-04 11:03:51 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache bda989882500f95b6b15904d031c5e4b.cache pour 86400 secondes
-2016-05-04 11:04:45 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 1abdce1c9d84ec55eb8a464cc6cb884d.cache pour 86400 secondes
-2016-05-04 11:04:45 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 45dffb0f8360463206ff9dcd7b467a54.cache pour 86400 secondes
-2016-05-04 11:04:46 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache a7277883cdb61d5e8693232bc65b84fb.cache pour 86400 secondes
-2016-05-04 11:04:46 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache a17deca1f30131622e415c26d55a4256.cache pour 86400 secondes
-2016-05-04 11:04:46 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 8378dd8b5dcb687d78083ca101b9aa48.cache pour 86400 secondes
-2016-05-04 11:04:46 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 782496bf308335d9e36e92f67badfaf6.cache pour 86400 secondes
-2016-05-04 11:04:46 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 959897c72ea7700a81435de69b65ccec.cache pour 86400 secondes
-2016-05-04 11:15:41 90.58.107.251 (pid 20094) :Pub:!INFO: Creation du cache d2dadbad29cb5abf1197331a2ee8f1d6.cache pour 86400 secondes
-2016-05-04 11:15:41 90.58.107.251 (pid 20094) :Pub:!INFO: Creation du cache f5d4f71318e7481b1df517763aa5236e.cache pour 86400 secondes
-2016-05-04 11:15:41 90.58.107.251 (pid 20094) :Pub:!INFO: Creation du cache 274f5f0da41f8280b2a1e078b983472d.cache pour 86400 secondes
-2016-05-04 11:15:41 90.58.107.251 (pid 20094) :Pub:!INFO: Creation du cache 590a0d1856edf7f2fd233f94f9968eb7.cache pour 86400 secondes
-2016-05-04 11:15:42 90.58.107.251 (pid 20093) :Pub:!INFO: Creation du cache d2dadbad29cb5abf1197331a2ee8f1d6.cache pour 86400 secondes
-2016-05-04 11:15:42 90.58.107.251 (pid 20093) :Pub:!INFO: Creation du cache d6bd8d1b7663c40c1872b91960642b9f.cache pour 86400 secondes
-2016-05-04 11:15:42 90.58.107.251 (pid 20093) :Pub:!INFO: Creation du cache be83b25e03a29d7c48616f194f688976.cache pour 86400 secondes
-2016-05-04 11:15:42 90.58.107.251 (pid 20093) :Pub:!INFO: Creation du cache 3c78f15526e500a977d792e335e40508.cache pour 86400 secondes
-2016-05-04 11:16:33 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 66cd49954d3a10ae7cfd2c1122c207fd.cache pour 86400 secondes
-2016-05-04 11:16:33 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 454b51eeb5b6f32c5b62cafe0545c236.cache pour 86400 secondes
-2016-05-04 11:16:33 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache b3fe145f3847fc01824a66cdd35e2d59.cache pour 86400 secondes
-2016-05-04 11:16:33 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 12c76a7f6b33e8f337152401d1918be6.cache pour 86400 secondes
-2016-05-04 11:16:33 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache b32643a835c1ffcb4559e969eb704fb6.cache pour 86400 secondes
-2016-05-04 11:16:34 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 66cd49954d3a10ae7cfd2c1122c207fd.cache pour 86400 secondes
-2016-05-04 11:16:34 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache 088ada987bee581833590e082c5cfa43.cache pour 86400 secondes
-2016-05-04 11:16:34 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache b5715f986ba2d95de9549d200140e33b.cache pour 86400 secondes
-2016-05-04 11:16:34 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache a6b73b5300d2a34d868e6555e74cac22.cache pour 86400 secondes
-2016-05-04 11:16:34 90.58.107.251 (pid 19237) :Pub:!INFO: Creation du cache e9891aa015c3e8ab8d787033232ae9e9.cache pour 86400 secondes
-2016-05-04 11:16:39 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 0863c3e08cb869a5426764524807921a.cache pour 86400 secondes
-2016-05-04 11:16:39 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 45f42a04adcc2ac66f2f331c359e4800.cache pour 86400 secondes
-2016-05-04 11:16:44 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache b115cd38618415f16a45a6c05d703171.cache pour 86400 secondes
-2016-05-04 11:16:44 90.58.107.251 (pid 18458) :Pub:!INFO: Creation du cache 1d3a1a03b20cb20c943567a6cc4e5281.cache pour 86400 secondes
-2016-05-04 11:18:32 90.58.107.251 (pid 20229) :Pub:!INFO: Creation du cache a88c632d6bca5cc88c525f5ca6503d0f.cache pour 86400 secondes
-2016-05-04 11:18:32 90.58.107.251 (pid 20229) :Pub:!INFO: Creation du cache a29859778bcd20a5d8a5b3621049b127.cache pour 86400 secondes
-2016-05-04 11:18:47 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 4b83b67f4576d9c9a017949dcc168ee6.cache pour 86400 secondes
-2016-05-04 11:18:47 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache a1a6396b4ccb8ac8f0cd71a7055a3053.cache pour 86400 secondes
-2016-05-04 11:18:47 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 6b05f968d39feaf8990b3443b5604b68.cache pour 86400 secondes
-2016-05-04 11:18:47 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 8455013376bfc09a6769190b38eb6acb.cache pour 86400 secondes
-2016-05-04 11:18:47 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 4d4fba4a7ce2fb61261aafa31e2ee4e9.cache pour 86400 secondes
-2016-05-04 11:20:06 90.58.107.251 (pid 20276) :Pub:!INFO: Creation du cache 0117dc1a254508f9dc0d82993eed0aa9.cache pour 86400 secondes
-2016-05-04 11:20:06 90.58.107.251 (pid 20276) :Pub:!INFO: Creation du cache 5411b328063d19c169b6e0ce3e4b49f5.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 4dd788545f33c86dcb77185cd8a99363.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache eba7ea440884aa3b73f660887f144ff0.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 100db78c6a9305bdf9f567749ffdb6e0.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache ddfbf10275017ff50675f630786db97d.cache pour 86400 secondes
-2016-05-04 11:20:28 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 11:21:31 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache 2a96a455ccbc66ab3a53c53160a43124.cache pour 86400 secondes
-2016-05-04 11:21:31 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache b9da5e78da025452c9cfeae5ccf648fa.cache pour 86400 secondes
-2016-05-04 11:21:33 90.58.107.251 (pid 19243) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 11:21:33 90.58.107.251 (pid 19243) :Pub:!INFO: Creation du cache db134fcf3663c17895bee0ccb60ba298.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 19243) :Pub:!INFO: Creation du cache 0ed3a4b544bdf20b163f64ddc8dfeadc.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 19243) :Pub:!INFO: Creation du cache 1ab04281c277f8f0f9c00b4341c35e5b.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 19243) :Pub:!INFO: Creation du cache cdf8449c119fe8834b53c7a5dfa37889.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache be50b3b49a3c87705e115f42a647004b.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache b5aaff406e93e029c2d625c6bd98a8db.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache 7cdc2616ab3e2c7f07ad01f1c78ef96c.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache 7fe2f6e7e1fa55320e44339ccead9c2d.cache pour 86400 secondes
-2016-05-04 11:21:34 90.58.107.251 (pid 20223) :Pub:!INFO: Creation du cache cfe24d8cb73e7f242fa6a5f39880f06a.cache pour 86400 secondes
-2016-05-04 11:23:05 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 3c03d58e1bc8ac863b0b22e75e751ebd.cache pour 86400 secondes
-2016-05-04 11:23:05 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 56f51db75f471e32409c9fd3af4afe60.cache pour 86400 secondes
-2016-05-04 11:23:05 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 8d03deced065b5043c6ac97d26adef67.cache pour 86400 secondes
-2016-05-04 11:23:05 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 5c57cca39d10d108c25f9ab5c3122c1b.cache pour 86400 secondes
-2016-05-04 11:23:05 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache a3f865a34526f981a69d8b998a8f736e.cache pour 86400 secondes
-2016-05-04 11:23:08 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 68cd78943953f4b48a7a1aa41d78128e.cache pour 86400 secondes
-2016-05-04 11:23:08 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 3a5cb5d00cc0be9c41e705be1f0d167a.cache pour 86400 secondes
-2016-05-04 11:23:08 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 8964b8e22b0c3ef5a664f6ef556e0bdb.cache pour 86400 secondes
-2016-05-04 11:23:08 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 391722a40f5ce99f34d5e9a77dcebf23.cache pour 86400 secondes
-2016-05-04 11:23:08 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 6e2dcf4f9b9ccfbf98deda89cd9cb158.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 9f95f4a50a7765715f481a623739ea5f.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 6aaf997be6b02c2ec1246a62ee3b7189.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache ddd08b0626ba9b5b7a9a894a8f468c2c.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 8f1f8a51ed9b352c38cd32bb2680640f.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 1bf7574f51158b6dfb204e0e0d04c753.cache pour 86400 secondes
-2016-05-04 11:23:09 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 9f95f4a50a7765715f481a623739ea5f.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 9f95f4a50a7765715f481a623739ea5f.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 7d68717af28b1c5383595791e209200b.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 6fa790a06c64e9def1ab986d35a6a573.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 4e56353a7be58dc71b51a7cdc1fd157a.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20275) :Pub:!INFO: Creation du cache 9e1abe044efcbb3811049164bfbac998.cache pour 86400 secondes
-2016-05-04 11:23:11 90.58.107.251 (pid 20097) :Pub:!INFO: Creation du cache 9f95f4a50a7765715f481a623739ea5f.cache pour 86400 secondes
-2016-05-04 11:23:15 90.58.107.251 (pid 20275) :Pri:!INFO: Creation du cache ca8e6aeb34965d083386e49f10c71d7a.cache pour 86400 secondes
-2016-05-04 11:23:27 90.58.107.251 (pid 19244) :Pri:!INFO: Creation du cache f31020cb9112d6834755050c6b2a3fcb.cache pour 86400 secondes
-2016-05-04 11:25:53 90.58.107.251 (pid 20338) :Pri:!INFO: Creation du cache 90a0c7f907f4c13b94207af954cff348.cache pour 86400 secondes
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:!INFO: Vider 31 tables sur serveur 'dump' : spip_articles, spip_auteurs, spip_auteurs_liens, spip_breves, spip_depots, spip_depots_plugins, spip_documents, spip_documents_liens, spip_forum, spip_groupes_mots, spip_jobs, spip_jobs_liens, spip_messages, spip_meta, spip_mots, spip_mots_liens, spip_paquets, spip_petitions, spip_plugins, spip_referers, spip_referers_articles, spip_rubriques, spip_signatures, spip_syndic, spip_syndic_articles, spip_types_documents, spip_urls, spip_versions, spip_versions_fragments, spip_visites, spip_visites_articles
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_articles - 
-DELETE FROM spip_articles - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_articles - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_auteurs - 
-DELETE FROM spip_auteurs - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_auteurs - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_auteurs_liens - 
-DELETE FROM spip_auteurs_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_auteurs_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_breves - 
-DELETE FROM spip_breves - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_breves - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_depots - 
-DELETE FROM spip_depots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_depots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_depots_plugins - 
-DELETE FROM spip_depots_plugins - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_depots_plugins - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_documents - 
-DELETE FROM spip_documents - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_documents - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_documents_liens - 
-DELETE FROM spip_documents_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_documents_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_forum - 
-DELETE FROM spip_forum - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_forum - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_groupes_mots - 
-DELETE FROM spip_groupes_mots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_groupes_mots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_jobs - 
-DELETE FROM spip_jobs - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_jobs - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_jobs_liens - 
-DELETE FROM spip_jobs_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_jobs_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_messages - 
-DELETE FROM spip_messages - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_messages - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_mots - 
-DELETE FROM spip_mots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_mots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_mots_liens - 
-DELETE FROM spip_mots_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_mots_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_paquets - 
-DELETE FROM spip_paquets - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_paquets - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_petitions - 
-DELETE FROM spip_petitions - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_petitions - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_plugins - 
-DELETE FROM spip_plugins - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_plugins - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_rubriques - 
-DELETE FROM spip_rubriques - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_rubriques - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_signatures - 
-DELETE FROM spip_signatures - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_signatures - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_syndic - 
-DELETE FROM spip_syndic - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_syndic - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_syndic_articles - 
-DELETE FROM spip_syndic_articles - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_syndic_articles - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_types_documents - 
-DELETE FROM spip_types_documents - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_types_documents - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_urls - 
-DELETE FROM spip_urls - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_urls - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: no such table: spip_versions - 
-DELETE FROM spip_versions - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:26:56 90.58.107.251 (pid 20343) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
-2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_syndic_articles' sur serveur 'dump'
-2016-05-04 11:27:13 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_types_documents' sur serveur 'dump'
-2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_types_documents 167
-2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
-2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_urls 109
-2016-05-04 11:27:14 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
-2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
-2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
-2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
-2016-05-04 11:27:15 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
-2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_auteurs 4
-2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
-2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: recopie spip_meta 151
-2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
-2016-05-04 11:27:16 90.58.107.251 (pid 20348) :Pri:!INFO: Creation du cache 9f891540ee292f923c893fd4bbcd6522.cache pour 86400 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 353caa4ea41e1a258d376e623c2d2271.cache pour 604800 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 6b0662c7c915cc7f96e14e062c075b71.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 1117010836916b9b726b3854884672eb.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache a6124cca2892e190a601ce0dc28ae832.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 43be1d78d621d255542882c2dac0a9a2.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache e27ef8fc239c3165e5f7d9e3b46c4769.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 8011c1e4658316a3de5f7eb68c17bada.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 196117a1d4e243883b4d1e1b8ff4b510.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache b44da47803bfd160616cbd0764843039.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 4b872ff3973a2d29ef1d220d4d159768.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache d5d0dcdb0d50fcb73c503da5ff7f1ff9.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 0c7d3a04ebc0c32d0df5f9308f98e849.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache b399414259c86f3fc61eb70fbf8eb958.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 1fdcd646d93f8d9f8b699582302f5610.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 0883f25a880253c6941291701c2f3d11.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 4a56ab2671a36966967a73072292bd8c.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 65c9a2707c8a2939cf069108181a18f2.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache e9ff386a053878cab62d2f12ed0b2190.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache a3ee3fef3504986ad159a24720c0eccd.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 373d1deaeda0de37199e9e1b16f4557e.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 80b8213afd71d459c09593603701fb31.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 8efccc69147e730de150c35507bdea3b.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache da155b6ac885991d0edb81e12030a1be.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 17d90c08cf7411e930a929c6c736c345.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache f2a8d41d4c6d4ede475d9c5b0f56c502.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 82666840349be5267b0418d94987a84b.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 16229e05c04cbef998881542492b5153.cache pour 360000 secondes
-2016-05-04 11:28:05 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache a9d31b3331f3952cc51945fe0165e4a8.cache pour 360000 secondes
-2016-05-04 11:28:06 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache e3861715317dc2ebc36fd3e0c737c71c.cache pour 360000 secondes
-2016-05-04 11:28:06 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 7d12770f00cbce8bb5ab3263ea1ae201.cache pour 604800 secondes
-2016-05-04 11:28:07 90.58.107.251 (pid 20097) :Pri:!INFO: Creation du cache 9f891540ee292f923c893fd4bbcd6522.cache pour 86400 secondes
-2016-05-04 11:28:17 90.58.107.251 (pid 20343) :Pri:!INFO: Creation du cache 75e57322a47f2d8af79bc445e03c9197.cache pour 86400 secondes
-2016-05-04 11:29:28 90.58.107.251 (pid 20401) :Pri:!INFO: Creation du cache da706fbdc27d412c09cc991c97f727f3.cache pour 86400 secondes
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:!INFO: Vider 31 tables sur serveur 'dump' : spip_articles, spip_auteurs, spip_auteurs_liens, spip_breves, spip_depots, spip_depots_plugins, spip_documents, spip_documents_liens, spip_forum, spip_groupes_mots, spip_jobs, spip_jobs_liens, spip_messages, spip_meta, spip_mots, spip_mots_liens, spip_paquets, spip_petitions, spip_plugins, spip_referers, spip_referers_articles, spip_rubriques, spip_signatures, spip_syndic, spip_syndic_articles, spip_types_documents, spip_urls, spip_versions, spip_versions_fragments, spip_visites, spip_visites_articles
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_articles - 
-DELETE FROM spip_articles - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_articles - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_auteurs - 
-DELETE FROM spip_auteurs - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_auteurs - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_auteurs_liens - 
-DELETE FROM spip_auteurs_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_auteurs_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_breves - 
-DELETE FROM spip_breves - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_breves - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_depots - 
-DELETE FROM spip_depots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_depots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_depots_plugins - 
-DELETE FROM spip_depots_plugins - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_depots_plugins - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_documents - 
-DELETE FROM spip_documents - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_documents - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_documents_liens - 
-DELETE FROM spip_documents_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_documents_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_forum - 
-DELETE FROM spip_forum - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_forum - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_groupes_mots - 
-DELETE FROM spip_groupes_mots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_groupes_mots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_jobs - 
-DELETE FROM spip_jobs - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_jobs - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_jobs_liens - 
-DELETE FROM spip_jobs_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_jobs_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_messages - 
-DELETE FROM spip_messages - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_messages - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_mots - 
-DELETE FROM spip_mots - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_mots - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_mots_liens - 
-DELETE FROM spip_mots_liens - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_mots_liens - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_paquets - 
-DELETE FROM spip_paquets - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_paquets - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_petitions - 
-DELETE FROM spip_petitions - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_petitions - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_plugins - 
-DELETE FROM spip_plugins - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_plugins - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_rubriques - 
-DELETE FROM spip_rubriques - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_rubriques - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_signatures - 
-DELETE FROM spip_signatures - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_signatures - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_syndic - 
-DELETE FROM spip_syndic - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_syndic - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_syndic_articles - 
-DELETE FROM spip_syndic_articles - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_syndic_articles - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_types_documents - 
-DELETE FROM spip_types_documents - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_types_documents - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_urls - 
-DELETE FROM spip_urls - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_urls - query inconnue - /var/www/open-edition/ecrire/base/connect_sql.php L168 [sql_error(),spip_sql_erreur(),sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: no such table: spip_versions - 
-DELETE FROM spip_versions - /var/www/open-edition/ecrire/base/dump.php L367 [sql_delete(),base_vider_tables_destination_copie(),base_copier_tables(),inc_sauvegarder_dist(),action_sauvegarder_dist(),traiter_appels_actions()]
-2016-05-04 11:30:59 90.58.107.251 (pid 20292) :Pri:ERREUR: Erreur sqlite HY000 / 1
-2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: Copier 31 tables de '' vers 'dump'
-2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_urls' sur serveur 'dump'
-2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_urls 109
-2016-05-04 11:31:16 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_versions' sur serveur 'dump'
-2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_versions_fragments' sur serveur 'dump'
-2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_visites' sur serveur 'dump'
-2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_visites_articles' sur serveur 'dump'
-2016-05-04 11:31:17 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_auteurs' sur serveur 'dump'
-2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_auteurs 4
-2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: creation 'spip_meta' sur serveur 'dump'
-2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: recopie spip_meta 151
-2016-05-04 11:31:18 90.58.107.251 (pid 20411) :Pri:!INFO: Pas de destruction copieur sur serveur 'dump'
-2016-05-04 11:31:19 90.58.107.251 (pid 20411) :Pri:!INFO: Creation du cache 01fabb2f57ad5d32127e1a98663485ba.cache pour 86400 secondes
-2016-05-04 11:32:22 90.58.107.251 (pid 20401) :Pri:!INFO: Creation du cache 50c45b142db67ec5454aad549407a17e.cache pour 86400 secondes
-2016-05-04 11:33:55 90.58.107.251 (pid 20407) :Pri:!INFO: Creation du cache 7c9560be4f094f5e44b0d67d955b99a7.cache pour 86400 secondes
+2016-05-10 16:28:41 ::1 (pid 7188) :Pub:!INFO: Creation du cache ced3ff6ca17477267e5a5f6a61ce86d9.cache pour 86400 secondes
+2016-05-10 16:28:41 ::1 (pid 7188) :Pub:!INFO: Creation du cache bde5fd073b8b92656bab4f835d42020a.cache pour 3600 secondes
+2016-05-10 16:28:41 ::1 (pid 7188) :Pub:!INFO: Creation du cache eafa384578c13c0f7f5f3ea45f48a7fa.cache pour 86400 secondes
+2016-05-10 16:28:41 ::1 (pid 7188) :Pub:!INFO: Creation du cache 9a347ced5d731359e2ed40b08b583269.cache pour 3600 secondes
+2016-05-10 16:28:41 ::1 (pid 22945) :Pub:!INFO: Creation du cache a963a07d193c428323cffb73e2685b47.cache pour 604800 secondes
+2016-05-10 16:28:41 ::1 (pid 24931) :Pub:!INFO: Creation du cache 34362d22f50d5c7ec795fb204bc2c7e3.cache pour 604800 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache a8703c3f0b84af26fb3cf1228f2595d6.cache pour 604800 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache d5776f81f9a76c65925640e8d9c26ea9.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache de3d621d3121310492c3acfbc7866093.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 90e8af82a012b1a141276c58f1fa8bb7.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 2077d62b3243c78b7421585e74bed5e1.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache e3c8d996063f99a74f9180ae0101d332.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache c96ee94b7e8ce68eaa0cf7f3abcca629.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 5bee4eb92afc3ef0e6799e6d27fd4867.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache aa32a12379707d6cd603a12942a1ba74.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 81985e05188ddf2ca667b18c0faba494.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache c07aa6f6d8aa2c9ee9a7d2dc48c82fd5.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 109623bf2bf19e784c8d0f52532dec92.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 838ac1a668a291f7a9e631b73af561f9.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 3b9a97d99af93c05b48aacbbfdd2c4e4.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 41afe999811cddee46978f4b2435e3f0.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache c767f40bd7a70732a955fc52eff9a586.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 388a692c3d66333be720738847536480.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 63970f6de7fc2beff2e25c22629e5bbc.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 0a4e0fdd8cd3847e77c6cd9eb327523b.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 355fdd74f1eb69e16f0c9d595d04575f.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache d9d5f205b2e3693f53c9a5394939802b.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 56dedcc52b83a80e6cfa27dce8b1b9c5.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache e335f1f0a56314e0c57ee1e642576e6f.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache 63da5427a9445296566bba96e06d431f.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache b61215681ba71f37eb1e0e7217da65dc.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache f40426ed3792219fa5ba0a638f47051b.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache c4c8aca420219e76068fc250a7c7278b.cache pour 360000 secondes
+2016-05-10 16:28:46 ::1 (pid 24931) :Pri:!INFO: Creation du cache c9af737cea2e65c5285ec6bf81b15f4a.cache pour 360000 secondes
+2016-05-10 16:28:47 ::1 (pid 24931) :Pri:!INFO: Creation du cache e6c2edea9e449241c9f55344b6106354.cache pour 360000 secondes
+2016-05-10 16:28:47 ::1 (pid 24931) :Pri:!INFO: Creation du cache ed5c88301f89e375bf7fc3ac17d9f2bd.cache pour 604800 secondes
+2016-05-10 16:28:47 ::1 (pid 24931) :Pri:!INFO: Creation du cache f2860ed3719aa62a232bd55909d9f65c.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 438a1d84b12093daa0097853a24f8357.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 6479eba56c712413a5223fc68a627902.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache fbcb13c8f3fb61a0487ce72e542a7607.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache dc14199cbc1678d673ecb146f2522d64.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 438a1d84b12093daa0097853a24f8357.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache 6479eba56c712413a5223fc68a627902.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache fbcb13c8f3fb61a0487ce72e542a7607.cache pour 86400 secondes
+2016-05-10 16:28:55 ::1 (pid 7186) :Pub:!INFO: Creation du cache dc14199cbc1678d673ecb146f2522d64.cache pour 86400 secondes
+2016-05-10 16:28:58 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:28:58 ::1 (pid 7186) :Pub:!INFO: Creation du cache ba7d46f6081aacb4e9f0b647dc6a7c86.cache pour 86400 secondes
+2016-05-10 16:28:58 ::1 (pid 7186) :Pub:!INFO: Creation du cache 3508175524acd98796c2cacf576cb266.cache pour 86400 secondes
+2016-05-10 16:28:58 ::1 (pid 7186) :Pub:!INFO: Creation du cache e55585c9b8e4b9381e2adba4d1a45055.cache pour 86400 secondes
+2016-05-10 16:28:58 ::1 (pid 7186) :Pub:!INFO: Creation du cache 124786fb48536c41f91303098fe39256.cache pour 86400 secondes
+2016-05-10 16:28:59 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:28:59 ::1 (pid 7186) :Pub:!INFO: Creation du cache 8add615ed2c8f995bbd43cb8f3cc139e.cache pour 86400 secondes
+2016-05-10 16:28:59 ::1 (pid 7186) :Pub:!INFO: Creation du cache 28a6d286fcf5914aae62d0587adbb2ca.cache pour 86400 secondes
+2016-05-10 16:28:59 ::1 (pid 7186) :Pub:!INFO: Creation du cache 59921be5225033930af3bf455734bd6a.cache pour 86400 secondes
+2016-05-10 16:28:59 ::1 (pid 7186) :Pub:!INFO: Creation du cache 8b5e838f564aaf1e83c29d3c296135a0.cache pour 86400 secondes
+2016-05-10 16:29:01 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:29:01 ::1 (pid 7186) :Pub:!INFO: Creation du cache cef961bccabb712ca64a8b0bfa28a1ca.cache pour 86400 secondes
+2016-05-10 16:29:01 ::1 (pid 7186) :Pub:!INFO: Creation du cache d6c0979273a7426c6f0b7d84e2a0b272.cache pour 86400 secondes
+2016-05-10 16:29:01 ::1 (pid 7186) :Pub:!INFO: Creation du cache 0c81ae14decfeac015fd3a20028cad8d.cache pour 86400 secondes
+2016-05-10 16:29:01 ::1 (pid 7186) :Pub:!INFO: Creation du cache a48674af2cb29ba50222440de5cb7566.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache 26012f81c1dc3c82c6a747528522ae29.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache e3c12e5052f14a7c57315dfdb8482bba.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache 8487914bd820d8fe05e975937f1e19af.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache feca1fc2919bd370afe8bb772f41731c.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache 26012f81c1dc3c82c6a747528522ae29.cache pour 86400 secondes
+2016-05-10 16:29:23 ::1 (pid 22887) :Pub:!INFO: Creation du cache e3c12e5052f14a7c57315dfdb8482bba.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache 8487914bd820d8fe05e975937f1e19af.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache feca1fc2919bd370afe8bb772f41731c.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache 93432fc35101373d912d443ff5fe2bd6.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache 33b70b85f17dddb9e6984316facce53d.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache 818f71e7fc6ce31196b2ee22aa04b8db.cache pour 86400 secondes
+2016-05-10 16:29:24 ::1 (pid 22887) :Pub:!INFO: Creation du cache b089ee836320d08e7870e059c5e61115.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 8014c47998934071f2655979e06238df.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache d1040fbd95e140dee84d3ae4c0db2878.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 3ed5186727fb7737da42c201666e530c.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache c7dc31e9e40f4922bfdb44d687a51854.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 8014c47998934071f2655979e06238df.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache d1040fbd95e140dee84d3ae4c0db2878.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache 3ed5186727fb7737da42c201666e530c.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7202) :Pub:!INFO: Creation du cache c7dc31e9e40f4922bfdb44d687a51854.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7187) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7187) :Pub:!INFO: Creation du cache 8014c47998934071f2655979e06238df.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7187) :Pub:!INFO: Creation du cache d1040fbd95e140dee84d3ae4c0db2878.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7187) :Pub:!INFO: Creation du cache 3ed5186727fb7737da42c201666e530c.cache pour 86400 secondes
+2016-05-10 16:36:40 ::1 (pid 7187) :Pub:!INFO: Creation du cache c7dc31e9e40f4922bfdb44d687a51854.cache pour 86400 secondes
+2016-05-10 16:37:11 ::1 (pid 22943) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 2de807a5afcc513faa23b81caa50baec.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 40e1240cb11b64f4cbd8462479a7b93f.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 2c770a91ab815e80f4cd0fbab629164d.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache ffa92f128dd3fd96cae5cb35659ece21.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 48156deebba37b6d0e5e0fb0531dc27a.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 1f5cd4ab80b917d964bec4ee3eecc0ca.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache a078b4e4614786e4864cef449c4a89d8.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache ce92d63436442f2c1fb38aa65e247e3c.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 48156deebba37b6d0e5e0fb0531dc27a.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache 1f5cd4ab80b917d964bec4ee3eecc0ca.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache a078b4e4614786e4864cef449c4a89d8.cache pour 86400 secondes
+2016-05-10 16:37:12 ::1 (pid 22943) :Pub:!INFO: Creation du cache ce92d63436442f2c1fb38aa65e247e3c.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache a370e9970965b03504a734f3dc9ddf7d.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 413ea074b47b9c937f008ff30ebe52b4.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 74a5bf2e574836e02e41c8a54ae7e8e8.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 6359344f70ec3ece5eebcff2e18713c2.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 1173c6dc511cd2133b88dc3b142a32e4.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache c0dd3826e4d79888f512e9e844233cb9.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 9dece8dc4c4ecdc5fba93f71c970e77e.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 96feabe1f48ca2c0dfe6126e6f7ce143.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 4559beaf7c557ee56f79bb040f2e2d6a.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 1173c6dc511cd2133b88dc3b142a32e4.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache c0dd3826e4d79888f512e9e844233cb9.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 9dece8dc4c4ecdc5fba93f71c970e77e.cache pour 86400 secondes
+2016-05-10 16:38:03 ::1 (pid 7186) :Pub:!INFO: Creation du cache 96feabe1f48ca2c0dfe6126e6f7ce143.cache pour 86400 secondes
