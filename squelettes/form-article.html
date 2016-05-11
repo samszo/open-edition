@@ -13,6 +13,7 @@
 		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/jquery.chained.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		<script src="#CHEMIN{ckeditor/ckeditor.js}"></script>
 		
@@ -58,23 +59,20 @@
 								
 								
 								<p><strong>Choix de la revue</strong></p>
-								<select name="revue">
+								<select id="revue" name="revue">
 									<option value="" selected="selected" disabled>Choisir --></option>
-									<BOUCLE_selectRevue(RUBRIQUES){tout}{type_rubrique=revue}>
-										<option value="#ID_RUBRIQUE">#TITRE</option>
+									<BOUCLE_selectRevue(RUBRIQUES){tout}{type_rubrique=revue}{par titre}>
+										<option value="#ID_RUBRIQUE">#TITRE (#LANG)</option>
 									</BOUCLE_selectRevue>
 								</select>
 								
 								
 								<p><strong>Choix du numéro</strong></p>
-								<select name="numero">
-									<option value="aucun">Pas dans la liste ?</option>
-									<BOUCLE_selectNumero(RUBRIQUES){tout}{type_rubrique=numero}>
-										<option value="#ID_RUBRIQUE">#TITRE</option>
+								<select id="numero" name="numero">
+									<option value="aucun">Choisir une revue --></option>
+									<BOUCLE_selectNumero(RUBRIQUES){tout}{type_rubrique IN 'numero','numero_special'}{par num titre}{doublons}>
+										<option value="<BOUCLE_tradNum(RUBRIQUES){traduction}{'-'}>#ID_RUBRIQUE-#LANG</BOUCLE_tradNum>" class="#ID_PARENT">#TITRE (<BOUCLE_motNumAn(MOTS){id_rubrique}{id_groupe=3}>#TITRE</BOUCLE_motNumAn>)</option>
 									</BOUCLE_selectNumero>
-									<BOUCLE_selectNumeroSp(RUBRIQUES){tout}{type_rubrique=numero_special}>
-										<option value="#ID_RUBRIQUE">#TITRE</option>
-									</BOUCLE_selectNumeroSp>
 								</select>
 							</div>
 							<div class="col-lg-6">
@@ -138,16 +136,25 @@
 						<!--il peut y avoir des centaines d'images ( les formules seront gérer en image)-->
 						<!--notes de bas de page[[avec la syntaxe de spip]]-->
 						
-						
-						<br>
+						<div class="separator"></div>
 						<!--les mots clefs de l'article ( français anglais )-->
-						<p>Les mots clefs de l'article : ici </p>
-						<br> <br>
+						<div class="row">
+							<div class="col-lg-6">
+								<p><strong>Les mots clefs français</strong></p>
+								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
+								<textarea name="mc-fr"></textarea>
+							</div>
+							<div class="col-lg-6">
+								<p><strong>Les mots clefs anglais</strong></p>
+								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
+								<textarea name="mc-en"></textarea>
+							</div>
+						</div>
 						
-
+						<div class="separator"></div>
 						<p><strong>Les auteurs et leurs appartenances </strong></p>
-						<p>Auteur : appartenance, email; Auteur : appartenance, email;</p>
-						<textarea name="texte"></textarea>
+						<p>Auteur, appartenance, email; Auteur, appartenance, email;</p>
+						<textarea name="auteurs"></textarea>
 						
 						<input type="submit" value="Envoyer"/>
 						
@@ -180,6 +187,8 @@
 		            });
 			        return false;
 				});
+				
+				$("#numero").chained("#revue");			
 			});
 		</script>
 	
