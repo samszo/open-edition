@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - Nouvel article</title>
+		<!--<meta name="description" content=" " />
+		<meta name="keywords" content=" " />-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		<script src="#CHEMIN{ckeditor/ckeditor.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					<script type="text/javascript">
+						//selectActiveDom(4);
+					</script>
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+					
+					<h1>Nouvel article</h1>
+					<br>
+					
+					
+					[(#SESSION{id_auteur}|oui) 
+						#FORMULAIRE_TEST
+					]
+					
+					<script>
+						//CKEDITOR.replace( 'text_area' );
+					</script>
+
+
+				</section>
+			</div>
+		</div>
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</html>

@@ -84,11 +84,29 @@
 				</nav>
 				<section class="col-md-9 col-lg-8 content">
 				
-					<!-- <p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > #TITRE</p> -->
 					  
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
-					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
-					  
+					<p class="fil"> <!-- Fil d'ariane -->
+						<BOUCLE_ParentDom(RUBRIQUES){id_rubrique}> 
+							<BOUCLE_ParentParentDom(RUBRIQUES){id_enfant}> 
+								<BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}>
+									<a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a>
+								</BOUCLE_arianeDom> 
+							</BOUCLE_ParentParentDom>
+						</BOUCLE_ParentDom>
+						<BOUCLE_ariane(HIERARCHIE){id_article}>  
+							<a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a>
+						</BOUCLE_ariane>
+					</p>
+					<!-- Les domaines secondaires -->
+					<BOUCLE_ParentDom2(RUBRIQUES){id_rubrique}> 
+					<BOUCLE_ParentParentDom2(RUBRIQUES){id_enfant}> 					
+						<B_arianeSec>
+							<p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p>
+						<//B_arianeSec>
+					</BOUCLE_ParentParentDom2>
+					</BOUCLE_ParentDom2>
+					
+
 					
 					<h1>#TITRE</h1>
 					<h2 class="subtitle">#SOUSTITRE</h2>
@@ -180,15 +198,32 @@
 
 						</div>
 						<div class="col-lg-12">
-							<!-- fil d'ariane : copier celui du haut -->
-							<p class="fil"> <BOUCLE_arianeDom2 (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien3(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien3>">#TITRE</a></BOUCLE_arianeDom2> <BOUCLE_ariane2(HIERARCHIE){id_article}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane2></p>
-							<B_arianeSec2><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec2(MOTS){id_article}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien4(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien4>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec2></p><//B_arianeSec2>
+							<!-- fil d'ariane : copie de celui du haut de la page -->
+							<p class="fil"> <!-- Fil d'ariane -->
+								<BOUCLE_ParentDomCopie(RUBRIQUES){id_rubrique}> 
+									<BOUCLE_ParentParentDomCopie(RUBRIQUES){id_enfant}> 
+										<BOUCLE_arianeDomCopie (MOTS){id_groupe=1}{id_mot=#DOM_P}>
+											<a class="arianeDom" href="<BOUCLE_arianeDomLienCopie(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLienCopie>">#TITRE</a>
+										</BOUCLE_arianeDomCopie> 
+									</BOUCLE_ParentParentDomCopie>
+								</BOUCLE_ParentDomCopie>
+								<BOUCLE_arianeCopie(HIERARCHIE){id_article}>  
+									<a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a>
+								</BOUCLE_arianeCopie>
+							</p>
+							<!-- Les domaines secondaires (copie de la boucle du haut de la page) -->
+							<BOUCLE_ParentDom2Copie(RUBRIQUES){id_rubrique}> 
+							<BOUCLE_ParentParentDom2Copie(RUBRIQUES){id_enfant}> 					
+								<B_arianeSecCopie>
+									<p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSecCopie(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2Copie(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2Copie>">#TITRE</a> &nbsp;  </BOUCLE_arianeSecCopie></p>
+								<//B_arianeSecCopie>
+							</BOUCLE_ParentParentDom2Copie>
+							</BOUCLE_ParentDom2Copie>
 					  
 						</div>
 						<input type="hidden" name="altDom" id="<BOUCLE_DomId (MOTS){id_article}{id_groupe=1}{n-1,n}>#ID_MOT</BOUCLE_DomId>"/>
 						<script type="text/javascript">
-							/*selectActiveDom(<BOUCLE_DomId2 (MOTS){id_article}{id_groupe=1}{n-1,n}>#ID_MOT</BOUCLE_DomId2>);*/
-							selectActiveDom(#DOM_P);
+							selectActiveDom(<BOUCLE_ParentDom3(RUBRIQUES){id_rubrique}><BOUCLE_ParentParentDom3(RUBRIQUES){id_enfant}>#DOM_P</BOUCLE_ParentParentDom3></BOUCLE_ParentDom3>);
 						</script>
 					</div>
 				</section>
