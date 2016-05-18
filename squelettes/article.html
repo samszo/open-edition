@@ -37,7 +37,7 @@
 					<div class="hidden-xs hidden-sm">
 					
 						<!--
-						<p><span class="btn-keywords-fr">Mots-clefs</span> | <span class="btn-keywords-en">Keywords</span></p>
+						<p><span class="btn-keywords-fr">Mots-clés</span> | <span class="btn-keywords-en">Keywords</span></p>
 						<div class="keywords keywords-fr">
 							<a href="#">Modélisation numérique</a>
 							<a href="#">mécanique</a>
@@ -82,34 +82,63 @@
 					</div>
 					
 				</nav>
-				<section class="col-md-9 col-lg-8 content">
+				<section class="col-md-9 col-lg-10 content">
 				
-					  
-					<p class="fil"> <!-- Fil d'ariane -->
-						<BOUCLE_ParentDom(RUBRIQUES){id_rubrique}> 
-							<BOUCLE_ParentParentDom(RUBRIQUES){id_enfant}> 
-								<BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}>
-									<a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a>
-								</BOUCLE_arianeDom> 
-							</BOUCLE_ParentParentDom>
-						</BOUCLE_ParentDom>
-						<BOUCLE_ariane(HIERARCHIE){id_article}>  
-							<a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a>
-						</BOUCLE_ariane>
-					</p>
-					<!-- Les domaines secondaires -->
-					<BOUCLE_ParentDom2(RUBRIQUES){id_rubrique}> 
-					<BOUCLE_ParentParentDom2(RUBRIQUES){id_enfant}> 					
-						<B_arianeSec>
-							<p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p>
-						<//B_arianeSec>
-					</BOUCLE_ParentParentDom2>
-					</BOUCLE_ParentDom2>
-					
+					<div class="row">
+						<div class="col-sm-8 col-md-7 col-lg-8">
+							<p class="fil"> <!-- Fil d'ariane -->
+								<BOUCLE_ParentDom(RUBRIQUES){id_rubrique}> 
+									<BOUCLE_ParentParentDom(RUBRIQUES){id_enfant}> 
+										<BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}>
+											<a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a>
+										</BOUCLE_arianeDom> 
+									</BOUCLE_ParentParentDom>
+								</BOUCLE_ParentDom>
+								<BOUCLE_ariane(HIERARCHIE){id_article}>  
+									<a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a>
+								</BOUCLE_ariane>
+							</p>
+							<!-- Les domaines secondaires -->
+							<BOUCLE_ParentDom2(RUBRIQUES){id_rubrique}> 
+							<BOUCLE_ParentParentDom2(RUBRIQUES){id_enfant}> 					
+								<B_arianeSec>
+									<p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p>
+								<//B_arianeSec>
+							</BOUCLE_ParentParentDom2>
+							</BOUCLE_ParentDom2>
+							
 
-					
-					<h1>#TITRE</h1>
-					<h2 class="subtitle">#SOUSTITRE</h2>
+							
+							<h1>#TITRE</h1>
+							<h2 class="subtitle">#SOUSTITRE</h2>
+						</div>
+						<div class="col-sm-4 col-md-5 col-lg-4 align-right">
+							<div class="center-aaa">
+								<!--
+								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> #TITRE </a> &nbsp; <br>
+								<a href="#URL_ARTICLE" title="#TITRE"> #TITRE <span class="glyphicon glyphicon-chevron-right"></span> </a> 
+								-->
+								<BOUCLE_article_precedent(ARTICLES) {id_rubrique} {!par date} {precedent}>
+									<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; <br>						
+								</BOUCLE_article_precedent>
+								<BOUCLE_article_suivant(ARTICLES) {id_rubrique} {!par date} {suivant}>
+									<a href="#URL_ARTICLE" title="#TITRE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
+								</BOUCLE_article_suivant>
+							</div>
+							<br>
+							<div class="bloc-btn">
+								<a href="[(#URL_PAGE{spipdf}|parametre_url{spipdf,article_pdf}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{nom_fichier,article_#ID_ARTICLE})]"><:open_science:download_pdf:> </a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+								<ul class="mini-submenu">
+									<li><a href="#" target="_blank">Facebook</a></li>
+									<li><a href="#" target="_blank">Twitter</a></li>
+									<li><a href="#" target="_blank">Google +</a></li>
+									<li><a href="#" target="_blank">Email</a></li>
+									<li><a href="#" target="_blank">Export Zotero</a></li>
+								</ul>
+							</div>
+						</div>
+							
+					</div>
 					
 					<div class="separator"></div>
 					<BOUCLE_sousTitreTrad(ARTICLES){traduction}{lang!=#LANG}>
@@ -133,11 +162,11 @@
 						<p class="doi"> <multi>[fr]Publié le [en]Published on </multi> [(#DATE|jour)] [(#DATE|nom_mois)] [(#DATE|annee)] &nbsp; DOI : <a href="#">#DOI</a></p>
 					
 					<div class="block-tabs">
-						<div class="h-tab"><h3 id="ht-1" class="active"><multi>[fr]Résumé[en]Abstract</multi></h3><h3 id="ht-2"><multi>[fr]Abstract[en]Résumé</multi></h3><h3 id="ht-3"><multi>[fr]Mots-clefs[en]Keywords</multi></h3><h3 id="ht-4"><multi>[fr]Keywords[en]Mots-clefs</multi></h3></div>
-						<p class="tab-1">
+						<div class="h-tab"><h3 id="ht-1" class="active"><multi>[fr]Résumé[en]Abstract</multi></h3><h3 id="ht-2"><multi>[fr]Abstract[en]Résumé</multi></h3><h3 id="ht-3"><multi>[fr]Mots-clés[en]Keywords</multi></h3><h3 id="ht-4"><multi>[fr]Keywords[en]Mots-clés</multi></h3></div>
+						<p class="tab-1 align-justify">
 							[(#DESCRIPTIF|supprimer_tags)]
 						</p>
-						<p class="tab-2">
+						<p class="tab-2 align-justify">
 							<BOUCLE_abstract(ARTICLES){traduction}{lang!=#LANG}>
 								[(#DESCRIPTIF|supprimer_tags)]
 							</BOUCLE_abstract>
@@ -227,58 +256,6 @@
 						</script>
 					</div>
 				</section>
-				<nav class="hidden-md hidden-sm hidden-xs col-lg-2 nav-right">
-						<div class="nav-fixed">
-							<div class="center-aaa">
-								<!--
-								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> #TITRE </a> &nbsp; <br>
-								<a href="#URL_ARTICLE" title="#TITRE"> #TITRE <span class="glyphicon glyphicon-chevron-right"></span> </a> 
-								-->
-								<BOUCLE_article_precedent(ARTICLES) {id_rubrique} {!par date} {precedent}>
-									<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; <br>						
-								</BOUCLE_article_precedent>
-								<BOUCLE_article_suivant(ARTICLES) {id_rubrique} {!par date} {suivant}>
-									<a href="#URL_ARTICLE" title="#TITRE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
-								</BOUCLE_article_suivant>
-							</div>
-							<br>
-							<div class="bloc-btn">
-								<a href="[(#URL_PAGE{spipdf}|parametre_url{spipdf,article_pdf}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{nom_fichier,article_#ID_ARTICLE})]"><:open_science:download_pdf:> </a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu">
-									<li><a href="#" target="_blank">Facebook</a></li>
-									<li><a href="#" target="_blank">Twitter</a></li>
-									<li><a href="#" target="_blank">Google +</a></li>
-									<li><a href="#" target="_blank">Email</a></li>
-									<li><a href="#" target="_blank">Export Zotero</a></li>
-								</ul>
-							</div>
-							
-							<br>
-							<!--
-							<ul class="sommaire-nav">
-								<li><a href="#">Introduction</a></li>
-								<li><a href="#">1. Le design de l’organisation apprenante</a></li>
-								<li><a href="#">2. Proposition d’un design organisationnel pour le management des connaissances</a></li>
-								<li><a href="#">3. Format de page</a></li>
-								<li><a href="#">4. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">5. Les notes de bas de page</a></li>
-								<li><a href="#">6. Figures et tableaux</a></li>
-								<li><a href="#">7. Formules</a></li>
-								<li><a href="#">8. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">9. Remarque ou note</a></li>
-								<li><a href="#">10. Titre des paragraphes ou titre</a></li>
-								<li><a href="#">Conclusion</a></li>
-							</ul>
-							-->
-							
-							<ul class="sommaire-nav">
-							</ul>
-							<script type="text/javascript">
-								sommaireNav();
-							</script>
-							
-						</div>
-				</nav>
 			</div>
 		</div>
 		
@@ -287,7 +264,7 @@
 			<div class="row">
 				<!--
 				<div class="col-sm-6">
-					<p><span class="btn-keywords-fr">Mots-clefs</span> | <span class="btn-keywords-en">Keywords</span></p>
+					<p><span class="btn-keywords-fr">Mots-clés</span> | <span class="btn-keywords-en">Keywords</span></p>
 					<div class="keywords keywords-fr">
 						<a href="#">Modélisation numérique</a>
 						<a href="#">mécanique</a>

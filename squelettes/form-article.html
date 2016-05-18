@@ -44,50 +44,27 @@
 					<h1>Nouvel article</h1>
 					<br>
 					
-					<form id="form-article" class="form-author">
+					<form id="form-article" class="form-author" enctype="multipart/form-data">
 					
 						<div class="row">
 						
-							<div class="col-lg-6">
-								<p><strong>Le domaine principal</strong></p>
-								<select name="dom-p">
-									<option value="" selected="selected" disabled>Choisir --></option>
-									<BOUCLE_menuDomSelect(MOTS){id_groupe=1}>
-										<option value="#ID_MOT">#TITRE</option> 
-									</BOUCLE_menuDomSelect>
-								</select>
-								
-								
+							<div class="col-lg-12">
+							
 								<p><strong>Choix de la revue</strong></p>
 								<select id="revue" name="revue">
-									<option value="" selected="selected" disabled>Choisir --></option>
+									<option value="rien" selected="selected" disabled>Choisir --></option>
 									<BOUCLE_selectRevue(RUBRIQUES){tout}{type_rubrique=revue}{par titre}>
 										<option value="#ID_RUBRIQUE">#TITRE (#LANG)</option>
 									</BOUCLE_selectRevue>
 								</select>
 								
 								
-								<p><strong>Choix du numéro</strong></p>
-								<select id="numero" name="numero">
-									<option value="aucun">Choisir une revue --></option>
-									<BOUCLE_selectNumero(RUBRIQUES){tout}{type_rubrique IN 'numero','numero_special'}{par num titre}{doublons}>
-										<option value="<BOUCLE_tradNum(RUBRIQUES){traduction}{'-'}>#ID_RUBRIQUE-#LANG</BOUCLE_tradNum>" class="#ID_PARENT">#TITRE (<BOUCLE_motNumAn(MOTS){id_rubrique}{id_groupe=3}>#TITRE</BOUCLE_motNumAn>)</option>
-									</BOUCLE_selectNumero>
-								</select>
-							</div>
-							<div class="col-lg-6">
 								
-								<p><strong>Le ou les domaines</strong></p>
-								
-								<BOUCLE_menuDomCheckBox(MOTS){id_groupe=1}>
-									<label><input type="checkbox" id="checkbox-#ID_MOT" value="#ID_MOT">  #TITRE  </label><br>
-								</BOUCLE_menuDomCheckBox>
 								
 							</div>
 						</div>
 
 					
-						<div class="separator"></div>
 					
 					
 						<div class="row">
@@ -109,32 +86,28 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<p>Résumé Français</p>
-								<textarea name="resume-fr"></textarea>
+								<textarea name="resume-fr" id="resume-fr"></textarea>
 							</div>
 							<div class="col-lg-6">
 								<p>Résumé Anglais (abstract)</p>
-								<textarea name="resume-en"></textarea>
+								<textarea name="resume-en" id="resume-en"></textarea>
 							</div>
 						</div>
 						
-						<div class="separator"></div>
 						
-						<h2>Texte de l'article français</h2>
-						<textarea name="editeurtexte-fr" id="editeurtexte-fr" rows="10" cols="80"></textarea>
+						<!--<h2>Article en PDF</h2>
+						<input name="pdf" type="file" id="input-pdf"/>-->
 						<script>
-							CKEDITOR.replace( 'editeurtexte-fr' );
+							/*
+							var inputPdf = document.getElementById('input-pdf');
+							inputPdf.addEventListener("change", function(){
+								if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert('Vous devez choisir un fichier PDF.'); }
+							
+							}, true);
+							*/
 						</script>
+						
 
-						<h2>Texte de l'article anglais</h2>
-						<textarea name="editeurtexte-en" id="editeurtexte-en" rows="10" cols="80"></textarea>
-						<script>
-							CKEDITOR.replace( 'editeurtexte-en' );
-						</script>
-						<!--dans le texte il doit y avoir des titres H2 (pour le sommaire)-->
-						<!--il doit y avoir des tableaux-->
-						<!--il doit y avoir des caractères spéciaux-->
-						<!--il peut y avoir des centaines d'images ( les formules seront gérer en image)-->
-						<!--notes de bas de page[[avec la syntaxe de spip]]-->
 						
 						<div class="separator"></div>
 						<!--les mots clefs de l'article ( français anglais )-->
@@ -142,12 +115,12 @@
 							<div class="col-lg-6">
 								<p><strong>Les mots clefs français</strong></p>
 								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
-								<textarea name="mc-fr"></textarea>
+								<textarea name="mc-fr" id="mc-fr"></textarea>
 							</div>
 							<div class="col-lg-6">
 								<p><strong>Les mots clefs anglais</strong></p>
 								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
-								<textarea name="mc-en"></textarea>
+								<textarea name="mc-en" id="mc-en"></textarea>
 							</div>
 						</div>
 						
@@ -158,7 +131,6 @@
 						
 						<input type="submit" value="Envoyer"/>
 						
-						<!--le champ DOI ?-->
 						
 
 
@@ -173,19 +145,60 @@
 		<script>
 			$(document).ready(function() {
 				$("#form-article").submit(function(event) {
+					var erreur = "";
 					
-		            $.ajax({
-		                url: 'admin/crud/insert',
-		                type: 'post',
-		                data: $(this).serialize(),
-		                success: function(result) {
-				    		    console.log(result)
-		                },
-				    	    	error: function(error){
-				    		    console.log(error.responseText)
-				    	    	},            				                
-		            });
-			        return false;
+					var listeRevue = document.getElementById("revue");
+					if(listeRevue.options[listeRevue.selectedIndex].value == "rien"){erreur = "\n - Choisissez la revue.";}
+
+					
+					/*alert(inputPdf.value);*/
+					/*
+					if (inputPdf.value == ""){ erreur += "\n - Vous devez envoyer l'article en PDF"; }
+					else if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ erreur += "\n - L'article doit être au format PDF"; }
+					*/
+					
+					
+					if(document.getElementsByName("titre-fr")[0].value == ""){erreur += "\n - Renseignez le titre en Français.";}
+					if(document.getElementsByName("titre-en")[0].value == ""){erreur += "\n - Renseignez le titre en Anglais.";}
+					
+					if(document.getElementById("resume-fr").value == "" ){erreur += "\n - Renseignez le résumé en Français.";}
+					if(document.getElementById("resume-en").value == "" ){erreur += "\n - Renseignez le résumé en Anglais.";}
+					
+					
+					var nbrMotsFr = document.getElementById("mc-fr").value.split(",").length;
+					if(document.getElementById("mc-fr").value == "" ){erreur += "\n - Renseignez au moins un mot-clef en Français.";}
+					else if(nbrMotsFr > 15 ){erreur += "\n - Maximum 15 Mots-Clefs Français";}
+					
+					var nbrMotsEn = document.getElementById("mc-en").value.split(",").length;
+					if(document.getElementById("mc-en").value == "" ){erreur += "\n - Renseignez au moins un mot-clef en Anglais.";}
+					else if(nbrMotsEn > 15 ){erreur += "\n - Maximum 15 Mots-Clefs Anglais";}
+					
+					/*alert(  ((document.getElementById("mc-fr").value.length ) / nbrMotsFr) );*/
+
+					
+					
+					if(erreur != "")
+					{
+						alert("Veuillez compléter le formulaire, s.v.p. \n" + erreur);
+					}
+					else if(erreur == "")
+					{
+						$.ajax({
+							url: 'admin/crud/insert',
+							type: 'post',
+							data: $(this).serialize(),
+							success: function(result) {
+									//alert("OK : " + result);
+									console.log(result)
+									window.location.href="spip.php?page=form-article-ok";
+							},
+									error: function(error){
+									alert("Erreur : " + error.responseText);
+									console.log(error.responseText)
+							},            				                
+						});
+					}
+					return false;
 				});
 				
 				$("#numero").chained("#revue");			

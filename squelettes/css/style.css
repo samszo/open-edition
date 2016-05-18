@@ -205,6 +205,7 @@ body{ background-color:#e2e2e2; }
 .center{text-align:center;}
 .align-right{text-align:right;}
 .align-left{text-align:left;}
+.align-justify{text-align:justify;}
 .picture-100 img{
 	width:100%;
 	height:auto;

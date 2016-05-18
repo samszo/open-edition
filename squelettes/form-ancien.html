@@ -48,7 +48,7 @@
 					
 						<div class="row">
 						
-							<div class="col-lg-12">
+							<div class="col-lg-6">
 							
 								<p><strong>Choix de la revue</strong></p>
 								<select id="revue" name="revue">
@@ -58,13 +58,37 @@
 									</BOUCLE_selectRevue>
 								</select>
 								
+								<p>Le domaine principal<strong> (à supprimer)</strong></p>
+								<select name="dom-p">
+									<option value="" selected="selected" disabled>Choisir -></option>
+									<BOUCLE_menuDomSelect(MOTS){id_groupe=1}>
+										<option value="#ID_MOT">#TITRE</option> 
+									</BOUCLE_menuDomSelect>
+								</select>
 								
+								
+								
+							</div>
+							<div class="col-lg-6">
+								<p>Choix du numéro<strong> (à supprimer (l'article est enregistré dans le dernier numéro))</strong></p>
+								<select id="numero" name="numero">
+									<option value="rien">Choisir une revue --></option>
+									<BOUCLE_selectNumero(RUBRIQUES){tout}{type_rubrique IN 'numero','numero_special'}{par num titre}{doublons}>
+										<option value="<BOUCLE_tradNum(RUBRIQUES){traduction}{'-'}>#ID_RUBRIQUE-#LANG</BOUCLE_tradNum>" class="#ID_PARENT">#TITRE (<BOUCLE_motNumAn(MOTS){id_rubrique}{id_groupe=3}>#TITRE</BOUCLE_motNumAn>)</option>
+									</BOUCLE_selectNumero>
+								</select>
+								
+								<p>Le ou les domaines<strong> (à supprimer)</strong></p>
+								<BOUCLE_menuDomCheckBox(MOTS){id_groupe=1}>
+									<label><input type="checkbox" id="checkbox-#ID_MOT" value="#ID_MOT">  #TITRE  </label><br>
+								</BOUCLE_menuDomCheckBox>
 								
 								
 							</div>
 						</div>
 
 					
+						<div class="separator"></div>
 					
 					
 						<div class="row">
@@ -94,8 +118,9 @@
 							</div>
 						</div>
 						
-						
-						<!--<h2>Article en PDF</h2>
+						<div class="separator"></div>
+						<!--
+						<h2>Article en PDF</h2>
 						<input name="pdf" type="file" id="input-pdf"/>-->
 						<script>
 							/*
@@ -103,11 +128,20 @@
 							inputPdf.addEventListener("change", function(){
 								if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert('Vous devez choisir un fichier PDF.'); }
 							
-							}, true);
-							*/
+							}, true);*/
 						</script>
 						
+						<h2>Texte de l'article français (à supprimer)</h2>
+						<textarea name="editeurtexte-fr" id="editeurtexte-fr" rows="10" cols="80"></textarea>
+						<script>
+							CKEDITOR.replace( 'editeurtexte-fr' );
+						</script>
 
+						<h2>Texte de l'article anglais (à supprimer)</h2>
+						<textarea name="editeurtexte-en" id="editeurtexte-en" rows="10" cols="80"></textarea>
+						<script>
+							CKEDITOR.replace( 'editeurtexte-en' );
+						</script>
 						
 						<div class="separator"></div>
 						<!--les mots clefs de l'article ( français anglais )-->
@@ -149,13 +183,14 @@
 					
 					var listeRevue = document.getElementById("revue");
 					if(listeRevue.options[listeRevue.selectedIndex].value == "rien"){erreur = "\n - Choisissez la revue.";}
-
+					/*
+					var listeNumero = document.getElementById("numero");
+					if(listeNumero.options[listeNumero.selectedIndex].value == "rien"){erreur += "\n - Choisissez le numéro.";}*/
 					
 					/*alert(inputPdf.value);*/
 					/*
 					if (inputPdf.value == ""){ erreur += "\n - Vous devez envoyer l'article en PDF"; }
-					else if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ erreur += "\n - L'article doit être au format PDF"; }
-					*/
+					else if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ erreur += "\n - L'article doit être au format PDF"; }*/
 					
 					
 					if(document.getElementsByName("titre-fr")[0].value == ""){erreur += "\n - Renseignez le titre en Français.";}
