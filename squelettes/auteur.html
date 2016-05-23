@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html dir="#LANG_DIR" lang="#LANG">
+	<head>
+		<meta charset="utf-8" />
+		<title>#NOM_SITE_SPIP - Nouvel article</title>
+		<!--<meta name="description" content=" " />
+		<meta name="keywords" content=" " />-->
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
+		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
+		<link href="#CHEMIN{bootstrap/css/bootstrap.min.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/reset.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
+		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
+		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/jquery.chained.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
+		<script src="#CHEMIN{ckeditor/ckeditor.js}"></script>
+		
+		<INCLURE{fond=inclure/domaines-style, env}>
+	</head>
+	<body>
+		<div id="ghi-lightbox-container">
+			<div>
+				<img title="exit" alt="exit" class="box-exit" src="#CHEMIN{design/exit.png}"/>
+			</div>
+		</div>
+		<header>
+			<INCLURE{fond=inclure/header, env}>
+		</header>
+		
+		<div class="container conteneur">
+			<div class="row">
+				<nav class="col-md-3 col-lg-2 nav-left">
+
+					<INCLURE{fond=inclure/domaines-nav, env}>
+					<script type="text/javascript">
+						//selectActiveDom(4);
+					</script>
+					
+				</nav>
+				<section class="col-md-9 col-lg-10 content">
+					
+
+					
+					
+					
+					<div class="row">
+						[(#REM) Contenu principal : affichage de l'auteur ]
+						<div class="wrapper col-lg-9">
+							<div>
+								<!--<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <:info_auteurs:>[ &gt; <strong class="on">(#NOM|couper{80})</strong>]</p>-->
+								
+								<BOUCLE_auteur(AUTEURS){id_auteur}>
+									<h1>#NOM</h1>
+									<p>#APPARTENANCE</p>
+									<p>#EMAIL</p>
+								</BOUCLE_auteur>
+						
+								<div class="vcard">[(#REM) microformat vcard]
+								<div class="cartouche">
+									[(#LOGO_AUTEUR|image_reduire{224,*})]
+									<h1 class="#EDIT{qui} fn">#NOM</h1>
+								</div>
+						
+								[<div class="#EDIT{bio} texte note">(#BIO)</div>]
+								[<p class="#EDIT{hyperlien} hyperlien"><:voir_en_ligne:> : <a href="(#URL_SITE)" class="url org spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{80})]})]</a></p>]
+								</div>[(#REM) / vcard]
+						
+								[(#REM) Articles de l'auteur ]
+								<B_articles>
+								<div class="menu">
+									#ANCRE_PAGINATION
+									<h2><:articles_auteur:> (#GRAND_TOTAL)</h2>
+									<ul class="spip">
+										<BOUCLE_articles(ARTICLES) {id_auteur} {!par popularite} {pagination 10}>
+										<li><a href="#URL_ARTICLE">#TITRE</a></li>
+										</BOUCLE_articles>
+									</ul>
+									[<p class="pagination">(#PAGINATION)</p>]
+								</div>
+								</B_articles>
+						
+								#FORMULAIRE_ECRIRE_AUTEUR
+						
+								[<div class="notes"><hr />(#NOTES)</div>]
+						
+							</div>
+						</div><!--.wrapper-->
+					
+						<div class="col-lg-3">
+							
+							[(#REM) Autres auteurs ]
+							<B_auteurs>
+							<div class="menu">
+								#ANCRE_PAGINATION
+								<h2><:info_auteurs:></h2>
+								<ul>
+									<BOUCLE_auteurs(AUTEURS) {par nom} {pagination 20}>
+									<li><a href="#URL_AUTEUR"[ class="(#EXPOSE)"]>[(#NOM|couper{80})]</a></li>
+									</BOUCLE_auteurs>
+								</ul>
+								[<p class="pagination">(#PAGINATION)</p>]
+							</div>
+							</B_auteurs>
+					
+						</div><!--.aside-->
+					</div><!--.main-->
+					
+					
+					
+					
+					
+					
+					
+					
+
+				</section>
+			</div>
+		</div>
+
+
+	
+		<footer>
+			<INCLURE{fond=inclure/footer, env}>
+		</footer>
+	</body>	
+</html>
