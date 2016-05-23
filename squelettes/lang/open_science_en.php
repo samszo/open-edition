@@ -7,6 +7,12 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'domains'=>"Domains",
+	'chief_editors'=>"Chief editors",
+	'objectives_journal'=>"Objectives of the journal",
+	'issues_of_the_journal'=>"Issues of the journal",
+	'last_articles'=>"Last articles",
+	'list_articles'=>"List of Articles",
 	'sign_up'=>"Sign up",
 	'sign_in'=>"Sign in",
 	'author_page'=>"Author's Page",
