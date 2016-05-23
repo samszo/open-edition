@@ -114,10 +114,6 @@
 						</div>
 						<div class="col-sm-4 col-md-5 col-lg-4 align-right">
 							<div class="center-aaa">
-								<!--
-								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> #TITRE </a> &nbsp; <br>
-								<a href="#URL_ARTICLE" title="#TITRE"> #TITRE <span class="glyphicon glyphicon-chevron-right"></span> </a> 
-								-->
 								<BOUCLE_article_precedent(ARTICLES) {id_rubrique} {!par date} {precedent}>
 									<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; <br>						
 								</BOUCLE_article_precedent>
@@ -173,13 +169,13 @@
 						</p>
 						<p class="tab-3 keywords-tab">
 							<BOUCLE_motsAuteurFr(MOTS){id_article}{id_groupe=2}>
-								<a href="#">#TITRE</a>
+								<a href="#URL_MOT">#TITRE</a>
 							</BOUCLE_motsAuteurFr>
 						</p>
 						<p class="tab-4 keywords-tab">
 							<BOUCLE_motsAuteurTrad(ARTICLES){traduction}{lang!=#LANG}>
 								<BOUCLE_motsAuteurEn(MOTS){id_article}{id_groupe=2}>
-									<a href="#">#TITRE</a>
+									<a href="#URL_MOT">#TITRE</a>
 								</BOUCLE_motsAuteurEn>
 							</BOUCLE_motsAuteurTrad>
 						</p>
@@ -195,19 +191,11 @@
 					</div>]
 					
 					
-					<!--
-					<p>
-					L’approche analytique1 semblant être insuffisante pour comprendre les situations complexes floues, changeantes et peu structurées, souvent rencontrées dans la réalité, nous développons puis appliquons l’approche systémique au design organisationnel.
-					</p>-->
 					
 					
 					<br><br>
 					<div class="row">
 						<div class="col-lg-12 center">
-							<!--
-							<a href="#"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp; 
-							<a href="#"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a>
-							-->
 							<BOUCLE_article_precedent2(ARTICLES) {id_rubrique} {!par date} {precedent}>
 								<a href="#URL_ARTICLE" title="#TITRE"> <span class="glyphicon glyphicon-chevron-left"></span> <:open_science:previous_article:> </a> &nbsp;						
 							</BOUCLE_article_precedent2>

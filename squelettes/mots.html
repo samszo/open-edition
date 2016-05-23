@@ -13,6 +13,7 @@
 		<link href="#CHEMIN{css/style.css}" rel="stylesheet" type="text/css"/>
 		<link href="#CHEMIN{css/ghi-lightbox.css}" rel="stylesheet" type="text/css"/>
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
+		<script type="text/javascript" src="#CHEMIN{js/jquery.chained.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		<script src="#CHEMIN{ckeditor/ckeditor.js}"></script>
 		
@@ -40,22 +41,34 @@
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
-					<h1>Nouvel article</h1>
-					<br>
-					
-					
-					[(#SESSION{id_auteur}|oui) 
-						#FORMULAIRE_TEST
-					]
-					
-					<script>
-						//CKEDITOR.replace( 'text_area' );
-					</script>
+					<BOUCLE_mot(MOTS){id_mot}>
+						<h1>#TITRE</h1>
+						<br>
+						[<p>(#DESCRIPTIF)</p>]
+						<br>
+						[<p>(#TEXTE)</p>]
+						
+						
 
-
+					</BOUCLE_mot>
+					
+					<hr>
+					<h2>Les articles liés :</h2>
+					<BOUCLE_art(ARTICLES){id_mot}{lang==#LANG}>
+						<a href="#URL_ARTICLE">#TITRE</a><br>
+					</BOUCLE_art>
+					
+					<B_revues>
+						<hr>
+						<h2>Les revues liés :</h2>
+						<BOUCLE_revues(RUBRIQUES){id_mot}{lang==#LANG}{type_rubrique=revue}>
+							<a href="#URL_RUBRIQUE">#TITRE</a><br>
+						</BOUCLE_revues>
+					<//B_revues>
 				</section>
 			</div>
 		</div>
+
 
 	
 		<footer>
