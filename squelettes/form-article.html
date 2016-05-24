@@ -141,8 +141,10 @@
 				$("#form-article").submit(function(event) {
 					var erreur = "";
 					
+					
+					/*
 					var listeRevue = document.getElementById("revue");
-					if(listeRevue.options[listeRevue.selectedIndex].value == "rien"){erreur = "\n - Choisissez la revue.";}
+					if(listeRevue.options[listeRevue.selectedIndex].value == "rien"){erreur = "\n - Choisissez la revue.";}*/
 
 					
 					/*alert(inputPdf.value);*/
@@ -184,7 +186,7 @@
 							success: function(result) {
 									//alert("OK : " + result);
 									console.log(result)
-									window.location.href="spip.php?page=form-article-ok";
+									window.location.href="spip.php?page=form-article-pdf"; // &id_article= ??? l'id du nouveau article
 							},
 									error: function(error){
 									alert("Erreur : " + error.responseText);
