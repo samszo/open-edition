@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
+<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique=revue}>
 	<head>
 		<meta charset="utf-8" />
 		<title>#NOM_SITE_SPIP - Nouvel article</title>
@@ -35,34 +36,27 @@
 
 					<INCLURE{fond=inclure/domaines-nav, env}>
 					<script type="text/javascript">
-						//selectActiveDom(4);
+						selectActiveDom(#DOM_P);
 					</script>
 					
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
 					<h1>Nouvel article</h1>
+					
+					<h2>#TITRE</h2>
+					<BOUCLE_sousTitreTrad(RUBRIQUES){traduction}{lang!=#LANG}>
+						<h3 class="subtitle">#TITRE</h3>
+					</BOUCLE_sousTitreTrad>
+					
 					<br>
 					
+					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
+					
+					
+					[(#SESSION{id_auteur}|oui) ... ]<!-- session = oui -->
 					<form id="form-article" class="form-author" enctype="multipart/form-data">
 					
-						<div class="row">
-						
-							<div class="col-lg-12">
-							
-								<p><strong>Choix de la revue</strong></p>
-								<select id="revue" name="revue">
-									<option value="rien" selected="selected" disabled>Choisir --></option>
-									<BOUCLE_selectRevue(RUBRIQUES){tout}{type_rubrique=revue}{par titre}>
-										<option value="#ID_RUBRIQUE">#TITRE (#LANG)</option>
-									</BOUCLE_selectRevue>
-								</select>
-								
-								
-								
-								
-							</div>
-						</div>
 
 					
 					
@@ -208,5 +202,6 @@
 		<footer>
 			<INCLURE{fond=inclure/footer, env}>
 		</footer>
-	</body>	
+	</body>
+</BOUCLE_principal>
 </html>
