@@ -43,18 +43,22 @@
 					
 					<h1>Nouvel article</h1>
 					<br>
-					
-					<p>Envoyez l'article au format PDF :</p>
-					
+					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
 					
 					<BOUCLE_art(ARTICLES){id_article}>
-						<p>#TITRE </p><br><br>
+						[(#SESSION{id_auteur}|oui)  
 						
-						#FORMULAIRE_UPLOAD
+							<p>Envoyez l'article au format PDF :</p>
+							
+							
+							
+							<p>#TITRE </p><br><br>
+								
+							#FORMULAIRE_UPLOAD
+							
+
+						]<!-- si session = oui -->
 					</BOUCLE_art>
-
-
-
 				</section>
 			</div>
 		</div>
