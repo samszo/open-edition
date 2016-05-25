@@ -126,6 +126,18 @@
 								-->
 							</div>
 							
+							<br>
+							<div class="block-other">
+								<h4>Numéros en cours</h4>
+								<p>Proposer un article pour ces numéros :</p>
+								<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}>
+								
+									<a href="#URL_RUBRIQUE">#TITRE <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>(#TITRE)</BOUCLE_AnneeNumAppel></a> | 
+									<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a><br>
+									
+								</BOUCLE_appel>
+							</div>
+							
 							
 							
 							
