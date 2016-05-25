@@ -39,17 +39,41 @@
 						selectActiveDom(#DOM_P);
 					</script>
 					
+					<br>
+					<BOUCLE_imageRevue(RUBRIQUES){id_enfant}>
+					<div class="hidden-xs hidden-sm picture-100">
+						<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+							<img src="#URL_DOCUMENT"/>
+						</BOUCLE_img>
+					</div>
+					</BOUCLE_imageRevue>
+					
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
-					<h1>Nouvel article</h1>
+					<BOUCLE_revue(RUBRIQUES){id_enfant}>
+						<h2>
+							#TITRE 
+							<BOUCLE_revueTrad3(RUBRIQUES){traduction}{lang!=#LANG}><span class="subtitle"> / #TITRE</span></BOUCLE_revueTrad3>
+						</h2>
+					</BOUCLE_revue>
+					<!--
+					<BOUCLE_revueTrad(RUBRIQUES){id_enfant}>
+						<BOUCLE_revueTrad2(RUBRIQUES){traduction}{lang!=#LANG}>
+							<h2>#TITRE</h2>
+						</BOUCLE_revueTrad2>
+					</BOUCLE_revueTrad>-->
 					
-					<h2>#TITRE</h2>
+					
+					<h3>#TITRE  <BOUCLE_sousTitreTrad2(RUBRIQUES){traduction}{lang!=#LANG}><span class="subtitle"> / #TITRE</span></BOUCLE_sousTitreTrad2></h3>
+					<!--
 					<BOUCLE_sousTitreTrad(RUBRIQUES){traduction}{lang!=#LANG}>
 						<h3 class="subtitle">#TITRE</h3>
-					</BOUCLE_sousTitreTrad>
+					</BOUCLE_sousTitreTrad>-->
 					
-					<br>
+					<hr>
+					<h1>Nouvel article</h1>
+					
 					
 					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
 					

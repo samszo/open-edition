@@ -81,7 +81,9 @@
 					<div class="row">
 						<div class="col-sm-8">
 						
-							<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a>
+							<BOUCLE_appel(MOTS){id_rubrique}{id_groupe=6}>
+								<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a>
+							</BOUCLE_appel>
 
 						
 							<h2><:open_science:list_articles:></h2>
