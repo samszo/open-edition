@@ -12,6 +12,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'traducteur' => 'Traducteur',
 	'correcteur' => 'Correcteur',
 	'relecteur'  => 'Relecteur',
+	'proposeur'  => 'Proposeur',
 );
 
 ?>

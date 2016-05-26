@@ -26,10 +26,11 @@ function roles_auteurs_declarer_tables_objets_sql($tables){
 			'traducteur' => 'roles_auteurs:traducteur',
 			'correcteur' => 'roles_auteurs:correcteur',
 			'relecteur'  => 'roles_auteurs:relecteur',
-		),
+			'proposeur'  => 'roles_auteurs:proposeur',
+	),
 		"roles_objets" => array(
 			'articles' => array(
-				'choix' => array('redacteur', 'traducteur', 'correcteur', 'relecteur'),
+				'choix' => array('redacteur', 'traducteur', 'correcteur', 'relecteur', 'proposeur'),
 				'defaut' => 'redacteur'
 			)
 			#'*' => array()
