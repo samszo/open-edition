@@ -3,7 +3,7 @@
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
 <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 <meta name="DC.Format" content="text/html" />
-<meta name="DC.Type" content="Text" />
+<meta name="DC.Type" content="journal" />
 <meta name="DC.Identifier" scheme="URI" content=["(#URL_ARTICLE|url_absolue)"] />
 [<meta name="DC.Identifier" scheme="ISSN" content="(#CONFIG{dublin_core/issn})" />]
 [<meta name="DC.Publisher" content="(#NOM_SITE_SPIP)" />]
@@ -23,7 +23,9 @@
 [(#CONFIG{dublin_core/dc_subject}|=={surtitre}|oui)[<meta name="DC.Subject" lang="#LANG" content="(#SURTITRE|attribut_html)" />]]
 [(#CONFIG{dublin_core/dc_subject}|=={soustitre}|oui)[<meta name="DC.Subject" lang="#LANG" content="(#SOUSTITRE|attribut_html)" />]]
 
-<meta name="DC.DOI" content=["(#DOI|attribut_html)"] />
+
+<meta name="DC.creator" content="<BOUCLE_creator(AUTEURS){id_article}>#NOM, </BOUCLE_creator>" />
+
 
 
 
