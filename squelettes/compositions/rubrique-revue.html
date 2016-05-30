@@ -108,7 +108,7 @@
 								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
 									#SET{gmAn,(#TITRE|substr{2,2})}																	
 									[<div class="block-num col-sm-4"><h4>(#TITRE|unique)</h4>]  
-										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
+										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}{tout}>
 											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
 												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
 												[<p>Volume (#GET{mAnNum}|unique)</p>]
@@ -130,7 +130,7 @@
 							<div class="block-other">
 								<h4>Numéros en cours</h4>
 								<p>Proposer un article pour ces numéros :</p>
-								<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}>
+								<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}{tout}>
 								
 									<a href="#URL_RUBRIQUE">#TITRE <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>(#TITRE)</BOUCLE_AnneeNumAppel></a> | 
 									<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a><br>

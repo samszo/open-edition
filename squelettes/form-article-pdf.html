@@ -45,7 +45,7 @@
 					<br>
 					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
 					
-					<BOUCLE_art(ARTICLES){id_article}>
+					<BOUCLE_art(ARTICLES){id_article}{tout}>
 						[(#SESSION{id_auteur}|oui)  
 						
 							<p>Envoyez l'article au format PDF :</p>
