@@ -206,7 +206,7 @@
 							</BOUCLE_article_suivant2>
 							<br>
 							<div class="bloc-btn">
-								<a href="[(#URL_PAGE{spipdf}|parametre_url{spipdf,article_pdf}|parametre_url{id_article,#ID_ARTICLE}|parametre_url{nom_fichier,article_#ID_ARTICLE})]"><:open_science:download_pdf:> </a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+								<a href="<BOUCLE_downloadPDF(DOCUMENTS){id_article}{extension==pdf}>#URL_DOCUMENT</BOUCLE_downloadPDF>"><:open_science:download_pdf:> </a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
 								<ul class="mini-submenu">
 									<li><a href="http://www.facebook.com/share.php?u=http://www.monsite.com&t=Titre de votre lien" target="_blank">Facebook</a></li>
 									<li><a href="#" target="_blank">Twitter</a></li>
@@ -253,35 +253,10 @@
 		
 		<nav class="container hidden-md hidden-lg nav-bottom">
 			<div class="row">
-				<!--
-				<div class="col-sm-6">
-					<p><span class="btn-keywords-fr">Mots-clés</span> | <span class="btn-keywords-en">Keywords</span></p>
-					<div class="keywords keywords-fr">
-						<a href="#">Modélisation numérique</a>
-						<a href="#">mécanique</a>
-						<a href="#">technologie</a>
-						<a href="#">communication</a>
-						<a href="#">design</a>
-						<a href="#">organisation apprenante</a>
-					</div>
-					<div class="keywords keywords-en">
-							<a href="#">English keyword</a>
-							<a href="#">keyword</a>
-							<a href="#">English </a>
-							<a href="#">English </a>
-							<a href="#">English keyword</a>
-							<a href="#">English keyword</a>
-					</div>
-					<br>
-				</div>
-				-->
 				
 				<div class="col-sm-12">
 					<p><:open_science:other_issues:> :</p>
 					<br>
-					<!--
-					<a href="#">Numéro 12 </a> &nbsp;
-					<a href="#">Numéro 6 </a> -->
 					<!-- copier celui du haut lors de la finalisation -->
 
 					<BOUCLE_select_rub2(RUBRIQUES){id_rubrique}>
