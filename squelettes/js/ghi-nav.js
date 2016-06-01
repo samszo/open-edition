@@ -13,7 +13,6 @@ jQuery(document).ready(function(){
 	}
 	
 	
-	
 	jQuery(".content table").width("100%"); /* force tout les tableaux à 100% */
 	
 	jQuery('.content .btn-share').click(function(){
@@ -104,8 +103,6 @@ jQuery(document).ready(function(){
 	
 	
 	
-	
-	
 });
 
 function sommaireNav(){
@@ -168,6 +165,16 @@ function selectAlpha(lettre){
 	box.scrollTop = offsetTop - 70;
 	
 }
+
+function hauteurLiseuse(){
+
+	var hauteur = window.innerHeight;
+	hauteur = hauteur - 40;
+	if(hauteur < 300){hauteur = 300;}
+	document.querySelector(".lecteurpdf").style.height = hauteur + "px";
+}
+
+
 
 
 
