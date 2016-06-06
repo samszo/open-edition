@@ -70,48 +70,42 @@
 					
 					
 					<div class="row">
-						<BOUCLE_revues(RUBRIQUES){id_mot=#DOM_P}{type_rubrique=revue}{lang=#LANG}>
+						<BOUCLE_revues(RUBRIQUES){id_mot=#DOM_P}{type_rubrique=revue}{lang=#LANG}{tout}>
 							<div class="col-sm-6 block-deco">
 								<div class="row">
 									<div class="col-xs-3">
-										<a href="#URL_RUBRIQUE">
-										<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
-											<img src="#URL_DOCUMENT"/>
-										</BOUCLE_img>
-										</a>
+										<!-- le lien s'affiche SI la revue à du contenu -->
+										[(#STATUT|=={publie}|?{' ',''}) 
+										<a href="#URL_RUBRIQUE"> ]
+										
+											<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+												<img src="#URL_DOCUMENT"/>
+											</BOUCLE_img>
+										
+										<!-- le lien s'affiche SI la revue à du contenu -->										
+										[(#STATUT|=={publie}|?{' ',''}) 
+										</a> ]
 									</div>
 									<div class="col-xs-9">
-										<h2><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+										
+										[(#STATUT|=={publie}|?{' ',''})
+											<h2><a href="#URL_RUBRIQUE">#TITRE</a></h2>
+										]
+										[(#STATUT|=={publie}|?{'',' '})
+											<h2>#TITRE</h2>
+										]
+										
 										<p>#REDAC_CHEF</p>
-										<!--
-										<strong>Un auteur</strong>
-										<p>Université Pierre et Marie Curie, Paris</p>
-										<strong>Un auteur</strong>
-										<p>Université Pierre et Marie Curie, Paris</p>
-										-->
+										
+
+										[(#STATUT|=={publie}|?{'',' '})
+											<p class="a-paraitre">à paraître</p>
+										]
 									</div>
 								</div>
 								<hr>
 							</div>
 						</BOUCLE_revues>
-						
-						<!--
-						<div class="col-sm-6 block-deco">
-							<div class="row">
-								<div class="col-xs-3">
-									<a href="#"><img src="#CHEMIN{images/r2.png}" alt="une revue" title="une revue"/></a>
-								</div>
-								<div class="col-xs-9">
-									<h2><a href="#">Une revue</a></h2>
-									<strong>Un auteur</strong>
-									<p>Université Pierre et Marie Curie, Paris</p>
-									<strong>Un auteur</strong>
-									<p>Université Pierre et Marie Curie, Paris</p>
-								</div>
-							</div>
-							<hr>
-						</div>
-						-->
 						
 
 						

@@ -1,21 +1,21 @@
 <BOUCLE_article(ARTICLES){id_article}>
 #HTTP_HEADER{Content-Type: text/plain; charset=#CHARSET;}
 #HTTP_HEADER{Content-Disposition: attachment; filename=article_openscience.ris}
-TY  - Type of reference
-<BOUCLE_author(AUTEURS){id_article}>AU  - #NOM
-</BOUCLE_author>AB  - [(#DESCRIPTIF|supprimer_tags)]
-DO  - #DOI
-ED  - Editor
-JO  - Journal/Periodical name: full format. This is an alphanumeric field of up to 255 characters.
-KW  - <BOUCLE_motsAuteurFr(MOTS){id_article}{id_groupe=2}>#TITRE, </BOUCLE_motsAuteurFr><BOUCLE_motsAuteurTrad(ARTICLES){traduction}{lang!=#LANG}><BOUCLE_motsAuteurEn(MOTS){id_article}{id_groupe=2}>#TITRE, </BOUCLE_motsAuteurEn></BOUCLE_motsAuteurTrad>
-L1  - Link to PDF.
-LA  - Français
-PB  - Publisher
-PY  - [(#DATE|annee)]
-SN  - ISBN/ISSN
-TI  - #TITRE
-TT  - <BOUCLE_sousTitreTrad(ARTICLES){traduction}{lang!=#LANG}>#TITRE</BOUCLE_sousTitreTrad>
-UR  - URL 
-VL  - Volume number
+TY  - Type of reference 
+<BOUCLE_author(AUTEURS){id_article}>AU  - #NOM 
+</BOUCLE_author>AB  - [(#DESCRIPTIF|supprimer_tags)] 
+DO  - #DOI 
+ED  - Editor 
+JO  - <BOUCLE_jo1(RUBRIQUES){id_rubrique}><BOUCLE_jo2(RUBRIQUES){id_enfant}>#TITRE</BOUCLE_jo2></BOUCLE_jo1> / <BOUCLE_numero(RUBRIQUES){id_rubrique}>#TITRE</BOUCLE_numero>  (Journal/Periodical name: full format. This is an alphanumeric field of up to 255 characters.) 
+KW  - <BOUCLE_motsAuteurFr(MOTS){id_article}{id_groupe=2}>#TITRE, </BOUCLE_motsAuteurFr><BOUCLE_motsAuteurTrad(ARTICLES){traduction}{lang!=#LANG}><BOUCLE_motsAuteurEn(MOTS){id_article}{id_groupe=2}>#TITRE, </BOUCLE_motsAuteurEn></BOUCLE_motsAuteurTrad> 
+L1  - <BOUCLE_downloadPDF(DOCUMENTS){id_article}{extension==pdf}>[(#URL_DOCUMENT|url_absolue)]</BOUCLE_downloadPDF> 
+LA  - #LANG 
+PB  - Publisher 
+PY  - [(#DATE|annee)] 
+SN  - <BOUCLE_sn1(RUBRIQUES){id_rubrique}><BOUCLE_sn2(RUBRIQUES){id_enfant}>#ISSN</BOUCLE_sn2></BOUCLE_sn1> 
+TI  - #TITRE 
+TT  - <BOUCLE_sousTitreTrad(ARTICLES){traduction}{lang!=#LANG}>#TITRE</BOUCLE_sousTitreTrad> 
+UR  - [(#URL_ARTICLE|url_absolue)] 
+VL  - <BOUCLE_volumeMot(MOTS){id_groupe=4}{id_rubrique}>#TITRE</BOUCLE_volumeMot> 
 ER  - 	
 </BOUCLE_article>
