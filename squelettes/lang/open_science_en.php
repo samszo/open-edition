@@ -7,6 +7,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'journals'=>"Journals",
 	'domains'=>"Domains",
 	'chief_editors'=>"Chief editors",
 	'objectives_journal'=>"Objectives of the journal",
