@@ -16,11 +16,15 @@ jQuery(document).ready(function(){
 	jQuery(".content table").width("100%"); /* force tout les tableaux à 100% */
 	
 	jQuery('.content .btn-share').click(function(){
-		jQuery('.content .mini-submenu').slideToggle(120);
+		jQuery('.content .submenu-export').slideUp(40);
+		jQuery('.content .submenu-share').slideToggle(90);
 	});
-	jQuery('nav .btn-share').click(function(){
-		jQuery('nav .mini-submenu').slideToggle(120);
+	jQuery('.content .btn-export').click(function(){
+		jQuery('.content .submenu-share').slideUp(40);
+		jQuery('.content .submenu-export').slideToggle(90);
 	});
+
+	
 	
 	jQuery('#btn-menu').click(function(){
 		jQuery('header .menu-middle').slideToggle(420);

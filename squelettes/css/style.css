@@ -581,9 +581,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	margin:0;
 	font-weight:normal;
 }
-.bloc-btn a:hover{
+.bloc-btn a:hover, .bloc-btn a:focus{
 	background-color:#0094cb;
 	text-decoration:none;
+}
+.bloc-btn a:active{
+	background-color:#00aadd;
 }
 .mini-submenu{
 	display:none;
@@ -591,6 +594,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	top:42px;
 	right:0px;
 	z-index:50;
+}
+.submenu-export{
+	right:87px;
 }
 nav .bloc-btn{
 	margin: 5px 0 18px 0;
