@@ -46,9 +46,8 @@
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
-					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a> > vol 1 num 2</p>-->
 					
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; numéro</p>
 					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					
 					<script type="text/javascript">
@@ -58,18 +57,17 @@
 					
 					<div class="row">
 						<div class="col-sm-9">
-							<BOUCLE_titre(RUBRIQUES){id_enfant}><h1>#TITRE</h1></BOUCLE_titre>
-							<h2><BOUCLE_vol(MOTS){id_rubrique}{id_groupe=4}>[Vol (#TITRE)]</BOUCLE_vol> - #TITRE</h2>
+							<h1><BOUCLE_vol(MOTS){id_rubrique}{id_groupe=4}>[Vol (#TITRE)]</BOUCLE_vol> - #TITRE</h1>
+							<BOUCLE_titre(RUBRIQUES){id_enfant}><h2>#TITRE</h2></BOUCLE_titre>
 						</div>
 						<div class="col-sm-3 align-right">
 							<div class="bloc-btn">
 								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu">
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Twitter</a></li>
-									<li><a href="#">Google +</a></li>
-									<li><a href="#">Email</a></li>
-									<li><a href="#">Export Zotero</a></li>
+								<ul class="mini-submenu submenu-share">
+									<li><a href="#" target="_blank">Facebook</a></li>
+									<li><a href="#" target="_blank">Twitter</a></li>
+									<li><a href="#" target="_blank">Google +</a></li>
+									<li><a href="#" target="_blank">Email</a></li>
 								</ul>
 							</div>
 							
@@ -129,23 +127,6 @@
 							<script type="text/javascript">
 								selectActiveNum(#ID_RUBRIQUE);
 							</script>
-							<!--
-							<a href="#">2018 - volume 3</a><br>
-							<a href="#">Numéro 1</a><br>
-							<a href="#">Numéro 2</a><br>
-							<a href="#">Numéro 3</a><br>
-							<br>
-							<a href="#">2017 - volume 2</a><br>
-							<a href="#">Numéro 1</a><br>
-							<a href="#">Numéro 2</a><br>
-							<a href="#">Numéro 3</a><br>
-							<br>
-							<a href="#">2016 - volume 1</a><br>
-							<a href="#">Numéro 1</a><br>
-							<a href="#" class="underline">Numéro 2</a><br>
-							<a href="#">Numéro 3</a><br>
-							<br>
-							-->
 							<!--
 							<br>
 							<a href="#">Accéder à la liste complète des numéros de revues</a><br>-->

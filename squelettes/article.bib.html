@@ -1,0 +1,27 @@
+<BOUCLE_article(ARTICLES){id_article}>
+#HTTP_HEADER{Content-Type: text/plain; charset=#CHARSET;}
+#HTTP_HEADER{Content-Disposition: attachment; filename=article_openscience.bib}
+
+@ARTICLE{#DOI, 
+
+TITLE={#TITRE}, 
+  
+AUTHOR={<BOUCLE_author(AUTEURS){id_article}>#NOM, </BOUCLE_author>}, 
+	
+JOURNAL={<BOUCLE_jf(RUBRIQUES){id_rubrique}><BOUCLE_jf2(RUBRIQUES){id_enfant}>#TITRE</BOUCLE_jf2></BOUCLE_jf>}, 
+	
+VOLUME={<BOUCLE_volumeMot(MOTS){id_groupe=4}{id_rubrique}>#TITRE</BOUCLE_volumeMot>}, 
+
+NUMBER={<BOUCLE_numero(RUBRIQUES){id_rubrique}>#TITRE</BOUCLE_numero>}, 
+	
+YEAR={[(#DATE|annee)]}, 
+
+URL={[(#URL_ARTICLE|url_absolue)]}, 
+	
+DOI={#DOI}, 
+	
+ISSN={<BOUCLE_sn1(RUBRIQUES){id_rubrique}><BOUCLE_sn2(RUBRIQUES){id_enfant}>#ISSN</BOUCLE_sn2></BOUCLE_sn1>}, 
+	
+ABSTRACT={[(#DESCRIPTIF|supprimer_tags)]}}
+
+</BOUCLE_article>

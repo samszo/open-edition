@@ -48,9 +48,8 @@
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 									
-					<!--<p class="fil"><a href="#">Environnement et système terre</a> > <a href="#">Paysages et patrimoines</a></p>-->
 					
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane></p>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; revue</p>
 					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					
 					
@@ -69,12 +68,11 @@
 						<div class="col-sm-3 align-right">
 							<div class="bloc-btn">
 								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu">
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Twitter</a></li>
-									<li><a href="#">Google +</a></li>
-									<li><a href="#">Email</a></li>
-									<li><a href="#">Export Zotero</a></li>
+								<ul class="mini-submenu submenu-share">
+									<li><a href="#" target="_blank">Facebook</a></li>
+									<li><a href="#" target="_blank">Twitter</a></li>
+									<li><a href="#" target="_blank">Google +</a></li>
+									<li><a href="#" target="_blank">Email</a></li>
 								</ul>
 							</div>
 							
@@ -91,14 +89,37 @@
 							<br><br>
 							<p class="align-right caption">#ACRONYME - ISSN #ISSN - © ISTE OpenScience Ltd</p>
 							
-							<hr>
-							
+							<!--<hr>-->
+							<!--
 							<h3><:open_science:objectives_journal:></h3>
 							<div class="align-justify">
 								<p>#TEXTE</p>
 							</div>
+							<BOUCLE_objectifsTraduction2(RUBRIQUES){traduction}{lang!=#LANG}>
+								<h3><:open_science:objectives_journal:></h3>
+								<div class="align-justify">
+									<p>#TEXTE</p>
+								</div>
+							</BOUCLE_objectifsTraduction2>
+							-->
 							
-							<hr>
+							
+							<div class="block-tabs">
+								<div class="h-tab"><h3 id="ht-1" class="active"><multi>[fr]Objectifs de la revue[en]Objectives of the journal</multi></h3><h3 id="ht-2"><multi>[fr]Objectives of the journal[en]Objectifs de la revue</multi></h3></div>
+								<p class="tab-1 align-justify">
+									
+									[(#TEXTE|supprimer_tags)]
+								</p>
+								<p class="tab-2 align-justify">
+									
+									<BOUCLE_objectifsTraduction(RUBRIQUES){traduction}{lang!=#LANG}>
+										[(#TEXTE|supprimer_tags)]
+									</BOUCLE_objectifsTraduction>
+								</p>
+							</div>
+							
+							
+							<!--<hr>-->
 							<h3><:open_science:issues_of_the_journal:></h3>
 							
 							<div class="row block-other">
@@ -138,41 +159,7 @@
 								</BOUCLE_appel>
 							</div>
 							
-							
-							
-							
-							
-							
-							
-							
-							
-							
-							<!--
-							<div class="row block-other">
-								<div class="col-sm-4">
-									<a href="#">2018 - volume 3</a><br>
-									<a href="#">Numéro 1</a><br>
-									<a href="#">Numéro 2</a><br>
-									<a href="#">Numéro 3</a><br>
-								</div>
-								<div class="col-sm-4">
-									<a href="#">2017 - volume 2</a><br>
-									<a href="#">Numéro 1</a><br>
-									<a href="#">Numéro 2</a><br>
-									<a href="#">Numéro 3</a><br>
-								</div>
-								<div class="col-sm-4">
-									<a href="#">2016 - volume 1</a><br>
-									<a href="#">Numéro 1</a><br>
-									<a href="#">Numéro 2</a><br>
-									<a href="#">Numéro 3</a><br>
-								</div>
-								<div class="col-lg-12">
-									<br><a href="#">Accéder à la liste complète des numéros de revues</a><br>
-								</div>
-							</div>
-							-->
-							
+
 							
 							
 							
@@ -200,8 +187,6 @@
 								#TEXTE
 							</BOUCLE_la_redaction>
 							
-							<!--<br><br>
-							<p>_CHAMP_LIBRE</p>-->
 						</div>
 					</div>
 
