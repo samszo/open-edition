@@ -72,17 +72,22 @@
 							<div class="col-sm-6 block-deco">
 								<div class="row">
 									<div class="col-xs-3">
-										<!-- le lien s'affiche SI la revue à du contenu -->
-										[(#STATUT|=={publie}|?{' ',''}) 
-										<a href="#URL_RUBRIQUE"> ]
-										
-											<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
-												<img src="#URL_DOCUMENT"/>
-											</BOUCLE_img>
-										
-										<!-- le lien s'affiche SI la revue à du contenu -->										
-										[(#STATUT|=={publie}|?{' ',''}) 
-										</a> ]
+										<div class="pos-relative">
+											<!-- le lien s'affiche SI la revue à du contenu -->
+											[(#STATUT|=={publie}|?{' ',''}) 
+											<a href="#URL_RUBRIQUE"> ]
+											
+												<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
+													<img src="#URL_DOCUMENT"/>
+												</BOUCLE_img>
+												[(#STATUT|=={publie}|?{'',' '})
+													<p class="a-paraitre">à paraître</p>
+												]
+											
+											<!-- le lien s'affiche SI la revue à du contenu -->										
+											[(#STATUT|=={publie}|?{' ',''}) 
+											</a> ]
+										</div>
 									</div>
 									<div class="col-xs-9">
 										
@@ -96,9 +101,7 @@
 										<p>#REDAC_CHEF</p>
 										
 
-										[(#STATUT|=={publie}|?{'',' '})
-											<p class="a-paraitre">à paraître</p>
-										]
+										<!-- == -->
 									</div>
 								</div>
 								<hr>
