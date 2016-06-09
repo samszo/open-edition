@@ -64,11 +64,10 @@ class CrudController extends Zend_Controller_Action
 			//,"dom_p"=>$arrRubNum["dom-p"]	
 			),false);
 			
-			
 		//vérifie s'il faut créer la traduction du numéro
 		$langueTrad = $langue == "fr" ? "en" : "fr";
 		$idSecteurTrad = $langueTrad == "fr" ? 1 : 2;
-		if($arrRubNum["id_trad"]==0){			
+		if($arrRubNum["id_trad"]==0 && $params['idRubRevueTrad']){			
 			//ajoute la rubrique pour la traduction du numéro
 			$idRubTrad = $dbRub->ajouter(array(
 				"parent"=>$params['idRubRevueTrad']
@@ -91,23 +90,25 @@ class CrudController extends Zend_Controller_Action
 		$this->view->rs["idRubTrad"]=$idRubTrad;
 		$this->view->rs["langueTrad"]=$langueTrad;
     		  		
-		//création de la traduction
-    		$idArtTrad = $dbArt->ajouter(array(
-			"id_rubrique"=>$idRubTrad
-			,"titre"=>$params['titre-'.$langueTrad]
-			,"soustitre"=>$params['sous-titre-'.$langueTrad]
-			,"descriptif"=>$params['resume-'.$langueTrad]
-			,"statut"=>"prop"			
-			,"id_secteur"=>$idSecteur
-			,"lang"=>$langueTrad
-			,"langue_choisie"=>"oui"				
-			,"id_trad"=>$idArt
-			//,"dom_p"=>$arrRubNum["dom-p"]				
-			),false);
-		//met à jour la traduction de l'article de référence
-		$dbArt->edit($idArt, array("id_trad"=>$idArt));
-		$this->view->rs["idArtTrad"]=$idArtTrad;
-		
+		if($params['idRubRevueTrad']){			
+			//création de la traduction
+	    		$idArtTrad = $dbArt->ajouter(array(
+				"id_rubrique"=>$idRubTrad
+				,"titre"=>$params['titre-'.$langueTrad]
+				,"soustitre"=>$params['sous-titre-'.$langueTrad]
+				,"descriptif"=>$params['resume-'.$langueTrad]
+				,"statut"=>"prop"			
+				,"id_secteur"=>$idSecteur
+				,"lang"=>$langueTrad
+				,"langue_choisie"=>"oui"				
+				,"id_trad"=>$idArt
+				//,"dom_p"=>$arrRubNum["dom-p"]				
+				),false);
+			//met à jour la traduction de l'article de référence
+			$dbArt->edit($idArt, array("id_trad"=>$idArt));
+			$this->view->rs["idArtTrad"]=$idArtTrad;
+		}
+				
 		//ajoute les mots clefs
 		$arrMcFr = explode(",",$params["mc-fr"]);
 		for ($i = 0; $i < count($arrMcFr); $i++) {
@@ -116,7 +117,7 @@ class CrudController extends Zend_Controller_Action
 			//ajoute aux articles
 			if($langue=="fr")
 				$dbML->ajouter(array("id_mot"=>$idMot,"objet"=>"article","id_objet"=>$idArt));
-			else
+			else if($params['idRubRevueTrad'])
 				$dbML->ajouter(array("id_mot"=>$idMot,"objet"=>"article","id_objet"=>$idArtTrad));
 		}
 		$arrMcEn = explode(",",$params["mc-en"]);
@@ -126,7 +127,7 @@ class CrudController extends Zend_Controller_Action
 			//ajoute aux articles
 			if($langue=="en")
 				$dbML->ajouter(array("id_mot"=>$idMot,"objet"=>"article","id_objet"=>$idArt));
-			else
+			else if($params['idRubRevueTrad'])
 				$dbML->ajouter(array("id_mot"=>$idMot,"objet"=>"article","id_objet"=>$idArtTrad));
 		}
 		
@@ -141,7 +142,7 @@ class CrudController extends Zend_Controller_Action
 				$idAut = $dbAut->ajouter(array("nom"=>$arrA[0],"statut"=>"1comite","email"=>$arrA[2]));	
 				//lien avec les articles
 				$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArt,"objet"=>"article","role"=>"redacteur"));		
-				$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"redacteur"));					
+				if($params['idRubRevueTrad'])$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"redacteur"));					
 				//définition du chapeau pour les appartenances
 				$chapeau .= "[->auteur".$idAut."] ".$arrA[1].", "; 
 				$this->view->rs["auteurs"][]=$idAut;
@@ -150,11 +151,11 @@ class CrudController extends Zend_Controller_Action
 		//met à jour les chapeaux
 		$chapeau = substr($chapeau,0,-2);
 		$dbArt->edit($idArt,array("chapo"=>$chapeau));
-		$dbArt->edit($idArtTrad,array("chapo"=>$chapeau));    		
+		if($params['idRubRevueTrad'])$dbArt->edit($idArtTrad,array("chapo"=>$chapeau));    		
 		
 		//ajoute l'auteur de la proposition
 		$dbAutL->ajouter(array("id_auteur"=>$params["idAuteur"],"id_objet"=>$idArt,"objet"=>"article","role"=>"proposeur"));		
-		$dbAutL->ajouter(array("id_auteur"=>$params["idAuteur"],"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"proposeur"));					
+		if($params['idRubRevueTrad'])$dbAutL->ajouter(array("id_auteur"=>$params["idAuteur"],"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"proposeur"));					
 		
 		$this->view->message="L'article a été ajouté.";
 		$this->view->rs["idArt"]=$idArt;
