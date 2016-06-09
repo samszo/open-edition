@@ -590,7 +590,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .bloc-btn a:active{
 	background-color:#00aadd;
 }
-.mini-submenu{
+
+.socialtags{margin:0!important; right:2px!important;}
+.socialtags img{
+	opacity:1;
+	height:32px!important;
+}
+.socialtags a{
+	padding:4px;
+}
+
+.mini-submenu, .socialtags{
 	display:none;
 	position:absolute;
 	top:42px;
@@ -603,13 +613,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 nav .bloc-btn{
 	margin: 5px 0 18px 0;
 }
-nav .mini-submenu{top:60px;}
+nav .mini-submenu, nav .socialtags {top:60px;}
 nav .bloc-btn a{
 	width:100%;
 	padding:4px;
 }
-.mini-submenu a{background-color:#575757;}
-.mini-submenu, .mini-submenu li, .mini-submenu a{
+.mini-submenu a, .socialtags a{background-color:#575757;}
+.mini-submenu, .mini-submenu li, .mini-submenu a,
+.socialtags, .socialtags li, .socialtags a{
 	width:100px;
 }
 

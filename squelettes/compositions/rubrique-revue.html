@@ -18,6 +18,8 @@
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		
+		#INSERT_HEAD
+		
 		<INCLURE{fond=inclure/domaines-style, env}>
 	</head>
 	<body>
@@ -68,12 +70,8 @@
 						<div class="col-sm-3 align-right">
 							<div class="bloc-btn">
 								<a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu submenu-share">
-									<li><a href="#" target="_blank">Facebook</a></li>
-									<li><a href="#" target="_blank">Twitter</a></li>
-									<li><a href="#" target="_blank">Google +</a></li>
-									<li><a href="#" target="_blank">Email</a></li>
-								</ul>
+								#RS
+								<div id="RS"></div>
 							</div>
 							
 						</div>

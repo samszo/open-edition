@@ -16,6 +16,8 @@
 		<script type="text/javascript" src="#CHEMIN{js/jquery-2.1.4.min.js}"></script>
 		<script type="text/javascript" src="#CHEMIN{js/ghi-nav.js}"></script>
 		
+		#INSERT_HEAD
+		
 		<INCLURE{fond=inclure/dublin_core_article, env}>
 		
 		<INCLURE{fond=inclure/domaines-style, env}>
@@ -90,7 +92,7 @@
 							</BOUCLE_ParentParentDom2>
 							</BOUCLE_ParentDom2>
 							
-
+							
 							
 							<h1>#TITRE</h1>
 							<h2 class="subtitle">#SOUSTITRE</h2>
@@ -108,12 +110,16 @@
 							
 							<div class="bloc-btn">
 								<a target="_blank" href="<BOUCLE_downloadPDF(DOCUMENTS){id_article}{extension==pdf}>#URL_DOCUMENT</BOUCLE_downloadPDF>"><:open_science:download_pdf:> &nbsp; <span class="glyphicon glyphicon-download-alt"></span> </a><a class="btn-export" href="#" onclick="return false;"> <:open_science:export:> &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu submenu-share">
+								
+								#RS
+								<div id="RS"></div>
+								
+								<!--<ul class="mini-submenu submenu-share">
 									<li><a href="#" target="_blank">Facebook</a></li>
 									<li><a href="#" target="_blank">Twitter</a></li>
 									<li><a href="#" target="_blank">Google +</a></li>
 									<li><a href="#" target="_blank">Email</a></li>
-								</ul>
+								</ul>-->
 								<ul class="mini-submenu submenu-export">
 									<li><a href="spip.php?page=article.ris&id_article=#ID_ARTICLE">RIS</a></li>
 									<li><a href="spip.php?page=article.txt&id_article=#ID_ARTICLE">Texte</a></li>
@@ -195,20 +201,7 @@
 								<a href="#URL_ARTICLE" title="#TITRE"> <:open_science:next_article:> <span class="glyphicon glyphicon-chevron-right"></span> </a> 						
 							</BOUCLE_article_suivant2>
 							<br>
-							<div class="bloc-btn">
-								<a target="_blank" href="<BOUCLE_downloadPDF2(DOCUMENTS){id_article}{extension==pdf}>#URL_DOCUMENT</BOUCLE_downloadPDF2>"><:open_science:download_pdf:> &nbsp; <span class="glyphicon glyphicon-download-alt"></span> </a><a class="btn-export" href="#" onclick="return false;"> <:open_science:export:> &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a><a class="btn-share" href="#" onclick="return false;"> <:open_science:share:>  &nbsp; <span class="glyphicon glyphicon-triangle-bottom"></span></a>
-								<ul class="mini-submenu submenu-share">
-									<li><a href="#" target="_blank">Facebook</a></li>
-									<li><a href="#" target="_blank">Twitter</a></li>
-									<li><a href="#" target="_blank">Google +</a></li>
-									<li><a href="#" target="_blank">Email</a></li>
-								</ul>
-								<ul class="mini-submenu submenu-export">
-									<li><a href="spip.php?page=article.ris&id_article=#ID_ARTICLE">RIS</a></li>
-									<li><a href="spip.php?page=article.txt&id_article=#ID_ARTICLE">Texte</a></li>
-									<li><a href="spip.php?page=article.bib&id_article=#ID_ARTICLE">BibTeX</a></li>
-								</ul>
-							</div>
+							<br>
 
 						</div>
 						<div class="col-lg-12">

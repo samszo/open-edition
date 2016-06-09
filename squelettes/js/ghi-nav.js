@@ -17,10 +17,10 @@ jQuery(document).ready(function(){
 	
 	jQuery('.content .btn-share').click(function(){
 		jQuery('.content .submenu-export').slideUp(40);
-		jQuery('.content .submenu-share').slideToggle(90);
+		jQuery('.content .socialtags').slideToggle(90);
 	});
 	jQuery('.content .btn-export').click(function(){
-		jQuery('.content .submenu-share').slideUp(40);
+		jQuery('.content .socialtags').slideUp(40);
 		jQuery('.content .submenu-export').slideToggle(90);
 	});
 
