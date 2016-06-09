@@ -82,8 +82,19 @@
 					<form id="form-article" class="form-author" enctype="multipart/form-data">
 					
 
-					
-					
+<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>					
+					  
+<input type="hidden" name="idRubNum" value="#ID_RUBRIQUE"/>
+<BOUCLE_rubRevue(RUBRIQUES){id_enfant}>
+	<input type="hidden" name="idRubRevue" value="#ID_RUBRIQUE"/>
+	<BOUCLE_rubRevue2(RUBRIQUES){traduction}{lang!=#LANG}>
+		<input type="hidden" name="idRubRevueTrad" value="#ID_RUBRIQUE"/>
+	</BOUCLE_rubRevue2>
+</BOUCLE_rubRevue>
+
+
+
+
 					
 						<div class="row">
 							<div class="col-lg-6">
@@ -206,11 +217,12 @@
 						$.ajax({
 							url: 'admin/crud/insert',
 							type: 'post',
+							dataType: 'json',
 							data: $(this).serialize(),
 							success: function(result) {
-									//alert("OK : " + result);
-									console.log(result)
-									window.location.href="spip.php?page=form-article-pdf"; // &id_article= ??? l'id du nouveau article
+									    //alert("OK : " + result); 
+									console.log(result);
+									window.location.href="spip.php?page=form-article-pdf&id_article="+result.rs.idArt;
 							},
 									error: function(error){
 									alert("Erreur : " + error.responseText);
