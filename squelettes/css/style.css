@@ -693,8 +693,8 @@ section .block-deco:nth-child(19)
 .block-deco hr{margin-top:10px;}
 
 .content .a-paraitre{
-	background-color:#474747;
-	color:#fff;
+	background-color:#eee;
+	color:#994747;
 	text-align:center;
 	position:absolute;
 	width:100%;
@@ -705,6 +705,9 @@ section .block-deco:nth-child(19)
 	margin-right:15px;*/
 	padding-top:1px;
 	padding-bottom:1px;
+	
+	outline: 1px solid #aaa;
+	outline-offset: -1px;
 }
 
 /* ------- page numero ------- */
