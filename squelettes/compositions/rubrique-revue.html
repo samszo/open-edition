@@ -85,7 +85,7 @@
 								<img src="#URL_DOCUMENT"/>
 							</BOUCLE_img2>
 							<br><br>
-							<p class="align-right caption">#ACRONYME - ISSN #ISSN - © ISTE OpenScience Ltd</p>
+							<p class="align-right caption">#ACRONYME[ - ISSN (#ISSN)] - © ISTE OpenScience Ltd</p>
 							
 							<!--<hr>-->
 							<!--
@@ -104,16 +104,16 @@
 							
 							<div class="block-tabs">
 								<div class="h-tab"><h3 id="ht-1" class="active"><multi>[fr]Objectifs de la revue[en]Objectives of the journal</multi></h3><h3 id="ht-2"><multi>[fr]Objectives of the journal[en]Objectifs de la revue</multi></h3></div>
-								<p class="tab-1 align-justify">
+								<div class="tab-1 align-justify">
 									
-									[(#TEXTE|supprimer_tags)]
-								</p>
-								<p class="tab-2 align-justify">
+									[(#TEXTE)]
+								</div>
+								<div class="tab-2 align-justify">
 									
 									<BOUCLE_objectifsTraduction(RUBRIQUES){traduction}{lang!=#LANG}>
-										[(#TEXTE|supprimer_tags)]
+										[(#TEXTE)]
 									</BOUCLE_objectifsTraduction>
-								</p>
+								</div>
 							</div>
 							
 							
@@ -146,6 +146,7 @@
 							</div>
 							
 							<br>
+							<B_appel>
 							<div class="block-other">
 								<h4>Numéros en cours</h4>
 								<p>Proposer un article pour ces numéros :</p>
@@ -156,6 +157,7 @@
 									
 								</BOUCLE_appel>
 							</div>
+							</B_appel>
 							
 
 							
