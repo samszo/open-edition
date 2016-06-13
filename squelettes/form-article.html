@@ -73,97 +73,33 @@
 					
 					<hr>
 					<h1>Nouvel article</h1>
+					<br>
+					<br>
 					
 					
-					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
+					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p><br> ]
 					
 					
-					[(#SESSION{id_auteur}|oui) ... ]<!-- session = oui -->
+					
 					<form id="form-article" class="form-author" enctype="multipart/form-data">
 					
-
-<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>					
-					  
-<input type="hidden" name="idRubNum" value="#ID_RUBRIQUE"/>
-<BOUCLE_rubRevue(RUBRIQUES){id_enfant}>
-	<input type="hidden" name="idRubRevue" value="#ID_RUBRIQUE"/>
-	<BOUCLE_rubRevue2(RUBRIQUES){traduction}{lang!=#LANG}>
-		<input type="hidden" name="idRubRevueTrad" value="#ID_RUBRIQUE"/>
-	</BOUCLE_rubRevue2>
-</BOUCLE_rubRevue>
-
-
-
-
+						<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>					
+						<input type="hidden" name="idRubNum" value="#ID_RUBRIQUE"/>
+						<BOUCLE_rubNumRevueTrad(RUBRIQUES){traduction}{lang!=#LANG}>
+								<input type="hidden" name="idRubNumTrad" value="#ID_RUBRIQUE"/>
+						</BOUCLE_rubNumRevueTrad>						
+						<BOUCLE_rubRevue(RUBRIQUES){id_enfant}>
+							<input type="hidden" name="idRubRevue" value="#ID_RUBRIQUE"/>
+							<BOUCLE_rubRevue2(RUBRIQUES){traduction}{lang!=#LANG}>
+								<input type="hidden" name="idRubRevueTrad" value="#ID_RUBRIQUE"/>
+							</BOUCLE_rubRevue2>
+						</BOUCLE_rubRevue>
 					
-						<div class="row">
-							<div class="col-lg-6">
-								<p>Titre Français</p><input type="text" name="titre-fr" maxlength="100"/>
-							</div>
-							<div class="col-lg-6">
-								<p>Titre Anglais</p><input type="text" name="titre-en" maxlength="100"/>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<p>Sous titre Français</p><input type="text" name="sous-titre-fr" maxlength="200"/>
-							</div>
-							<div class="col-lg-6">
-								<p>Sous titre Anglais</p><input type="text" name="sous-titre-en" maxlength="200"/>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<p>Résumé Français</p>
-								<textarea name="resume-fr" id="resume-fr"></textarea>
-							</div>
-							<div class="col-lg-6">
-								<p>Résumé Anglais (abstract)</p>
-								<textarea name="resume-en" id="resume-en"></textarea>
-							</div>
-						</div>
+						[(#SESSION{id_auteur}|oui) 
 						
+							<INCLURE{fond=inclure/inc-form-article, env}>
 						
-						<!--<h2>Article en PDF</h2>
-						<input name="pdf" type="file" id="input-pdf"/>-->
-						<script>
-							/*
-							var inputPdf = document.getElementById('input-pdf');
-							inputPdf.addEventListener("change", function(){
-								if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert('Vous devez choisir un fichier PDF.'); }
-							
-							}, true);
-							*/
-						</script>
-						
-
-						
-						<div class="separator"></div>
-						<!--les mots clefs de l'article ( français anglais )-->
-						<div class="row">
-							<div class="col-lg-6">
-								<p><strong>Les mots clefs français</strong></p>
-								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
-								<textarea name="mc-fr" id="mc-fr"></textarea>
-							</div>
-							<div class="col-lg-6">
-								<p><strong>Les mots clefs anglais</strong></p>
-								<p>mot-clef 1, mot-clef 2, mot-clef 3</p>
-								<textarea name="mc-en" id="mc-en"></textarea>
-							</div>
-						</div>
-						
-						<div class="separator"></div>
-						<p><strong>Les auteurs et leurs appartenances </strong></p>
-						<p>Auteur, appartenance, email; Auteur, appartenance, email;</p>
-						<textarea name="auteurs"></textarea>
-						
-						<input type="submit" value="Envoyer"/>
-						
-						
-
-
-
+						]<!-- session = oui -->
 					</form>
 
 
