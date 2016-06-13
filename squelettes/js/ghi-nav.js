@@ -91,14 +91,16 @@ jQuery(document).ready(function(){
 	 $window.scroll(posNavRight);
 	 
 	 
+	 
+	 /* Page d'accueil : taille du panneau de droite, calculé en fonction de la taille du panneau de gauche. */
 	 function resizeScrollBox() {
 		
-		if($(window).width() < 992){ /* pour les tablettes */
+		if($(window).width() < 992){ /* pour les tablettes, et téléphones */
 			$(".scroll-box").height("auto");
 		}
 		else
 		{
-			$(".scroll-box").height(  ($(".squares-container").height()) - 76  );
+			$(".scroll-box").height(  ($(".squares-container").height()) - 70  );
 			//alert($(window).width());
 		}
 	 }

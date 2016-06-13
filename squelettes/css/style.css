@@ -689,7 +689,11 @@ section .block-deco:nth-child(11),
 section .block-deco:nth-child(13),
 section .block-deco:nth-child(15),
 section .block-deco:nth-child(17),
-section .block-deco:nth-child(19)
+section .block-deco:nth-child(19),
+section .block-deco:nth-child(21),
+section .block-deco:nth-child(23),
+section .block-deco:nth-child(25),
+section .block-deco:nth-child(27)
 {clear:both;}
 
 .block-deco h2, .block-deco h2 a{
@@ -722,6 +726,12 @@ section .block-deco:nth-child(19)
 	
 	outline: 1px solid #aaa;
 	outline-offset: -1px;
+}
+
+.content .a-paraitre:hover, .content .block-deco .pos-relative:hover .a-paraitre{
+	background-color:#ffeeee;
+	color:#cc3333;
+	outline: 1px solid #bb4747;
 }
 
 /* ------- page numero ------- */
@@ -786,8 +796,9 @@ section .block-deco:nth-child(19)
 }
 .alphabet a{
 	/*background-color:#ddd;*/
-	padding: 5px;
+	padding: 2px;
 	display:inline-block;
+	font-size:12px;
 }
 .alphabet a:hover, .alphabet a:focus{
 	background-color:#474747;
