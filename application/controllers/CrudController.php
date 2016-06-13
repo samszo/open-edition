@@ -14,18 +14,19 @@ class CrudController extends Zend_Controller_Action
     		$params = $this->_request->getParams();
     		$this->view->rs = array();
     		/*
-		idRubRevue=35
-		idRubNum=36
-		idAuteur=1
-		titre-fr=test
-		titre-en=test
-		sous-titre-fr=test
-		sous-titre-en=test
-		resume-fr=test
-		resume-en=test
-		mc-fr=mot-clef+1,+mot-clef+2
-		mc-en=mot-clef+1,+mot-clef+2,+mot-clef+3
-		auteurs=Auteur,+appartenance,+email;+Auteur,+appartenance,+email;		
+		idAuteur:1
+		idRubNum:170
+		idRubRevue:57
+		idRubRevueTrad:60
+		titre-fr:test
+		titre-en:test
+		sous-titre-fr:test
+		sous-titre-en:test
+		resume-fr:test
+		resume-en:test
+		mc-fr:mot-clef 1, mot-clef 2, mot-clef 3
+		mc-en:mot-clef 1, mot-clef 2, mot-clef 3
+		auteurs:Auteur, appartenance, email; Auteur, appartenance, email;
     		 */
     		
     		/*enlève les paramètres Zend
