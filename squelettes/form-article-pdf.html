@@ -2,7 +2,7 @@
 <html dir="#LANG_DIR" lang="#LANG">
 	<head>
 		<meta charset="utf-8" />
-		<title>#NOM_SITE_SPIP - Nouvel article</title>
+		<title>#NOM_SITE_SPIP - <:open_science:new_article:></title>
 		<!--<meta name="description" content=" " />
 		<meta name="keywords" content=" " />-->
 		
@@ -41,24 +41,54 @@
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
-					<h1>Nouvel article</h1>
+					<h1><:open_science:new_article:></h1>
 					<br>
-					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p> ]
+					<p class="hidden" id="retour-formulaire"><:open_science:article_sent:><br></p>
+					
+					
+					[(#SESSION{login}|non)
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<p class="center"><:open_science:login_to_submit_an_article:></p><br><br>
+								
+								[(#LOGIN_PUBLIC{#URL_PAGE})]
+								<br>
+							</div>
+						</div>
+					]
+					
+					
+					
 					
 					<BOUCLE_art(ARTICLES){id_article}{tout}>
-						[(#SESSION{id_auteur}|oui)  
-						
-							<p>Envoyez l'article au format PDF :</p>
+						<BOUCLE_rubVerif(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{id_mot=41}{tout}>
+							<!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot-clé "en cours"  -->
+							[(#SESSION{id_auteur}|oui)  
 							
-							
-							
-							<p>#TITRE </p><br><br>
+								<p><:open_science:article_pdf_format:> :</p>
 								
-							#FORMULAIRE_UPLOAD
-							
+								
+								
+								<p>#TITRE </p><br><br>
+									
+								#FORMULAIRE_UPLOAD
+								
 
-						]<!-- si session = oui -->
+							]<!-- si session = oui -->
+						</BOUCLE_rubVerif>
 					</BOUCLE_art>
+					
+					<script>
+						var retourForm = window.location.href.split("#");
+						if(retourForm[1])
+						{
+							if(retourForm[1] == "formulaire_upload")// si le formulaire est terminé.
+							{
+								document.getElementById("retour-formulaire").classList.remove("hidden");
+							}
+						}
+						
+					</script>
 				</section>
 			</div>
 		</div>

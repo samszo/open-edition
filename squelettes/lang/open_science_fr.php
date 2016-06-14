@@ -7,6 +7,21 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'login_to_submit_an_article'=>"Connectez-vous pour proposer un article.",
+	'french_title'=>"Titre Français",
+	'english_title'=>"Titre Anglais",
+	'french_subtitle'=>"Sous-titre Français",
+	'english_subtitle'=>"Sous-titre Anglais",
+	'french_abstract'=>"Résumé Français",
+	'english_abstract'=>"Résumé Anglais (abstract)",
+	'french_keywords'=>"Les mots clefs français",
+	'english_keywords'=>"Les mots clefs Anglais",
+	'keyword'=>"mot-clé",
+	'authors_and_affiliations'=>"Les auteurs et leurs appartenances",
+	'affiliation'=>"appartenance",
+	'submit'=>"envoyer",
+	'article_sent'=>"Votre article a été enregistré et proposé.",
+	'article_pdf_format'=>"Envoyez l'article au format PDF",
 	'forthcoming'=>"En attente",
 	'journal'=>"Revue",
 	'issue'=>"Numéro",

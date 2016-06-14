@@ -1,0 +1,63 @@
+							<div class="row">
+								<div class="col-lg-6">
+									<p><:open_science:french_title:></p><input type="text" name="titre-fr" maxlength="100"/>
+								</div>
+								<div class="col-lg-6">
+									<p><:open_science:english_title:></p><input type="text" name="titre-en" maxlength="100"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<p><:open_science:french_subtitle:></p><input type="text" name="sous-titre-fr" maxlength="200"/>
+								</div>
+								<div class="col-lg-6">
+									<p><:open_science:english_subtitle:></p><input type="text" name="sous-titre-en" maxlength="200"/>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<p><:open_science:french_abstract:></p>
+									<textarea name="resume-fr" id="resume-fr"></textarea>
+								</div>
+								<div class="col-lg-6">
+									<p><:open_science:english_abstract:></p>
+									<textarea name="resume-en" id="resume-en"></textarea>
+								</div>
+							</div>
+							
+							
+							<!--<h2>Article en PDF</h2>
+							<input name="pdf" type="file" id="input-pdf"/>-->
+							<script>
+								/*
+								var inputPdf = document.getElementById('input-pdf');
+								inputPdf.addEventListener("change", function(){
+									if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert('Vous devez choisir un fichier PDF.'); }
+								
+								}, true);
+								*/
+							</script>
+							
+
+							
+							<div class="separator"></div>
+							<!--les mots clefs de l'article ( français anglais )-->
+							<div class="row">
+								<div class="col-lg-6">
+									<p><strong><:open_science:french_keywords:></strong></p>
+									<p><:open_science:keyword:> 1, <:open_science:keyword:> 2, <:open_science:keyword:> 3</p>
+									<textarea name="mc-fr" id="mc-fr"></textarea>
+								</div>
+								<div class="col-lg-6">
+									<p><strong><:open_science:english_keywords:></strong></p>
+									<p><:open_science:keyword:> 1, <:open_science:keyword:> 2, <:open_science:keyword:> 3</p>
+									<textarea name="mc-en" id="mc-en"></textarea>
+								</div>
+							</div>
+							
+							<div class="separator"></div>
+							<p><strong><:open_science:authors_and_affiliations:> </strong></p>
+							<p><:auteur:>, <:open_science:affiliation:>, email; <:auteur:>, <:open_science:affiliation:>, email;</p>
+							<textarea name="auteurs"></textarea>
+							
+							<input type="submit" value="<:open_science:submit:>"/>

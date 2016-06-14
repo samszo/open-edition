@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
-<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{tout}>
-	<head>
+<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{id_mot=41}{tout}>
+	<head><!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot "en cours"  -->
 		<meta charset="utf-8" />
-		<title>#NOM_SITE_SPIP - Nouvel article</title>
+		<title>#NOM_SITE_SPIP - <:open_science:new_article:></title>
 		<!--<meta name="description" content=" " />
 		<meta name="keywords" content=" " />-->
 		
@@ -72,12 +72,23 @@
 					</BOUCLE_sousTitreTrad>-->
 					
 					<hr>
-					<h1>Nouvel article</h1>
+					<h1><:open_science:new_article:></h1>
 					<br>
 					<br>
 					
 					
-					[(#SESSION{id_auteur}|non) <p><a href="#URL_SITE_SPIP/ecrire">Connectez-vous</a> pour proposer un article.</p><br> ]
+					
+					
+					[(#SESSION{login}|non)
+						<div class="row">
+							<div class="col-md-6 col-md-offset-3">
+								<p class="center"><:open_science:login_to_submit_an_article:></p><br><br>
+								
+								[(#LOGIN_PUBLIC{#URL_PAGE})]
+								<br>
+							</div>
+						</div>
+					]
 					
 					
 					

@@ -218,6 +218,7 @@ body{ background-color:#e2e2e2; }
 .margin-top-10{margin-top:10px;}
 
 .pos-relative{position:relative;}
+.hidden{display:none;}
 
 /* ----------------------------------- NAV RIGHT and LEFT ---------------------------------------------- */
 
@@ -432,7 +433,7 @@ nav p, nav strong, nav a{ line-height:22px; }
 	/*margin-left:30px;*/
 }
 
-.content p{
+.content p, .content legend{
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 }
@@ -827,7 +828,7 @@ section .block-deco:nth-child(27)
 /* -------------------------------------- formulaire -------------------------------------- */
 
 
-.content form input[type=text], .content form textarea{
+.content form input[type=text], .content form input[type=password], .content form textarea{
 	outline: 1px solid #aaa;
 	background-color:#fafafa;
 	border:0;
@@ -843,7 +844,7 @@ section .block-deco:nth-child(27)
 	min-height:140px;
 	resize: vertical;
 }
-.content form input[type=text]:focus, .content form textarea:focus{
+.content form input[type=text]:focus, .content form input[type=password]:focus, .content form textarea:focus{
 	outline: 2px solid #0094cb;
 	background-color:#fcfcfc;
 	-webkit-box-shadow: 1px 1px 2px 4px #eee;
@@ -884,6 +885,9 @@ form .miniature{
 	height:auto;
 	vertical-align:middle;
 }
+
+#formulaire_login{text-align:center;}
+#session_remember{display:inline;}
 
 
 /* --------------------------------------FOOTER--------------------------------------------------- */

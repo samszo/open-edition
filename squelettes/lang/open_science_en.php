@@ -7,6 +7,21 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'login_to_submit_an_article'=>"Login to submit an article.",
+	'french_title'=>"French title",
+	'english_title'=>"English title",
+	'french_subtitle'=>"French subtitle",
+	'english_subtitle'=>"English subtitle",
+	'french_abstract'=>"French abstract",
+	'english_abstract'=>"English abstract",
+	'french_keywords'=>"The French keywords",
+	'english_keywords'=>"The English keywords",
+	'keyword'=>"keyword",
+	'authors_and_affiliations'=>"The authors and their affiliations",
+	'affiliation'=>"affiliation",
+	'submit'=>"submit",
+	'article_sent'=>"Your article is sent.",
+	'article_pdf_format'=>"Send the article in PDF format",
 	'forthcoming'=>"Forthcoming",
 	'journal'=>"Journal",
 	'issue'=>"Issue",
