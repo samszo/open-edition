@@ -43,7 +43,7 @@
 					
 					<h1><:open_science:new_article:></h1>
 					<br>
-					<p class="hidden" id="retour-formulaire"><:open_science:article_sent:><br></p>
+					<p class="hidden" id="retour-formulaire"><strong><:open_science:article_sent:></strong><br><br><br><br><br><br></p>
 					
 					
 					[(#SESSION{login}|non)
@@ -61,7 +61,7 @@
 					
 					
 					<BOUCLE_art(ARTICLES){id_article}{tout}>
-						<BOUCLE_rubVerif(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{id_mot=41}{tout}>
+
 							<!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot-clé "en cours"  -->
 							[(#SESSION{id_auteur}|oui)  
 							
@@ -75,7 +75,7 @@
 								
 
 							]<!-- si session = oui -->
-						</BOUCLE_rubVerif>
+
 					</BOUCLE_art>
 					
 					<script>
