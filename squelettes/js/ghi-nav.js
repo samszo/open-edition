@@ -100,7 +100,7 @@ jQuery(document).ready(function(){
 		}
 		else
 		{
-			$(".scroll-box").height(  ($(".squares-container").height()) - 70  );
+			$(".scroll-box").height(  ($(".squares-container").height()) - 44  );
 			//alert($(window).width());
 		}
 	 }

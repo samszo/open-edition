@@ -813,6 +813,9 @@ section .block-deco:nth-child(27)
 		overflow : -moz-scrollbars-vertical;
 		height:600px;
 	}
+	.scroll-box a{
+		font-size:14px;
+	}
 }
 @media (max-width: 991px){ /* pour tablettes et telephones */
 	.scroll-box{

@@ -51,7 +51,7 @@
 				<section class="col-md-9 col-lg-10 content">
 									
 					
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; revue</p>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; <:open_science:journal:></p>
 					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					
 					
@@ -134,12 +134,12 @@
 							<br>
 							<B_appel>
 							<div class="block-other">
-								<h4>Numéros en cours</h4>
-								<p>Proposer un article pour ces numéros :</p>
+								<h4><:open_science:in_progress:></h4>
+								<p><:open_science:submit_an_article:> :</p>
 								<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}{tout}>
 								
 									<a href="#URL_RUBRIQUE">#TITRE <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>(#TITRE)</BOUCLE_AnneeNumAppel></a> | 
-									<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a><br>
+									<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a><br>
 									
 								</BOUCLE_appel>
 							</div>
@@ -167,7 +167,7 @@
 
 						</div>
 						<div class="col-sm-4 block-grey">
-							<h3 class="no-margin"><:open_science:chief_editors:></h3>
+							<!--<h3 class="no-margin"><:open_science:chief_editors:></h3>-->
 							
 							<BOUCLE_la_redaction(ARTICLES){id_rubrique}>
 								#TEXTE

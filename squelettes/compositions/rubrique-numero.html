@@ -49,7 +49,7 @@
 				<section class="col-md-9 col-lg-10 content">
 					
 					
-					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; numéro</p>
+					<p class="fil"> <BOUCLE_arianeDom (MOTS){id_groupe=1}{id_mot=#DOM_P}><a class="arianeDom" href="<BOUCLE_arianeDomLien(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien>">#TITRE</a></BOUCLE_arianeDom> <BOUCLE_ariane(HIERARCHIE){id_rubrique}>  <a href="#URL_RUBRIQUE">[ &nbsp; &gt; (#TITRE|couper{80})]</a></BOUCLE_ariane>  &nbsp; &gt; <:open_science:issue:></p>
 					<B_arianeSec><p class="fil-secondary"><:open_science:related_domains:> : <BOUCLE_arianeSec(MOTS){id_rubrique}{id_groupe=1}{id_mot!=#DOM_P}> <a href="<BOUCLE_arianeDomLien2(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}>#URL_ARTICLE</BOUCLE_arianeDomLien2>">#TITRE</a> &nbsp;  </BOUCLE_arianeSec></p><//B_arianeSec>
 					
 					<script type="text/javascript">
@@ -86,7 +86,7 @@
 						<div class="col-sm-8">
 						
 							<BOUCLE_appel(MOTS){id_rubrique}{id_groupe=6}>
-								<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE">Appel à article</a>
+								<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a>
 							</BOUCLE_appel>
 
 						

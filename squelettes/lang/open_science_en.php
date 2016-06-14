@@ -7,6 +7,14 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'forthcoming'=>"Forthcoming",
+	'journal'=>"Journal",
+	'issue'=>"Issue",
+	'article'=>"Article",
+	'in_progress'=>"In progress",
+	'submit_an_article'=>"Submit an article to these issues",
+	'new_article'=>"New article",
+	'call_for_article'=>"Call for article",
 	'journals'=>"Journals",
 	'domains'=>"Domains",
 	'chief_editors'=>"Chief editors",
