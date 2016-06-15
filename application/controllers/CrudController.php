@@ -178,6 +178,13 @@ class CrudController extends Zend_Controller_Action
     		unset($params['obj']);
     		unset($params['recid']);
     		
+    		switch ($params['type']) {
+    			case "artEmbPdf":
+    				$dbArt = new Model_DbTable_Spip_articles();
+    				$dbArt->edit($params['idArt'], array("texte"=>"<emb".$params['idDoc']."|largeur=100%|hauteur=600>"));
+    			break;
+    		}
+    		
     		$this->view->message = "Les modifications ont été effectuées.";
 	
     } 
