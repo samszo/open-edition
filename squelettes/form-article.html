@@ -51,10 +51,10 @@
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
 					
-					<BOUCLE_revue(RUBRIQUES){id_enfant}>
+					<BOUCLE_revue(RUBRIQUES){id_enfant}{tout}>
 						<h2>
 							#TITRE 
-							<BOUCLE_revueTrad3(RUBRIQUES){traduction}{lang!=#LANG}><span class="subtitle"> / #TITRE</span></BOUCLE_revueTrad3>
+							<BOUCLE_revueTrad3(RUBRIQUES){traduction}{lang!=#LANG}{tout}><span class="subtitle"> / #TITRE</span></BOUCLE_revueTrad3>
 						</h2>
 					</BOUCLE_revue>
 					<!--
@@ -65,7 +65,7 @@
 					</BOUCLE_revueTrad>-->
 					
 					
-					<h3>#TITRE  <BOUCLE_sousTitreTrad2(RUBRIQUES){traduction}{lang!=#LANG}><span class="subtitle"> / #TITRE</span></BOUCLE_sousTitreTrad2></h3>
+					<h3>#TITRE  <BOUCLE_sousTitreTrad2(RUBRIQUES){traduction}{lang!=#LANG}{tout}><span class="subtitle"> / #TITRE</span></BOUCLE_sousTitreTrad2></h3>
 					<!--
 					<BOUCLE_sousTitreTrad(RUBRIQUES){traduction}{lang!=#LANG}>
 						<h3 class="subtitle">#TITRE</h3>
@@ -96,12 +96,12 @@
 					
 						<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>					
 						<input type="hidden" name="idRubNum" value="#ID_RUBRIQUE"/>
-						<BOUCLE_rubNumRevueTrad(RUBRIQUES){traduction}{lang!=#LANG}>
+						<BOUCLE_rubNumRevueTrad(RUBRIQUES){traduction}{lang!=#LANG}{tout}>
 								<input type="hidden" name="idRubNumTrad" value="#ID_RUBRIQUE"/>
 						</BOUCLE_rubNumRevueTrad>						
-						<BOUCLE_rubRevue(RUBRIQUES){id_enfant}>
+						<BOUCLE_rubRevue(RUBRIQUES){id_enfant}{tout}>
 							<input type="hidden" name="idRubRevue" value="#ID_RUBRIQUE"/>
-							<BOUCLE_rubRevue2(RUBRIQUES){traduction}{lang!=#LANG}>
+							<BOUCLE_rubRevue2(RUBRIQUES){traduction}{lang!=#LANG}{tout}>
 								<input type="hidden" name="idRubRevueTrad" value="#ID_RUBRIQUE"/>
 							</BOUCLE_rubRevue2>
 						</BOUCLE_rubRevue>
