@@ -65,28 +65,96 @@
 							<!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot-clé "en cours"  -->
 							[(#SESSION{id_auteur}|oui)  
 							
-								<p><:open_science:article_pdf_format:> :</p>
-								
-								
-								
-								<p>#TITRE </p><br><br>
+								<div class="container-form-pdf">
+									<p><:open_science:article_pdf_format:> :</p>
 									
-								#FORMULAIRE_UPLOAD
+									<p>#TITRE </p><br><br>
+										
+									#FORMULAIRE_UPLOAD
+								</div>
 								
 
 							]<!-- si session = oui -->
+							
+							<BOUCLE_artPDF(DOCUMENTS){id_article}{extension==pdf}{tout}>
+								<p id="id-doc" class="#ID_DOCUMENT">#ID_DOCUMENT</p>
+							</BOUCLE_artPDF>
 
 					</BOUCLE_art>
 					
 					<script>
+						var idArt = 0;
+						idArt = #ID_ARTICLE;
+						var idDoc = 0;
+						
 						var retourForm = window.location.href.split("#");
 						if(retourForm[1])
 						{
 							if(retourForm[1] == "formulaire_upload")// si le formulaire est terminé.
 							{
-								document.getElementById("retour-formulaire").classList.remove("hidden");
+								$(".container-form-pdf").hide();
+								
+								// on récupère l'id du document
+								idDoc = document.getElementById("id-doc").className;
+								//alert("DOC = " + idDoc + "\n Article = " + idArt);
+								
+								$.ajax({
+									url : 'admin/crud/update',
+									type : 'post',
+									data : 'type=artEmbPdf' + '&idArt=' + idArt + '&idDoc=' + idDoc,
+									dataType : 'json',
+									success : function(code_html, statut){
+										//alert("OK : " + code_html);
+									},
+
+									error : function(resultat, statut, erreur){
+										alert("erreur : " + resultat);
+									},
+
+									complete : function(resultat, statut){
+										document.getElementById("retour-formulaire").classList.remove("hidden");
+										// redirection vers une autre page.
+										document.location.href="spip.php?page=form-article-ok&id_article=" + idArt + "&id_document=" + idDoc;
+									}
+
+								});
+
+								
+								
+								
 							}
 						}
+						
+						var formPdf = document.getElementsByTagName("form");
+						
+						if(formPdf[1])
+						{
+							if(formPdf[1].enctype == "multipart/form-data")// on vérifie si c'est le bon formulaire
+							{
+								var action = formPdf[1].action.split("#");
+								if(action[0]){action = action[0];}
+								action = action + "&id_article=" + idArt + "#formulaire_upload";
+								formPdf[1].action = action;
+								
+								//alert(formPdf[1].action);
+							}
+						}
+						
+						$("section .formulaire_upload form").submit(function(event) {
+							
+							var inputPdf = document.getElementById("fichier_articles_" + idArt);
+							//alert(inputPdf.value);
+							if (inputPdf.value == ""){ alert("Vous devez envoyer l'article en PDF"); event.preventDefault(); }
+							else if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert("L'article doit être au format PDF"); event.preventDefault(); }
+
+						});
+						
+						/*
+						var btnJoindre = document.getElementsByName("joindre_upload");
+						if(btnJoindre[0])
+						{
+							alert(btnJoindre[0].value);
+						}*/
 						
 					</script>
 				</section>
