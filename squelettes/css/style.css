@@ -219,6 +219,7 @@ body{ background-color:#e2e2e2; }
 
 .pos-relative{position:relative;}
 .hidden{display:none;}
+.grey{color:#aaa;}
 
 /* ----------------------------------- NAV RIGHT and LEFT ---------------------------------------------- */
 
@@ -481,6 +482,53 @@ nav p, nav strong, nav a{ line-height:22px; }
 .content h1, .content h2, .content h3, .translated-title { margin-top:20px; }
 
 .content .sommaire p{ margin-left:25px; }
+/* ------------------ content sitemap -------------------- */
+.tree{ 
+	padding-left:45px; 
+	margin-left:5px; 
+}
+.sitemap h2 a{
+	font-size:24px;
+	color:#000;
+}
+.sitemap h2 a:hover{color:#0094cb;}
+.tree a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:normal;
+	color:#000;
+}
+.tree a:hover{color:#0094cb;}
+.tree p{color:#666;}
+
+.tree a, .tree p{font-size:16px;}
+.tree .tree a, .tree .tree p{font-size:14px;}
+.tree .tree .tree a, .tree .tree .tree p{font-size:12px;}
+.tree .tree .tree .tree a, .tree .tree .tree .tree p{font-size:10px;}
+
+.tree {border-left:1px solid #888;}
+.tree .tree {border-left:1px solid #aaa;}
+.tree .tree .tree {border-left:1px solid #ccc;}
+.tree .tree .tree .tree {border-left:1px solid #eee;}
+
+/*
+.tree:hover > a, .tree:hover > p{
+	background-color:#ccc;
+}
+*/
+/*
+.tree a, .tree p{
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.tree:hover > a, .tree:hover > p{padding-left:5px;}
+*/
+/*------------------------*/
+
+
+
 
 .separator, hr{
 	margin: 20px 0 20px 0;

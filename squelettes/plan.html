@@ -38,13 +38,37 @@
 					</script>
 					
 				</nav>
-				<section class="col-md-9 col-lg-10 content">
+				<section class="col-md-9 col-lg-10 content sitemap">
 					
 					<h1><:open_science:sitemap:></h1>
 	
-							
-							
+						
+					<!--	
 					#MODELE{plan}
+					-->
+					<BOUCLE_dom(MOTS){id_groupe=1}{par titre}>
+						<BOUCLE_domArt(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}{par titre}><h2><a href="#URL_ARTICLE">#TITRE</a></h2></BOUCLE_domArt>
+						<div class="tree">
+							<BOUCLE_revues(RUBRIQUES){id_mot}{type_rubrique=revue}{lang=#LANG}{tout}{par titre}>
+								[(#STATUT|=={publie}|?{' ',''})
+									<a href="#URL_RUBRIQUE"> #TITRE</a><br>
+								]
+								[(#STATUT|=={publie}|?{'',' '})
+									<p> #TITRE <em class="grey">(<:open_science:forthcoming:>)</em></p>
+								]
+								<div class="tree">
+									<BOUCLE_numeros(RUBRIQUES){id_parent}{type_rubrique!=revue}{par titre}{tout}>
+										<a href="#URL_RUBRIQUE">#TITRE   (vol <BOUCLE_VolNum(MOTS){id_rubrique}{id_groupe=4}>#TITRE</BOUCLE_VolNum> - <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>#TITRE</BOUCLE_AnneeNumAppel>)</a><br>
+										<div class="tree">
+											<BOUCLE_articles(ARTICLES){id_rubrique}{par date}>
+												<a href="#URL_ARTICLE">#TITRE</a><br>
+											</BOUCLE_articles>
+										</div>
+									</BOUCLE_numeros>
+								</div>
+							</BOUCLE_revues>
+						</div>
+					</BOUCLE_dom>
 
 
 				</section>
