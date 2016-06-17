@@ -37,6 +37,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'issues_of_the_journal'=>"Journal issues",
 	'last_articles'=>"Recent articles",
 	'list_articles'=>"List of Articles",
+	'logout'=>"Logout",
 	'sign_up'=>"Sign up",
 	'sign_in'=>"Sign in",
 	'author_page'=>"Author's Page",

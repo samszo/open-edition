@@ -28,8 +28,13 @@
 					<div class="col-sm-3 col-lg-2">
 						<ul>
 							<li><INCLURE{fond=inclure/menu_langues,env}/></li>
-							<li><a href="#URL_SITE_SPIP/ecrire"><:open_science:sign_in:> </a></li>
-							<li><a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a></li>
+							<li>
+								<a href="#URL_SITE_SPIP/ecrire">[(#SESSION{id_auteur}|oui) #SESSION{nom}][(#SESSION{id_auteur}|non)<:open_science:sign_in:>]</a>
+							</li>
+							<li>
+								[(#SESSION{id_auteur}|non)<a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a>]
+								[(#SESSION{id_auteur}|oui)<a href="#URL_LOGOUT"><:open_science:logout:></a>]
+							</li>
 							<BOUCLE_footerLegal(ARTICLES){id_mot=78}{lang=#LANG}><li><a href="#URL_ARTICLE">#TITRE</a></li></BOUCLE_footerLegal>
 							<li><a href="spip.php?page=plan&lang=#LANG"><:open_science:sitemap:></a></li>
 						</ul>
