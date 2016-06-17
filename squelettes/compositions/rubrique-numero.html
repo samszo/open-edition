@@ -86,18 +86,19 @@
 						<div class="col-sm-8">
 						
 							<BOUCLE_appel(MOTS){id_rubrique}{id_groupe=6}>
-								<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a>
+								<p><:open_science:call_for_article_text:></p>
+								<a class="call-for-article" href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a>
 							</BOUCLE_appel>
 
 						
-							<h2><:open_science:list_articles:></h2>
-
-							
-							<BOUCLE_articles(ARTICLES){id_rubrique}>
-								<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
-								<p><em>[(#DESCRIPTIF|couper{220})]</em></p>
-								<p><BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author></p><br>
-							</BOUCLE_articles>
+							<B_articles>
+								<h2><:open_science:list_articles:></h2>
+								<BOUCLE_articles(ARTICLES){id_rubrique}>
+									<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
+									<p><em>[(#DESCRIPTIF|couper{220})]</em></p>
+									<p><BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author></p><br>
+								</BOUCLE_articles>
+							</B_articles>
 							
 
 						</div>
@@ -109,33 +110,37 @@
 							</BOUCLE_revue>
 							
 							
-							<h3><:open_science:other_issues:> :</h3>
-							<!--<h3>Autres numéros de la revue</h3>-->
-							
-							
+
 							<BOUCLE_RubTest(RUBRIQUES){id_enfant}>
-							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
-								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
-									#SET{gmAn,(#TITRE|substr{2,2})}																	
-									[<p>(#TITRE|unique)</p>]  
-										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
-											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
-												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
-												[<p>Volume (#GET{mAnNum}|unique)</p>]
-											</BOUCLE_motVol>								
-											<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br/>
-										</BOUCLE_num>
-									[<!--(#ID_MOT|unique)-->]								
-								</BOUCLE_motAn>
-							</BOUCLE_rubAn>
-							</BOUCLE_RubTest>
 							
+								<B_rubAn>
+									<h3><:open_science:other_issues:> :</h3>
+									<!--<h3>Autres numéros de la revue</h3>-->
+									<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
+										<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
+											#SET{gmAn,(#TITRE|substr{2,2})}																	
+											[<p>(#TITRE|unique)</p>]  
+												<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}>
+													<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
+														#SET{mAnNum,#GET{gmAn} - #TITRE}																												
+														[<p>Volume (#GET{mAnNum}|unique)</p>]
+													</BOUCLE_motVol>								
+													<a id="num-#ID_RUBRIQUE" href="#URL_RUBRIQUE">#TITRE</a><br/>
+												</BOUCLE_num>
+											[<!--(#ID_MOT|unique)-->]								
+										</BOUCLE_motAn>
+									</BOUCLE_rubAn>
+								</B_rubAn>
+								
+							</BOUCLE_RubTest>
 							<script type="text/javascript">
 								selectActiveNum(#ID_RUBRIQUE);
 							</script>
 							<!--
 							<br>
 							<a href="#">Accéder à la liste complète des numéros de revues</a><br>-->
+							
+							
 						</div>
 					</div>
 

@@ -39,7 +39,6 @@
 					<INCLURE{fond=inclure/domaines-nav, env}>
 					
 					
-					
 					<br>
 					<div class="hidden-xs hidden-sm picture-100">
 						<BOUCLE_img(DOCUMENTS){id_document=#IMG_1}>
@@ -103,67 +102,64 @@
 							</div>
 							
 							
-							<!--<hr>-->
-							<h3><:open_science:issues_of_the_journal:></h3>
-							
-							<div class="row block-other">
-							
-							
-							<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
-								<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
-									#SET{gmAn,(#TITRE|substr{2,2})}																	
-									[<div class="block-num col-sm-4"><h4>(#TITRE|unique)</h4>]  
-										<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}{tout}>
-											<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
-												#SET{mAnNum,#GET{gmAn} - #TITRE}																												
-												[<p>Volume (#GET{mAnNum}|unique)</p>]
-											</BOUCLE_motVol>								
-											<a href="#URL_RUBRIQUE">#TITRE</a><br/>
-										</BOUCLE_num>
-									[<!--(#ID_MOT|unique)--></div>]								
-								</BOUCLE_motAn>
-							</BOUCLE_rubAn>																								
-											
-								<!--
-								<div class="col-lg-12">
-									<br><a href="#">Accéder à la liste complète des numéros de revues</a><br>
-								</div>
-								-->
-							</div>
-							
-							<br>
-							<B_appel>
-							<div class="block-other">
-								<h4><:open_science:in_progress:></h4>
-								<p><:open_science:submit_an_article:> :</p>
-								<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}{tout}>
+							<B_rubAn>
+								<h3><:open_science:issues_of_the_journal:></h3>
 								
-									<a href="#URL_RUBRIQUE">#TITRE <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>(#TITRE)</BOUCLE_AnneeNumAppel></a> | 
-									<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a><br>
+								<div class="row block-other">
+									<BOUCLE_rubAn(RUBRIQUES){id_parent}{par num titre}>
+										<BOUCLE_motAn(MOTS){id_groupe=3}{id_rubrique}>
+											#SET{gmAn,(#TITRE|substr{2,2})}																	
+											[<div class="block-num col-sm-4"><h4>(#TITRE|unique)</h4>]  
+												<BOUCLE_num(RUBRIQUES){id_parent=#ID_PARENT}{id_mot=#ID_MOT}{doublons}{tout}>
+													<BOUCLE_motVol(MOTS){id_rubrique}{id_groupe=4}{par titre}>
+														#SET{mAnNum,#GET{gmAn} - #TITRE}																												
+														[<p>Volume (#GET{mAnNum}|unique)</p>]
+													</BOUCLE_motVol>								
+													<a href="#URL_RUBRIQUE">#TITRE</a><br/>
+												</BOUCLE_num>
+											[<!--(#ID_MOT|unique)--></div>]								
+										</BOUCLE_motAn>
+									</BOUCLE_rubAn>
+									<!--
+									<div class="col-lg-12">
+										<br><a href="#">Accéder à la liste complète des numéros de revues</a><br>
+									</div>
+									-->
+								</div>
+							</B_rubAn>
+							
+							
+							<B_appel>
+								<div class="block-other">
+									<h3><:open_science:in_progress:></h3>
+									<p><:open_science:submit_an_article:> :</p>
+									<BOUCLE_appel(RUBRIQUES){id_parent}{id_groupe=6}{tout}>
 									
-								</BOUCLE_appel>
-							</div>
+										<a href="#URL_RUBRIQUE">#TITRE <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>(#TITRE)</BOUCLE_AnneeNumAppel></a> | 
+										<a href="spip.php?page=form-article&id_rubrique=#ID_RUBRIQUE"><:open_science:call_for_article:></a><br>
+										
+									</BOUCLE_appel>
+								</div>
 							</B_appel>
 							
 
 							
-							
-							
-							<hr>
-							
-							<h3><:open_science:last_articles:></h3>
-							
-							<BOUCLE_rrr(RUBRIQUES){id_parent}{par date}{inverse}{0,3}>
-								<!--<h4>#TITRE</h4>-->
+							<B_rrr>
+								<hr>
+								<h3><:open_science:last_articles:></h3>
 								
-								<BOUCLE_article(ARTICLES){id_rubrique}{par date}{inverse}{0,2}>
-									<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
-									<p><em>[(#DESCRIPTIF|couper{128})]</em></p>
-									<p>
-									<BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author>
-									</p><br>
-								</BOUCLE_article>
-							</BOUCLE_rrr>
+								<BOUCLE_rrr(RUBRIQUES){id_parent}{par date}{inverse}{0,3}>
+									<!--<h4>#TITRE</h4>-->
+									
+									<BOUCLE_article(ARTICLES){id_rubrique}{par date}{inverse}{0,2}>
+										<a href="#URL_ARTICLE" title="#TITRE">#TITRE</a>
+										<p><em>[(#DESCRIPTIF|couper{128})]</em></p>
+										<p>
+										<BOUCLE_author(AUTEURS){id_article}>[(#COMPTEUR_BOUCLE|>{1}|?{',  ',''})]#NOM</BOUCLE_author>
+										</p><br>
+									</BOUCLE_article>
+								</BOUCLE_rrr>
+							</B_rrr>
 
 						</div>
 						<div class="col-sm-4 block-grey">

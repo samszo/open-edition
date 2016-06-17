@@ -30,6 +30,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	'submit_an_article'=>"Proposer un article pour ces numéros",
 	'new_article'=>"Nouvel article",
 	'call_for_article'=>"Appel à article",
+	'call_for_article_text'=>"Ce numéro a besoin d'articles :",
 	'journals'=>"Liste des revues",
 	'domains'=>"Domaines",
 	'chief_editors'=>"Rédacteurs en chef",
