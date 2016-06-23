@@ -6,6 +6,7 @@
 									<p><:open_science:english_title:></p><input type="text" name="titre-en" maxlength="100"/>
 								</div>
 							</div>
+							<!--
 							<div class="row">
 								<div class="col-lg-6">
 									<p><:open_science:french_subtitle:></p><input type="text" name="sous-titre-fr" maxlength="200"/>
@@ -14,6 +15,8 @@
 									<p><:open_science:english_subtitle:></p><input type="text" name="sous-titre-en" maxlength="200"/>
 								</div>
 							</div>
+							-->
+							
 							<div class="row">
 								<div class="col-lg-6">
 									<p><:open_science:french_abstract:></p>
@@ -56,8 +59,94 @@
 							</div>
 							
 							<div class="separator"></div>
+							<!--
 							<p><strong><:open_science:authors_and_affiliations:> </strong></p>
 							<p><:auteur:>, <:open_science:affiliation:>, email; <:auteur:>, <:open_science:affiliation:>, email;</p>
 							<textarea name="auteurs"></textarea>
+							-->
+							
+							<p><strong><:auteur:>s </strong></p><!-- le premier auteur à le numéro zéro, pas un -->
+							
+							<div id="ajout-auteurs">
+								<div id="auteur-original" class="row auteur auteur-0">
+									<div class="col-sm-3">
+										<p>Prénom - Nom</p><input type="text" class="auteur-nom" name="auteur-nom-0" maxlength="60"/>
+									</div>
+									<div class="col-sm-3">
+										<p>Appartenance</p><input type="text" class="auteur-appart" name="auteur-appart-0" maxlength="100"/>
+									</div>
+									<div class="col-sm-3">
+										<p>Email</p><input type="email" class="auteur-email" name="auteur-email-0" maxlength="60"/>
+									</div>
+									<div class="col-sm-3">
+										<p>ISNI</p><input type="text" class="auteur-isni" name="auteur-isni-0" maxlength="16"/>
+									</div>
+								</div>
+							</div>
+							<p class="p-btn" id="btn-ajout-auteur"><span class="glyphicon glyphicon-plus btn-rond"></span> Ajouter un auteur</p> &nbsp;  
+							<p class="p-btn hidden" id="btn-suppr-auteur"><span class="glyphicon glyphicon-minus btn-rond"></span> Supprimer un auteur</p>
+							
+							<script>
+								var nbrAuteur = 1;
+								var btnAjoutAuteur = document.getElementById("btn-ajout-auteur");
+								var btnSupprAuteur = document.getElementById("btn-suppr-auteur");
+								var original = document.getElementById("auteur-original");
+								var contentAuteurs = document.getElementById("ajout-auteurs");
+								var tableauAuteurs = [];
+								
+								btnAjoutAuteur.addEventListener("click", function(e){
+								
+									if(nbrAuteur < 16)
+									{
+										tableauAuteurs[nbrAuteur] = document.createElement("div");
+										tableauAuteurs[nbrAuteur].className = "row auteur auteur-" + nbrAuteur;
+										tableauAuteurs[nbrAuteur].innerHTML = original.innerHTML;
+										
+										contentAuteurs.appendChild(tableauAuteurs[nbrAuteur]);
+										
+										document.querySelector(".auteur-" + nbrAuteur + " .auteur-nom").setAttribute("name", "auteur-nom-" + nbrAuteur);
+										document.querySelector(".auteur-" + nbrAuteur + " .auteur-email").setAttribute("name", "auteur-email-" + nbrAuteur);
+										document.querySelector(".auteur-" + nbrAuteur + " .auteur-appart").setAttribute("name", "auteur-appart-" + nbrAuteur);
+										document.querySelector(".auteur-" + nbrAuteur + " .auteur-isni").setAttribute("name", "auteur-isni-" + nbrAuteur);
+										
+										nbrAuteur++;
+									}
+									else {alert("Nombre maximal d'auteurs atteint.");}
+									
+									if(nbrAuteur == 2)
+									{	
+										btnSupprAuteur.classList.remove("hidden");
+									}
+									
+								
+								}, false);
+								
+								
+								btnSupprAuteur.addEventListener("click", function(e){
+									if(confirm("Voulez-vous supprimer le dernier auteur ajouté ?"))
+									{
+										if(nbrAuteur > 1)
+										{
+											contentAuteurs.removeChild(tableauAuteurs[nbrAuteur-1]);
+											nbrAuteur--;
+										}
+										
+										if(nbrAuteur == 1)
+										{	
+											btnSupprAuteur.classList.add("hidden");
+										}
+									}
+								
+								}, false);
+							</script>
+							
+							<hr>
+							
+							
+							
+							
+							
+							
+							
 							
 							<input type="submit" value="<:open_science:submit:>"/>

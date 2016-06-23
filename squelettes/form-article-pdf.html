@@ -49,6 +49,7 @@
 					
 					
 					[(#SESSION{login}|non)
+						<!--
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3">
 								<p class="center"><:open_science:login_to_submit_an_article:></p><br><br>
@@ -57,6 +58,7 @@
 								<br>
 							</div>
 						</div>
+						-->
 					]
 					
 					
@@ -65,7 +67,7 @@
 					<BOUCLE_art(ARTICLES){id_article}{tout}>
 
 							<!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot-clé "en cours"  -->
-							[(#SESSION{id_auteur}|oui)  
+							<!--[(#SESSION{id_auteur}|oui) ... ]-->
 							
 								<div class="container-form-pdf">
 									<p><:open_science:article_pdf_format:> :</p>
@@ -76,18 +78,27 @@
 								</div>
 								
 
-							]<!-- si session = oui -->
+							<!--] si session = oui -->
 							
 							<BOUCLE_artPDF(DOCUMENTS){id_article}{extension==pdf}{tout}>
 								<p id="id-doc" class="#ID_DOCUMENT">#ID_DOCUMENT</p>
 							</BOUCLE_artPDF>
+							<BOUCLE_artTrad(ARTICLES){traduction}{lang!=#LANG}{tout}>
+								<p id="id-art-trad" class="#ID_ARTICLE"> <!--#ID_ARTICLE--> </p>
+							</BOUCLE_artTrad>
 
 					</BOUCLE_art>
 					
+					
+					
 					<script>
 						var idArt = 0;
+						var idArtTrad = 0;
 						idArt = #ID_ARTICLE;
+						idArtTrad = document.getElementById("id-art-trad").className;
 						var idDoc = 0;
+						
+						//alert(idArt + "    trad : " + idArtTrad );
 						
 						var retourForm = window.location.href.split("#");
 						if(retourForm[1])
@@ -114,9 +125,28 @@
 									},
 
 									complete : function(resultat, statut){
-										document.getElementById("retour-formulaire").classList.remove("hidden");
-										// redirection vers une autre page.
-										document.location.href="spip.php?page=form-article-ok&id_article=" + idArt + "&id_document=" + idDoc;
+										//_________________________________________
+											$.ajax({
+												url : 'admin/crud/update',
+												type : 'post',
+												data : 'type=artEmbPdf' + '&idArt=' + idArtTrad + '&idDoc=' + idDoc,
+												dataType : 'json',
+												success : function(code_html, statut){
+													//alert("OK : " + code_html);
+												},
+
+												error : function(resultat, statut, erreur){
+													alert("erreur : " + resultat);
+												},
+
+												complete : function(resultat, statut){
+													document.getElementById("retour-formulaire").classList.remove("hidden");
+													// redirection vers une autre page.
+													document.location.href="spip.php?page=form-article-ok&id_article=" + idArt + "&id_document=" + idDoc;
+												}
+
+											});
+										//_________________________________________
 									}
 
 								});

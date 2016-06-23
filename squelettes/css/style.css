@@ -220,6 +220,26 @@ body{ background-color:#e2e2e2; }
 .pos-relative{position:relative;}
 .hidden{display:none;}
 .grey{color:#aaa;}
+.btn-rond{
+	color:#fff;
+	background-color:#474747;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;
+	padding:9px;
+	padding-left:10px;
+}
+.btn-rond:hover, .p-btn:hover .glyphicon{
+	background-color:#0094cb;
+	cursor:pointer;
+}
+.p-btn{
+	display:inline-block;
+}
+.p-btn:hover{
+	color:#0094cb;
+	text-decoration:underline;
+	cursor:pointer;
+}
 
 /* ----------------------------------- NAV RIGHT and LEFT ---------------------------------------------- */
 
@@ -876,7 +896,7 @@ section .block-deco:nth-child(27)
 /* -------------------------------------- formulaire -------------------------------------- */
 
 
-.content form input[type=text], .content form input[type=password], .content form textarea{
+.content form input[type=text], .content form input[type=email], .content form input[type=password], .content form textarea{
 	outline: 1px solid #aaa;
 	background-color:#fafafa;
 	border:0;
@@ -892,7 +912,7 @@ section .block-deco:nth-child(27)
 	min-height:140px;
 	resize: vertical;
 }
-.content form input[type=text]:focus, .content form input[type=password]:focus, .content form textarea:focus{
+.content form input[type=text]:focus, .content form input[type=email]:focus, .content form input[type=password]:focus, .content form textarea:focus{
 	outline: 2px solid #0094cb;
 	background-color:#fcfcfc;
 	-webkit-box-shadow: 1px 1px 2px 4px #eee;

@@ -1,7 +1,9 @@
 <!DOCTYPE HTML>
 <html dir="#LANG_DIR" lang="#LANG">
-<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{id_mot=41}{tout}>
-	<head><!--  le formulaire ne doit pas s'afficher si la rubrique (le numéro) ne possède pas le mot "en cours"  -->
+<BOUCLE_principal(RUBRIQUES){id_rubrique}{type_rubrique!=revue}{id_mot=111}{tout}>
+	<head>
+		<!--  le formulaire doit s'afficher si la rubrique (le numéro) possède le mot "en cours" {id_mot=41} -->
+		<!--  le formulaire doit s'afficher si la rubrique est un dossier des propositions {id_mot=111} -->
 		<meta charset="utf-8" />
 		<title>#NOM_SITE_SPIP - <:open_science:new_article:></title>
 		<!--<meta name="description" content=" " />
@@ -82,6 +84,7 @@
 					
 					
 					[(#SESSION{login}|non)
+						<!--
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3">
 								<p class="center"><:open_science:login_to_submit_an_article:></p><br><br>
@@ -90,13 +93,14 @@
 								<br>
 							</div>
 						</div>
+						-->
 					]
 					
 					
 					
 					<form id="form-article" class="form-author" enctype="multipart/form-data">
 					
-						<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>					
+						<!--<input type="hidden" name="idAuteur" value="#SESSION{id_auteur}"/>	-->				
 						<input type="hidden" name="idRubNum" value="#ID_RUBRIQUE"/>
 						<BOUCLE_rubNumRevueTrad(RUBRIQUES){traduction}{lang!=#LANG}{tout}>
 								<input type="hidden" name="idRubNumTrad" value="#ID_RUBRIQUE"/>
@@ -108,11 +112,11 @@
 							</BOUCLE_rubRevue2>
 						</BOUCLE_rubRevue>
 					
-						[(#SESSION{id_auteur}|oui) 
+						<!--[(#SESSION{id_auteur}|oui) ... ]-->
 						
 							<INCLURE{fond=inclure/inc-form-article, env}>
 						
-						]<!-- session = oui -->
+						<!--] session = oui -->
 					</form>
 
 
@@ -152,6 +156,18 @@
 					var nbrMotsEn = document.getElementById("mc-en").value.split(",").length;
 					if(document.getElementById("mc-en").value == "" ){erreur += "\n - Renseignez au moins un mot-clef en Anglais.";}
 					else if(nbrMotsEn > 15 ){erreur += "\n - Maximum 15 Mots-Clefs Anglais";}
+					
+					
+					if(document.getElementsByName("auteur-nom-0")[0].value == ""){erreur += "\n - Renseignez au moins un auteur.";}
+					if(document.getElementsByName("auteur-email-0")[0].value == ""){erreur += "\n - Renseignez l'email du premier auteur";}
+					
+					var erreurAuteur = 0;
+					for(i = 1; i < nbrAuteur ; i++)
+					{
+						if(document.getElementsByName("auteur-nom-" + i)[0].value == ""){erreurAuteur = 1;}
+						if(document.getElementsByName("auteur-email-" + i)[0].value == ""){erreurAuteur = 1;}
+					}
+					if(erreurAuteur == 1){erreur += "\n - Renseignez les noms et email de tous les auteurs.";}
 					
 					/*alert(  ((document.getElementById("mc-fr").value.length ) / nbrMotsFr) );*/
 
