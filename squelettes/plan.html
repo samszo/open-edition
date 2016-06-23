@@ -46,6 +46,39 @@
 					<!--	
 					#MODELE{plan}
 					-->
+					
+					<h2><a href="#URL_SITE_SPIP?lang=#LANG" title="#NOM_SITE_SPIP"><BOUCLE_r2(RUBRIQUES){racine}{lang=#LANG}>#TITRE</BOUCLE_r2></a></h2>
+					<div class="tree">
+						<BOUCLE_r(RUBRIQUES){racine}{lang=#LANG}>
+							<BOUCLE_pages_site(ARTICLES){id_rubrique}>
+								<a href="#URL_ARTICLE">#TITRE</a><br>
+							</BOUCLE_pages_site>
+						</BOUCLE_r>
+					</div>
+
+					<!--
+					<div class="tree-root">
+					<BOUCLE_pages_site2(RUBRIQUES) {racine}{lang=#LANG}>
+						<BOUCLE_plan_lien(SITES) {id_rubrique}>
+							<a href="#URL_SITE">#NOM_SITE</a><br>
+						</BOUCLE_plan_lien>
+					</BOUCLE_pages_site2>
+					<BOUCLE_planContact(ARTICLES){id_mot=72}{lang=#LANG}><a href="#URL_ARTICLE">#TITRE</a></BOUCLE_planContact>
+					<BOUCLE_planLegal(ARTICLES){id_mot=78}{lang=#LANG}><a href="#URL_ARTICLE">#TITRE</a></BOUCLE_planLegal>
+					</div>
+					-->
+					
+					
+					<!--
+					<h2><:auteur:>s</h2>
+					<div class="tree">
+						<BOUCLE_auteurs(AUTEURS){webmestre=non}>
+							<a href="#URL_AUTEUR">#NOM</a><br>
+						</BOUCLE_auteurs>
+					</div>
+					-->
+					
+					
 					<BOUCLE_dom(MOTS){id_groupe=1}{par titre}>
 						<BOUCLE_domArt(ARTICLES){id_mot}{id_mot=39}{lang=#LANG}{par titre}><h2><a href="#URL_ARTICLE">#TITRE</a></h2></BOUCLE_domArt>
 						<div class="tree">
