@@ -46,6 +46,7 @@
 					<h1><:open_science:new_article:></h1>
 					<br>
 					<p class="hidden" id="retour-formulaire"><strong><:open_science:article_sent:></strong><br><br><br><br><br><br></p>
+					<p class="hidden" id="please-wait"><strong><:open_science:please_wait:></strong> &nbsp; &nbsp; <img src="#CHEMIN{design/wait.gif}" /><br></p>
 					
 					
 					[(#SESSION{login}|non)
@@ -178,6 +179,12 @@
 							//alert(inputPdf.value);
 							if (inputPdf.value == ""){ alert("Vous devez envoyer l'article en PDF"); event.preventDefault(); }
 							else if (inputPdf.value.split('.').reverse()[0] != 'pdf'){ alert("L'article doit être au format PDF"); event.preventDefault(); }
+							else
+							{
+								// le fichier est bon
+								document.getElementById("please-wait").classList.remove("hidden");
+								document.querySelector(".container-form-pdf").classList.add("hidden");
+							}
 
 						});
 						

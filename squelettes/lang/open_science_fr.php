@@ -7,6 +7,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
+	'please_wait'=>"Veuillez patienter",
 	'login_to_submit_an_article'=>"Connectez-vous pour proposer un article.",
 	'french_title'=>"Titre Français",
 	'english_title'=>"Titre Anglais",
