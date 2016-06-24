@@ -55,7 +55,7 @@ class CrudController extends Zend_Controller_Action
 		$idArt = $dbArt->ajouter(array(
 			"id_rubrique"=>$arrRubNum["id_rubrique"]
 			,"titre"=>$params['titre-'.$langue]
-			,"soustitre"=>$params['sous-titre-'.$langue]
+			//,"soustitre"=>$params['sous-titre-'.$langue]
 			,"descriptif"=>$params['resume-'.$langue]
 			//,"texte"=>$params['editeurtexte-'.$langue]
 			,"statut"=>"prop"			
@@ -96,7 +96,7 @@ class CrudController extends Zend_Controller_Action
 	    		$idArtTrad = $dbArt->ajouter(array(
 				"id_rubrique"=>$idRubTrad
 				,"titre"=>$params['titre-'.$langueTrad]
-				,"soustitre"=>$params['sous-titre-'.$langueTrad]
+				//,"soustitre"=>$params['sous-titre-'.$langueTrad]
 				,"descriptif"=>$params['resume-'.$langueTrad]
 				,"statut"=>"prop"			
 				,"id_secteur"=>$idSecteur
@@ -132,31 +132,35 @@ class CrudController extends Zend_Controller_Action
 				$dbML->ajouter(array("id_mot"=>$idMot,"objet"=>"article","id_objet"=>$idArtTrad));
 		}
 		//ajoute des auteurs
-		$arrAut = explode(";",$params["auteurs"]);
+		$i=0;
 		$chapeau = "";
 		$this->view->rs["auteurs"]=array();
-		foreach ($arrAut as $a) {
-			if($a){
-				$arrA = explode(",",$a);
-				//création de l'auteur
-				$idAut = $dbAut->ajouter(array("nom"=>$arrA[0],"statut"=>"1comite","email"=>$arrA[2]));	
+		while (isset($params["auteur-nom-".$i])) {
+			//création de l'auteur
+			$idAut = $dbAut->ajouter(array("nom"=>$params["auteur-nom-".$i]
+				,"statut"=>"1comite"
+				,"email"=>$params["auteur-email-".$i]	
+				,"isni"=>$params["auteur-isni-".$i]));	
 				//lien avec les articles
-				$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArt,"objet"=>"article","role"=>"redacteur"));		
-				if($params['idRubRevueTrad'])$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"redacteur"));					
-				//définition du chapeau pour les appartenances
-				$chapeau .= "[->auteur".$idAut."] ".$arrA[1].", "; 
-				$this->view->rs["auteurs"][]=$idAut;
-			}
+			$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArt,"objet"=>"article","role"=>"redacteur"));		
+			//mis à jour de l'auteur pour éviter les doublons 
+			$dbAut->edit($idAut, array("appartenance"=>$params["auteur-appart-".$i]));	
+			//lien avec les articles			
+			if($params['idRubRevueTrad'])$dbAutL->ajouter(array("id_auteur"=>$idAut,"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"redacteur"));					
+			//définition du chapeau pour les appartenances
+			$chapeau .= "[->auteur".$idAut."] ".$params["auteur-appart-".$i].", "; 
+			$this->view->rs["auteurs"][]=$idAut;
+			$i++;
 		}
 		//met à jour les chapeaux
-		$chapeau = substr($chapeau,0,-2);
+		if($chapeau)$chapeau = substr($chapeau,0,-2);
 		$dbArt->edit($idArt,array("chapo"=>$chapeau));
 		if($params['idRubRevueTrad'])$dbArt->edit($idArtTrad,array("chapo"=>$chapeau));    		
 
-		//ajoute l'auteur de la proposition
+		/*ajoute l'auteur de la proposition
 		$dbAutL->ajouter(array("id_auteur"=>$params["idAuteur"],"id_objet"=>$idArt,"objet"=>"article","role"=>"proposeur"));		
 		if($params['idRubRevueTrad'])$dbAutL->ajouter(array("id_auteur"=>$params["idAuteur"],"id_objet"=>$idArtTrad,"objet"=>"article","role"=>"proposeur"));					
-		
+		*/
 		
 		$this->view->message="L'article a été ajouté.";
 		$this->view->rs["idArt"]=$idArt;
