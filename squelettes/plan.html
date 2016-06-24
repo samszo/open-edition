@@ -92,7 +92,7 @@
 									<p> #TITRE <em class="grey">(<:open_science:forthcoming:>)</em></p>
 								]
 								<div class="tree">
-									<BOUCLE_numeros(RUBRIQUES){id_parent}{type_rubrique!=revue}{par titre}{tout}>
+									<BOUCLE_numeros(RUBRIQUES){id_parent}{type_rubrique!=revue}{par titre}{id_mot!=111}{tout}>
 										<a href="#URL_RUBRIQUE">#TITRE   (vol <BOUCLE_VolNum(MOTS){id_rubrique}{id_groupe=4}>#TITRE</BOUCLE_VolNum> - <BOUCLE_AnneeNumAppel(MOTS){id_rubrique}{id_groupe=3}>#TITRE</BOUCLE_AnneeNumAppel>)</a><br>
 										<div class="tree">
 											<BOUCLE_articles(ARTICLES){id_rubrique}{par date}>
