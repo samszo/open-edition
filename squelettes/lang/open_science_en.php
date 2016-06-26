@@ -8,6 +8,10 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	'please_wait'=>"Please wait",
+	'add_author'=>"Add author",
+	'delete_author'=>"Delete an author",
+	'first_last_name'=>"First and last name",
+	'membership'=>"Membership",
 	'login_to_submit_an_article'=>"Login to submit an article.",
 	'french_title'=>"French title",
 	'english_title'=>"English title",

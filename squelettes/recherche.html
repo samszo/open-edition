@@ -52,7 +52,7 @@
 						#ANCRE_PAGINATION
 						<h2><:articles:> (#GRAND_TOTAL)</h2>
 						<ul class="spip">
-							<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}>
+							<BOUCLE_articles(ARTICLES) {recherche} {!par points} {pagination}{!titre_mot=exclure_recherche}>
 							<li><a href="#URL_ARTICLE">#TITRE</a></li>
 							</BOUCLE_articles>
 						</ul>

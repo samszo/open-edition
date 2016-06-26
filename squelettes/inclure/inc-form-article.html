@@ -48,12 +48,12 @@
 							<div class="row">
 								<div class="col-lg-6">
 									<p><strong><:open_science:french_keywords:></strong></p>
-									<p><:open_science:keyword:> 1, <:open_science:keyword:> 2, <:open_science:keyword:> 3</p>
+									<p><:open_science:keyword:>, <:open_science:keyword:>, <:open_science:keyword:></p>
 									<textarea name="mc-fr" id="mc-fr"></textarea>
 								</div>
 								<div class="col-lg-6">
 									<p><strong><:open_science:english_keywords:></strong></p>
-									<p><:open_science:keyword:> 1, <:open_science:keyword:> 2, <:open_science:keyword:> 3</p>
+									<p><:open_science:keyword:>, <:open_science:keyword:>, <:open_science:keyword:></p>
 									<textarea name="mc-en" id="mc-en"></textarea>
 								</div>
 							</div>
@@ -70,10 +70,10 @@
 							<div id="ajout-auteurs">
 								<div id="auteur-original" class="row auteur auteur-0">
 									<div class="col-sm-3">
-										<p>Prénom - Nom</p><input type="text" class="auteur-nom" name="auteur-nom-0" maxlength="60"/>
+										<p><:open_science:first_last_name:></p><input type="text" class="auteur-nom" name="auteur-nom-0" maxlength="60"/>
 									</div>
 									<div class="col-sm-3">
-										<p>Appartenance</p><input type="text" class="auteur-appart" name="auteur-appart-0" maxlength="100"/>
+										<p><:open_science:membership:></p><input type="text" class="auteur-appart" name="auteur-appart-0" maxlength="100"/>
 									</div>
 									<div class="col-sm-3">
 										<p>Email</p><input type="email" class="auteur-email" name="auteur-email-0" maxlength="60"/>
@@ -83,8 +83,8 @@
 									</div>
 								</div>
 							</div>
-							<p class="p-btn" id="btn-ajout-auteur"><span class="glyphicon glyphicon-plus btn-rond"></span> Ajouter un auteur</p> &nbsp;  
-							<p class="p-btn hidden" id="btn-suppr-auteur"><span class="glyphicon glyphicon-minus btn-rond"></span> Supprimer un auteur</p>
+							<p class="p-btn" id="btn-ajout-auteur"><span class="glyphicon glyphicon-plus btn-rond"></span> <:open_science:add_author:></p> &nbsp;  
+							<p class="p-btn hidden" id="btn-suppr-auteur"><span class="glyphicon glyphicon-minus btn-rond"></span> <:open_science:delete_author:></p>
 							
 							<script>
 								var nbrAuteur = 1;
