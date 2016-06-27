@@ -26,11 +26,13 @@
 					<div class="col-sm-2 col-md-2 col-lg-2">
 						<ul class="menu-right">
 							<li><INCLURE{fond=inclure/menu_langues,env}/></li>
+							<!--
 							<li>
 								<a href="#URL_SITE_SPIP/ecrire">[(#SESSION{id_auteur}|oui) #SESSION{nom}][(#SESSION{id_auteur}|non)<:open_science:sign_in:>]</a>
 							</li>
+							-->
 							<li>
-								[(#SESSION{id_auteur}|non)<a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a>]
+								<!--[(#SESSION{id_auteur}|non)<a href="#URL_SITE_SPIP/spip.php?page=identifiants&focus=nom_inscription&mode=1comite"><:open_science:sign_up:> </a>]-->
 								[(#SESSION{id_auteur}|oui)<a href="#URL_LOGOUT"><:open_science:logout:></a>]
 							</li>
 						</ul>
