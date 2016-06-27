@@ -2,7 +2,7 @@
 <html dir="#LANG_DIR" lang="#LANG">
 	<head>
 		<meta charset="utf-8" />
-		<title>#NOM_SITE_SPIP - <:open_science:submit_an_article_link:></title>
+		<title>#NOM_SITE_SPIP - 404 error</title>
 		<!--<meta name="description" content=" " />
 		<meta name="keywords" content=" " />-->
 		
@@ -42,42 +42,28 @@
 					
 				</nav>
 				<section class="col-md-9 col-lg-10 content">
-					
-					<h1><:open_science:submit_an_article_h1:></h1>
-					
-					#FORMULAIRE_CONTACT
-					<script>
-						var langage = "";
-						langage = "#LANG";
-						
-						if(langage == "fr")
-						{
-							document.getElementById("info_sujet").value = "";// sujet: Proposition d'article
-							$(".editer_sujet label").html("Indiquez le nom de la <strong>revue</strong>");
-							$(".editer_organisation label").html("Appartenance / organisation");
-						}
-						else
-						{
-							document.getElementById("info_sujet").value = "";// Article Proposal
-							$(".editer_sujet label").html("Please select a <strong>journal</strong>");
-							$(".editer_organisation label").html("Appartenance / organisation");
-						}
-						
-						$("form legend").html("<br>");
-					</script>
-					
-					<BOUCLE_revue(RUBRIQUES){id_rubrique}>
-						<script>
-							selectActiveDom(#DOM_P);
-							var sujet = "";
-							
-							sujet += "#TITRE";
-							document.getElementById("info_sujet").value = sujet + "";
-						</script>
-					</BOUCLE_revue>
+
+					<div id="content">
+						<p class="arbo"><a href="#URL_SITE_SPIP/"><:accueil_site:></a> &gt; <strong class="on"><:pass_erreur:></strong></p>
+				
+						<div class="cartouche">
+							<h1><:pass_erreur:> [(#ENV{status, 404}|intval)]</h1>
+						</div>
+						[(#ENV{erreur}|non)
+						[(#ENV{fond_erreur}|=={article}|oui)<div class="chapo"><p><:aucun_article:></p></div>]
+						[(#ENV{fond_erreur}|=={rubrique}|oui)<div class="chapo"><p><:aucune_rubrique:></p></div>]
+						[(#ENV{fond_erreur}|=={breve}|oui)<div class="chapo"><p><:aucune_breve:></p></div>]
+						[(#ENV{fond_erreur}|=={auteur}|oui)<div class="chapo"><p><:aucun_auteur:></p></div>]
+						[(#ENV{fond_erreur}|=={site}|oui)<div class="chapo"><p><:aucun_site:></p></div>]
+						[(#ENV{fond_erreur}|=={forum}|oui)<div class="chapo"><p><:forum:aucun_message_forum:></p></div>]
+						]
+						[<div class="chapo"><p>(#ENV{erreur})</p></div>]
+				
+					</div><!--.content-->
 					
 					
-					<br><br>
+					
+					<br><br><br><br><br><br>
 				</section>
 			</div>
 		</div>
