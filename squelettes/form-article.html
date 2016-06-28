@@ -187,7 +187,8 @@
 							success: function(result) {
 									    //alert("OK : " + result); 
 									console.log(result);
-									window.location.href="spip.php?page=form-article-pdf&id_article="+result.rs.idArt;
+									//window.location.href="spip.php?page=form-article-pdf&id_article="+result.rs.idArt;
+									window.location.href="spip.php?page=form-article-ok&id_article="+result.rs.idArt;
 							},
 									error: function(error){
 									alert("Erreur : " + error.responseText);
