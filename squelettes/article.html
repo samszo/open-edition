@@ -6,9 +6,8 @@
 		<title>#NOM_SITE_SPIP - #TITRE</title>
 		[<meta name="description" content="(#DESCRIPTIF|couper{200}|attribut_html|textebrut)" />]
 		<B_metakeywords>
-		<meta name="keywords" content="<BOUCLE_metakeywords(MOTS) {id_article} {", "}>[(#TITRE)]</BOUCLE_metakeywords>" />
+		<meta name="keywords" content="<BOUCLE_metakeywords(MOTS) {id_article} {", "}>[(#TITRE|textebrut)]</BOUCLE_metakeywords>" />
 		</B_metakeywords>
-
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" /> 
 		<link rel="icon" type="image/png" href="#CHEMIN{design/icon.png}" />
