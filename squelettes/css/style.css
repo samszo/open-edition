@@ -818,6 +818,8 @@ section .block-deco:nth-child(27)
 
 /* -------------------------------------ACCUEIL--------------------------------------------------- */
 
+.content .home-title{font-size:21px;}
+
 .bg-grey{background-color:#e2e2e2;}
 
 .square{
